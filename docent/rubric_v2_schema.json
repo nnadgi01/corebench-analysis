@@ -1,0 +1,96 @@
+{
+  "type": "object",
+  "title": "Behavioral diagnostic rubric for computational reproducibility agent runs (v2)",
+  "description": "Structured diagnosis of a single agent run on a CORE-Bench reproducibility task. The rubric evaluates four behavioral dimensions: where the answer came from, what obstacles were encountered, how the agent responded to obstacles, and whether the answer was verified. Each dimension is scored independently from the full trace. The goal is to understand HOW the agent arrived at its answer, not just whether it succeeded.",
+  "additionalProperties": false,
+  "required": [
+    "label",
+    "answer_source",
+    "primary_obstacle",
+    "obstacle_resolution",
+    "answer_verification",
+    "strategy_pattern",
+    "explanation"
+  ],
+  "properties": {
+    "label": {
+      "type": "string",
+      "description": "Outcome label derived directly from the final numeric score: 1 -> success, 0 -> failure.",
+      "enum": [
+        "success",
+        "failure"
+      ]
+    },
+    "answer_source": {
+      "type": "string",
+      "description": "Where did the agent's final submitted answer come from? Classify based on the primary source of the final value(s) written to answer.json, not intermediate steps. If the agent used multiple sources, pick the one that most directly produced the submitted value.\n\n- original_pipeline: Ran the capsule's code as-is, or with only dependency/environment fixes (e.g., installing packages, fixing paths, setting environment variables). The code logic itself was not changed.\n- modified_pipeline: Wrote simplified scripts, changed parameters, extracted subsets of the original code, or rewrote parts of the pipeline (e.g., translating R code to Python). The agent ran code, but not the original code.\n- repo_artifacts: Found the answer in pre-existing output files, cached results, saved model outputs, log files, or result CSVs already present in the repository — without re-running the code that produced them.\n- manuscript_or_readme: Extracted the answer from the capsule's manuscript, README, paper PDF, or other documentation files within the repo. The agent read the reported value rather than computing it.\n- figure_computational: Generated the figure by running code, then extracted the value programmatically (e.g., reading plot data, parsing saved figure data).\n- figure_visual: Used a vision model (query_vision_language_model) or visual inspection to read a value from a figure image, rather than extracting it from code output.\n- external_source: Used web_search, visit_webpage, or general LLM knowledge to find the answer from sources outside the capsule repository (published papers, academic databases, etc.).\n- no_answer: The agent did not produce a final answer (timed out, gave up, or failed to write answer.json).",
+      "enum": [
+        "original_pipeline",
+        "modified_pipeline",
+        "repo_artifacts",
+        "manuscript_or_readme",
+        "figure_computational",
+        "figure_visual",
+        "external_source",
+        "no_answer"
+      ]
+    },
+    "primary_obstacle": {
+      "type": "string",
+      "description": "What was the single most significant obstacle the agent encountered during the run? Pick the obstacle that consumed the most effort or most directly affected the outcome. If the agent encountered no significant obstacles, use 'none'.\n\n- none: No significant obstacle; the agent proceeded smoothly.\n- dependency_install_failure: A required package could not be installed at all (not available, build failed, no internet access for the package).\n- dependency_version_conflict: A package installed but produced errors due to version incompatibility (deprecated APIs, changed function signatures, etc.).\n- compilation_timeout: A C/C++/Fortran package compilation took so long it consumed a significant portion of the time budget.\n- environment_constraint: System-level limitations — no root/sudo access, no GPU, insufficient disk space, memory limits, externally-managed-environment blocking pip.\n- code_bug_original: A bug or error in the capsule's own code that the agent had to diagnose and fix.\n- code_bug_introduced: The agent introduced a bug while modifying or rewriting code.\n- data_missing_or_inaccessible: Data files were missing, symlinks were broken, paths were wrong, or files were in an unexpected format.\n- task_ambiguity: The task question was ambiguous, had multiple valid interpretations, or referenced unclear metrics.\n- tool_limitation: The agent's available tools couldn't handle a required operation (e.g., no R interpreter, no GUI for interactive plots, can't read PDF natively).",
+      "enum": [
+        "none",
+        "dependency_install_failure",
+        "dependency_version_conflict",
+        "compilation_timeout",
+        "environment_constraint",
+        "code_bug_original",
+        "code_bug_introduced",
+        "data_missing_or_inaccessible",
+        "task_ambiguity",
+        "tool_limitation"
+      ]
+    },
+    "obstacle_resolution": {
+      "type": "string",
+      "description": "How did the agent respond to the primary obstacle? If primary_obstacle is 'none', use 'not_applicable'.\n\n- direct_fix: Diagnosed the issue and applied a targeted fix (installed the right package version, fixed the path, patched the bug), then continued with the original code.\n- selective_execution: Identified that only part of the pipeline was needed for the answer, skipped the obstacle-causing parts, and ran only the relevant code.\n- alternative_code: Wrote new code from scratch to replace the blocked section (e.g., rewrote R analysis in Python, created a simplified computation script).\n- external_fallback: Abandoned code execution and turned to web search, vision models, or general knowledge to find the answer.\n- brute_force_retry: Kept retrying variations of the same approach without clear diagnosis — trying different package versions, restarting, or repeating failed commands.\n- gave_up: Stopped attempting to overcome the obstacle and either submitted no answer or submitted a low-confidence guess.\n- not_applicable: No significant obstacle was encountered (use when primary_obstacle is 'none').",
+      "enum": [
+        "direct_fix",
+        "selective_execution",
+        "alternative_code",
+        "external_fallback",
+        "brute_force_retry",
+        "gave_up",
+        "not_applicable"
+      ]
+    },
+    "answer_verification": {
+      "type": "string",
+      "description": "Did the agent verify or cross-check its answer before submitting? Look for evidence in the trace of the agent comparing its result to expected values, re-running the computation, checking units/format, or expressing confidence.\n\n- cross_checked: The agent explicitly verified the answer — re-ran the computation, compared to expected format/range, checked against the manuscript, or validated through an independent method.\n- single_pass: The agent computed the answer once and submitted it without explicit verification, but showed no signs of doubt.\n- expressed_uncertainty: The agent submitted an answer but explicitly noted uncertainty, caveats, or that it might be wrong.\n- no_verification: No evidence of answer checking; the agent may have grabbed the first plausible value it found.",
+      "enum": [
+        "cross_checked",
+        "single_pass",
+        "expressed_uncertainty",
+        "no_verification"
+      ]
+    },
+    "strategy_pattern": {
+      "type": "string",
+      "description": "Dominant pattern of the agent's behavior over the entire run.\n\n- mostly_linear_progress: The agent followed a mostly sequential plan — explore repo, install deps, run code, extract answer — with minor detours.\n- multiple_distinct_strategies: The agent tried two or more fundamentally different approaches (e.g., tried running the original code, then switched to writing a custom script, then tried web search).\n- late_strategy_shift: The agent committed to one approach for most of the run, then pivoted to a different strategy near the end (often when running out of time).\n- repetitive_or_looping: The agent repeated the same or very similar actions multiple times without making progress.\n- gave_up_early: The agent abandoned the task after minimal exploration.\n- unclear_or_mixed: The pattern doesn't fit the above categories.",
+      "enum": [
+        "mostly_linear_progress",
+        "multiple_distinct_strategies",
+        "late_strategy_shift",
+        "repetitive_or_looping",
+        "gave_up_early",
+        "unclear_or_mixed"
+      ]
+    },
+    "explanation": {
+      "type": "string",
+      "description": "Concise, self-contained narrative (3-5 sentences) explaining: (1) what the agent's initial approach was, (2) what obstacle it hit (if any), (3) how it responded, (4) where the final answer came from, and (5) whether the agent verified it. Reference specific trace blocks where relevant.",
+      "citations": true,
+      "minLength": 1
+    }
+  }
+}
