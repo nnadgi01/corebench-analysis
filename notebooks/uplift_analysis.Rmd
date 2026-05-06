@@ -1,0 +1,138 @@
+---
+title: "Analysis of uplift RCT"
+output: html_document
+date: "2026-05-02"
+author: Tilman Bayer
+---
+
+# Libraries and settings
+```{r}
+library(googlesheets4)
+library(data.table)
+```
+
+
+```{r}
+# Seaborn "colorblind" palette, copied from SEABORN_PALETTES in:
+# https://github.com/mwaskom/seaborn/blob/master/seaborn/palettes.py
+# Seaborn documents "colorblind" as a named palette:
+# https://seaborn.pydata.org/generated/seaborn.color_palette.html
+colorblind_palette <- c(
+  "#0173B2",
+  "#DE8F05",
+  "#029E73",
+  "#D55E00",
+  "#CC78BC",
+  "#CA9161",
+  "#FBAFE4",
+  "#949494",
+  "#ECE133",
+  "#56B4E9"
+)
+```
+
+# Ingest data from Google Sheets
+```{r echo=FALSE}
+# NB: This may require authorization with your Google account in interactive mode 
+# first (reply to the question in the console) before using it while knitting
+d <- read_sheet('https://docs.google.com/spreadsheets/d/1bEDYkg4epbnJr5JUJ-P10KVICxhoYQhGx2CXVOOGCf8/edit')
+# TODO: replace with a reference to the published version of the data once released
+```
+
+```{r}
+# inspect data:
+head(d)
+```
+
+
+```{r}
+dt <- data.table(d)
+names(dt)
+```
+
+```{r}
+# Retrieve column name for session duration (since it has a complicated name, 
+# inherited from the wording of this question in Google Forms):
+duration_col <- grep("duration", names(dt), ignore.case = TRUE, value = TRUE)
+if (length(duration_col) != 1) {
+  stop("Expected exactly one duration column, found: ", paste(duration_col, collapse = ", "))
+}
+
+durs <- dt[[duration_col]]
+```
+
+
+## Histogram of session durations
+```{r}
+hist_breaks <- seq(
+  floor(min(durs, na.rm = TRUE) / 15) * 15,
+  ceiling(max(durs, na.rm = TRUE) / 15) * 15,
+  by = 15
+)
+hist_xlim <- range(c(hist_breaks, 180))
+hist_tick_at <- seq(
+  floor(hist_xlim[1] / 30) * 30,
+  ceiling(hist_xlim[2] / 30) * 30,
+  by = 30
+)
+hist_tick_at <- hist_tick_at[hist_tick_at >= hist_xlim[1] & hist_tick_at <= hist_xlim[2]]
+hist_axis_at <- sort(unique(c(hist_tick_at, hist_xlim)))
+hist_axis_labels <- ifelse(hist_axis_at %in% hist_tick_at, hist_axis_at, "")
+```
+
+
+```{r duration-by-condition}
+condition_col <- "Condition"
+
+duration_by_condition <- split(durs, dt[[condition_col]])
+duration_by_condition <- lapply(duration_by_condition, function(x) x[!is.na(x)])
+duration_by_condition <- duration_by_condition[lengths(duration_by_condition) > 0]
+
+condition_colors <- rep(colorblind_palette, length.out = length(duration_by_condition))
+
+hist_data <- lapply(
+  duration_by_condition,
+  hist,
+  breaks = hist_breaks,
+  plot = FALSE
+)
+hist_colors <- grDevices::adjustcolor(
+  condition_colors,
+  alpha.f = 0.45
+)
+hist_ylim <- c(0, max(unlist(lapply(hist_data, function(x) x[["counts"]]))))
+
+par(family = "serif")
+for (i in seq_along(hist_data)) { # loop through conditions
+  plot(
+    hist_data[[i]], # plot the ith histogram object
+    col = hist_colors[i],
+    border = "white",
+    xlab = "minutes",
+    ylab = "",
+    main = "Duration of reproduction sessions",
+    # font size magnification factors:
+    cex.main = 1.875,
+    cex.axis = 0.8,
+    xlim = hist_xlim,
+    ylim = hist_ylim,
+    xaxt = "n", # suppress the default x-axis
+    add = i > 1 # create plot if i=1, add plot if i>1
+  )
+}
+
+# add custom x axis, and y axis label:
+axis(1, at = hist_axis_at, labels = hist_axis_labels, cex.axis = 1.2)
+mtext("number of sessions", side = 2, line = 3, cex = 0.8)
+
+legend(
+  "top",
+  legend = names(duration_by_condition),
+  fill = hist_colors,
+  border = "white",
+  cex = 1.5
+)
+```
+
+## Uplift analysis
+(to be added)
