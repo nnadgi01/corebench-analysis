@@ -113,7 +113,7 @@ for (i in seq_along(hist_data)) { # loop through conditions
     main = "Duration of reproduction sessions",
     # font size magnification factors:
     cex.main = 1.875,
-    cex.axis = 0.8,
+    cex.axis = 1.04,
     xlim = hist_xlim,
     ylim = hist_ylim,
     xaxt = "n", # suppress the default x-axis
@@ -123,7 +123,7 @@ for (i in seq_along(hist_data)) { # loop through conditions
 
 # add custom x axis, and y axis label:
 axis(1, at = hist_axis_at, labels = hist_axis_labels, cex.axis = 1.2)
-mtext("number of sessions", side = 2, line = 3, cex = 0.8)
+mtext("number of sessions", side = 2, line = 3, cex = 1.04)
 
 legend(
   "top",
