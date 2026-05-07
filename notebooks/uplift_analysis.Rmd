@@ -9,6 +9,7 @@ author: Tilman Bayer
 ```{r}
 library(googlesheets4)
 library(data.table)
+library(clubSandwich)
 ```
 
 
@@ -135,4 +136,113 @@ legend(
 ```
 
 ## Uplift analysis
-(to be added)
+
+This regression estimates the association between condition (AI-assisted vs. Manual) and log duration. The underlying experiment was designed assuming that both researchers (evaluators) and papers (replication targets) may have unobserved characteristics that affect task duration. This motivates the use of a blocked randomization assignment (blocking on both researchers and papers), and the use of fixed effects for both in the model.
+
+In the paper's notation, the model is:
+
+$$
+\log(\mathrm{duration}_{i}) =
+\alpha
++ \beta \, \mathrm{AI}_{i}
++ \gamma_p
++ \delta_r
++ \varepsilon_i,
+$$
+
+Here, $i$ indexes the individual reproduction session, $p$ denotes the paper whose result is being reproduced in $i$, and $r$ the researcher conducting the session. The terms $\gamma_p$ are paper fixed effects, $\delta_r$ are researcher fixed effects, and $\beta$ is the estimated uplift from AI assistance relative to the manual condition.
+
+```{r prepare data for FE models}
+condition_col <- "Condition"
+reference_condition <- "AI-assisted" # estimate change relative to this condition
+# Uplift is generally conceived as a speed change in this context,
+# and speed is reciprocal to duration. So for simplicity we estimate 
+# the reciprocal factor for duration (from AI-assisted to Manual instead of vice versa).
+
+paper_col <- "Paper Title"
+researcher_col <- "Human Researcher [your name]"
+
+fixed_effects_regression_data <- data.frame(
+  duration_minutes = durs,
+  condition = relevel(factor(dt[[condition_col]]), ref = reference_condition),
+  paper = factor(dt[[paper_col]]),
+  researcher = factor(dt[[researcher_col]])
+)
+```
+
+```{r FE model}
+m_fe <- lm(
+  log(duration_minutes) ~ condition + paper + researcher,
+  data = fixed_effects_regression_data
+)
+
+condition_effect_term <- grep(
+  "^condition",
+  names(coef(m_fe)),
+  value = TRUE
+)
+if (length(condition_effect_term) != 1) {
+  stop("Expected exactly one condition effect, found: ", paste(condition_effect_term, collapse = ", "))
+}
+
+condition_label <- sub("^condition", "", condition_effect_term)
+
+# Use the actual model frame to avoid potential row-alignment problems:
+mf <- model.frame(m_fe)
+```
+
+```{r CR2 clustered by researcher}
+V_researcher_cr2 <- vcovCR(
+  m_fe,
+  cluster = mf$researcher,
+  type = "CR2"
+)
+
+researcher_cr2_condition_test <- coef_test(
+  m_fe,
+  vcov = V_researcher_cr2,
+  test = "Satterthwaite",
+  coefs = condition_effect_term
+)
+researcher_cr2_condition_log_effect <- researcher_cr2_condition_test$beta
+researcher_cr2_condition_std_error <- researcher_cr2_condition_test$SE
+researcher_cr2_condition_df <- researcher_cr2_condition_test$df_Satt
+researcher_cr2_condition_p_value <- researcher_cr2_condition_test$p_Satt
+researcher_cr2_condition_multiplier <- exp(researcher_cr2_condition_log_effect)
+researcher_cr2_condition_percent_change <-
+  100 * (researcher_cr2_condition_multiplier - 1)
+researcher_cr2_condition_variance <- researcher_cr2_condition_std_error^2
+
+researcher_cr2_condition_test
+
+```
+
+
+Using CR2 standard errors clustered by researcher, the coefficient for `r condition_label` is `r round(researcher_cr2_condition_log_effect, 4)`, with a CR2 standard error of `r round(researcher_cr2_condition_std_error, 4)`, Satterthwaite degrees of freedom of `r round(researcher_cr2_condition_df, 1)`, and p-value `r format.pval(researcher_cr2_condition_p_value, digits = 3)`. The point estimate implies that `r condition_label` sessions last `r round(researcher_cr2_condition_multiplier, 2)` times as long as `r reference_condition` sessions, or about `r round(researcher_cr2_condition_percent_change, 0)` percent as long.
+
+
+```{r CR2 clustered by paper}
+V_paper_cr2 <- vcovCR(
+  m_fe,
+  cluster = mf$paper,
+  type = "CR2"
+)
+
+paper_cr2_condition_test <- coef_test(
+  m_fe,
+  vcov = V_paper_cr2,
+  test = "Satterthwaite",
+  coefs = condition_effect_term
+)
+paper_cr2_condition_log_effect <- paper_cr2_condition_test$beta
+paper_cr2_condition_std_error <- paper_cr2_condition_test$SE
+paper_cr2_condition_df <- paper_cr2_condition_test$df_Satt
+paper_cr2_condition_p_value <- paper_cr2_condition_test$p_Satt
+paper_cr2_condition_multiplier <- exp(paper_cr2_condition_log_effect)
+paper_cr2_condition_percent_change <- 100 * (paper_cr2_condition_multiplier - 1)
+paper_cr2_condition_variance <- paper_cr2_condition_std_error^2
+
+paper_cr2_condition_test
+```
+
+Using CR2 standard errors clustered by paper, the coefficient for `r condition_label` is `r round(paper_cr2_condition_log_effect, 4)`, with a CR2 standard error of `r round(paper_cr2_condition_std_error, 4)`, Satterthwaite degrees of freedom of `r round(paper_cr2_condition_df, 1)`, and p-value `r format.pval(paper_cr2_condition_p_value, digits = 3)`. The point estimate is unchanged, but this version allows residual dependence within papers rather than within researchers.
