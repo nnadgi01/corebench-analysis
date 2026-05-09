@@ -1,0 +1,229 @@
+agent_run_id,metadata.scaffold,metadata.scores.accuracy,metadata.capsule_id
+b59b3181-063e-421f-802f-32e6a116fa62,"Codex Agent (gpt-5.4, re=medium, mt=9)",0,capsule-7350043
+71f609f3-281f-4681-ac09-538a9c0a69f9,"Codex Agent (gpt-5.4, re=medium, mt=9)",0,capsule-6562149
+16560168-2cd4-46ab-b8cf-1dc12388aa92,"Codex Agent (gpt-5.4, re=medium, mt=9)",0,capsule-5172670
+c48b9d3d-e9df-42c8-b9bf-c7455c7a6de8,"Codex Agent (gpt-5.4, re=medium, mt=6)",0,capsule-7350043
+6e94f5b6-aa0d-4e12-940c-9f1103b7e81a,"Codex Agent (gpt-5.4, re=medium, mt=6)",0,capsule-5172670
+f3ea7f44-2a80-4520-9783-8c0085455f60,"Codex Agent (gpt-5.4, re=medium, mt=6)",0,capsule-0571975
+6173d68a-efbf-420a-bf80-d19d17829d83,"Codex Agent (gpt-5, re=medium)",0,capsule-7350043
+e8044ad0-075b-48f5-9924-fcdab6d3d473,"Codex Agent (gpt-5.4, re=medium, mt=3)",0,capsule-7350043
+1a269a57-c90c-4c3a-95ee-2839e1a8f072,"Codex Agent (gpt-5.4, re=medium, mt=3)",0,capsule-5172670
+1d938d67-1b4a-470d-8f8f-b00083112fd4,"Codex Agent (gpt-5.4, re=medium, mt=1)",0,capsule-7350043
+c8402e43-7164-43bb-aab0-6c440e812c50,"Codex Agent (gpt-5.4, re=medium)",0,capsule-5172670
+6b9dde1a-13a3-4dc6-899f-cf572d1523ef,"Codex Agent (gpt-5.4, re=medium)",0,capsule-0571975
+0429e196-0343-4ac4-9461-935a152072c0,"Codex Agent (gpt-5.4, re=low)",0,capsule-7350043
+2335364a-3de5-4a03-bc47-4b2cdc75112f,"Codex Agent (gpt-5.4, re=low)",0,capsule-6562149
+caa36910-0fcc-44f5-9199-4c3c4be7ea30,"Codex Agent (gpt-5.4, re=low)",0,capsule-5172670
+347775b3-c553-4f4b-b29f-3165d7f878fc,"Codex Agent (gpt-5, re=medium)",0,capsule-2675546
+dd5f406f-8f97-479e-aefd-b064cee67dc1,"Codex Agent (gpt-5.4, re=high)",0,capsule-7350043
+d50bef8c-7d0e-4e25-ae31-5cf5f4a7512d,"Codex Agent (gpt-5.4, re=high)",0,capsule-5172670
+55d838d7-fe0f-48bf-9e81-2115a219a965,"Codex Agent (gpt-5.3-codex, re=medium)",0,capsule-6562149
+aed2c440-9916-4bf4-8a32-cf33911696e3,"Codex Agent (gpt-5.3-codex, re=medium)",0,capsule-0571975
+055f4a80-353a-473a-bb85-54b6cc5bad9c,"Codex Agent (gpt-5.1, re=medium)",0,capsule-7350043
+61fab013-284f-45ee-b1cd-2a9bd5be95bc,"Codex Agent (gpt-5, re=medium)",1,capsule-9419423
+26014ca7-c731-4876-9cd3-bef44f7b0c46,"Codex Agent (gpt-5.4, re=xhigh)",1,capsule-8610546
+6e4e59f0-cbd8-464d-a270-d6aa63bcb665,"Codex Agent (gpt-5.4, re=xhigh)",1,capsule-8467067
+a310f72f-0d71-4602-b8fb-a47dc980c6f6,"Codex Agent (gpt-5.4, re=xhigh)",1,capsule-8353473
+9043e982-b3ae-43d1-ba05-c80e6bcfb5f5,"Codex Agent (gpt-5.4, re=xhigh)",1,capsule-8185407
+78601b82-e459-4ec0-a77f-3103fc837ea2,"Codex Agent (gpt-5.4, re=xhigh)",1,capsule-7350043
+7d16bf48-7373-411b-b4fb-0e4791ced12b,"Codex Agent (gpt-5.4, re=xhigh)",1,capsule-6724161
+b5668f1d-e637-4901-bac7-9ce0a30cad7b,"Codex Agent (gpt-5.4, re=xhigh)",1,capsule-6562149
+9118a379-041c-4e96-a5b5-b12883bfb7bf,"Codex Agent (gpt-5.4, re=xhigh)",1,capsule-5360076
+fc0a45c1-e541-4e25-9561-7733c9b99402,"Codex Agent (gpt-5.4, re=xhigh)",1,capsule-5172670
+30bb7c20-8765-4af3-9928-f71f7a775364,"Codex Agent (gpt-5.4, re=xhigh)",1,capsule-5007288
+a5e0829b-a201-4891-810f-c83bf365b0c8,"Codex Agent (gpt-5.4, re=xhigh)",1,capsule-4407237
+9256f3b1-4b84-4f2f-a381-868561964a44,"Codex Agent (gpt-5.4, re=xhigh)",1,capsule-4320893
+4d83badf-69b3-496e-b1e4-982ff863c552,"Codex Agent (gpt-5.4, re=xhigh)",1,capsule-3990498
+c90c58b3-fca5-49ad-a3ed-fb76004a6959,"Codex Agent (gpt-5.4, re=xhigh)",1,capsule-2675546
+f7162927-0e45-44ca-b217-770026cd9c93,"Codex Agent (gpt-5.4, re=xhigh)",1,capsule-2151475
+25e8e2e5-dc67-4f6f-ae98-3a028ebf3b23,"Codex Agent (gpt-5.4, re=xhigh)",1,capsule-0811394
+a66456a4-6161-4208-abe5-9a5e059d647c,"Codex Agent (gpt-5.4, re=xhigh)",1,capsule-0571975
+fdda854c-c22f-448e-bd8a-e9f7490e59d9,"Codex Agent (gpt-5.4, re=medium, mt=9)",1,capsule-9419423
+6d676792-7856-4f1a-87b7-f882e53ee4db,"Codex Agent (gpt-5.4, re=medium, mt=9)",1,capsule-9026204
+18719085-f631-4228-b644-a1eabb4b33e2,"Codex Agent (gpt-5.4, re=medium, mt=9)",1,capsule-8610546
+0c0de08c-557e-4ad9-8a93-1bbfbec36f6e,"Codex Agent (gpt-5.4, re=medium, mt=9)",1,capsule-8467067
+f9564b77-9b0c-40c3-97e8-8b09c9635169,"Codex Agent (gpt-5.4, re=medium, mt=9)",1,capsule-8353473
+95e21299-37e3-4e1e-91c4-7d8a704f61bc,"Codex Agent (gpt-5.4, re=medium, mt=9)",1,capsule-8185407
+8df7fb3c-093a-4aa7-a887-1d1e38d3bcb8,"Codex Agent (gpt-5, re=medium)",1,capsule-9026204
+636e28ba-4ceb-4822-9c78-ba8b30399a09,"Codex Agent (gpt-5.4, re=medium, mt=9)",1,capsule-6724161
+845a8d2c-ec81-448b-af1b-259c4dec88b0,"Codex Agent (gpt-5, re=medium)",1,capsule-8610546
+0bf8fceb-e968-460f-b77f-e0b3c8d44d2f,"Codex Agent (gpt-5.4, re=medium, mt=9)",1,capsule-5360076
+02e43305-d685-43cf-b4d0-3ad22e314f6a,"Codex Agent (gpt-5, re=medium)",1,capsule-8467067
+9c28b28b-724b-440d-b77f-2e152e28cb55,"Codex Agent (gpt-5.4, re=medium, mt=9)",1,capsule-5007288
+c26fe69b-75a5-4db1-9181-ccfd93490189,"Codex Agent (gpt-5.4, re=medium, mt=9)",1,capsule-4407237
+76555a45-0f5e-470e-8fcc-922ab942ad00,"Codex Agent (gpt-5.4, re=medium, mt=9)",1,capsule-4320893
+22236390-ea87-48a2-95f4-bb8b3533a149,"Codex Agent (gpt-5.4, re=medium, mt=9)",1,capsule-3990498
+ed4fa604-64de-4e69-9438-d52c52e2ba67,"Codex Agent (gpt-5.4, re=medium, mt=9)",1,capsule-2675546
+5b6d9549-02fa-4ee5-9923-9e6ca12365f2,"Codex Agent (gpt-5.4, re=medium, mt=9)",1,capsule-2151475
+a1cb48cf-66b5-4714-ad3a-594d4d10aece,"Codex Agent (gpt-5.4, re=medium, mt=9)",1,capsule-0811394
+880115fe-9a9a-4800-ad66-7afb63616e6e,"Codex Agent (gpt-5.4, re=medium, mt=9)",1,capsule-0571975
+1bdaff79-0298-4f16-a097-294439ae7b50,"Codex Agent (gpt-5.4, re=medium, mt=6)",1,capsule-9419423
+fc4f654f-41df-41be-811e-b3a06b858ba9,"Codex Agent (gpt-5.4, re=medium, mt=6)",1,capsule-9026204
+ac1c8a0b-7a67-4a41-a9dd-d1b4dfb63767,"Codex Agent (gpt-5.4, re=medium, mt=6)",1,capsule-8610546
+97def35c-ec17-40f9-b798-2c2eef351a44,"Codex Agent (gpt-5.4, re=medium, mt=6)",1,capsule-8467067
+4aae7ef2-f597-4840-afe8-3f2f0eac2822,"Codex Agent (gpt-5.4, re=medium, mt=6)",1,capsule-8353473
+4f27d979-3c72-4bbf-8d7b-eb3520da9fab,"Codex Agent (gpt-5.4, re=medium, mt=6)",1,capsule-8185407
+1b0a2554-98c9-4d2f-b5f6-9dfb3d28ce77,"Codex Agent (gpt-5, re=medium)",1,capsule-8353473
+5002fbe2-f885-4d63-958f-6ba68d9147fb,"Codex Agent (gpt-5.4, re=medium, mt=6)",1,capsule-6724161
+c753d5ef-0947-47c4-b97e-893aada9daa5,"Codex Agent (gpt-5.4, re=medium, mt=6)",1,capsule-6562149
+567b4080-557a-4097-a327-7ee95bb0a5d0,"Codex Agent (gpt-5.4, re=medium, mt=6)",1,capsule-5360076
+d4b0601a-fe00-4eaf-8a5b-7e39f7ab846e,"Codex Agent (gpt-5, re=medium)",1,capsule-8185407
+abff46ba-18dc-495f-987f-7a334689d968,"Codex Agent (gpt-5.4, re=medium, mt=6)",1,capsule-5007288
+347e3ff9-cda8-45b3-b7e8-4e3096770808,"Codex Agent (gpt-5.4, re=medium, mt=6)",1,capsule-4407237
+a461327e-cd03-4fce-a6fc-6d1bda8910e5,"Codex Agent (gpt-5.4, re=medium, mt=6)",1,capsule-4320893
+e8c211d5-87c2-4929-8361-7b9002ed9a92,"Codex Agent (gpt-5.4, re=medium, mt=6)",1,capsule-3990498
+00bf2a6c-774e-4fe0-b8f5-5a6aad4854d5,"Codex Agent (gpt-5.4, re=medium, mt=6)",1,capsule-2675546
+88b2d04f-7989-4141-9b2a-d1b9ba9950c0,"Codex Agent (gpt-5.4, re=medium, mt=6)",1,capsule-2151475
+f11180ba-9951-4f89-9120-dc7a3e254e1b,"Codex Agent (gpt-5.4, re=medium, mt=6)",1,capsule-0811394
+50c3579f-d8ce-40c9-8200-f74f3d0095ff,"Codex Agent (gpt-5, re=medium)",1,capsule-6724161
+8d963db8-66c1-4db7-8ada-b86fc104bc87,"Codex Agent (gpt-5.4, re=medium, mt=3)",1,capsule-9419423
+8fa81ff0-a128-4689-b8fe-7337ee23efe9,"Codex Agent (gpt-5.4, re=medium, mt=3)",1,capsule-9026204
+b028596a-3bbf-4dc1-b7e0-fdb3596627eb,"Codex Agent (gpt-5.4, re=medium, mt=3)",1,capsule-8610546
+57ef99a8-d381-4384-9069-c86dc5867868,"Codex Agent (gpt-5.4, re=medium, mt=3)",1,capsule-8467067
+66db9fa1-c194-41e3-8a69-34b39fb35efc,"Codex Agent (gpt-5.4, re=medium, mt=3)",1,capsule-8353473
+ddff9abb-e6cb-41d5-bfcd-9e822ab1a78a,"Codex Agent (gpt-5.4, re=medium, mt=3)",1,capsule-8185407
+19bb095a-8da0-45dc-96e5-1a86ba1e5c36,"Codex Agent (gpt-5, re=medium)",1,capsule-6562149
+5bc30c77-307c-4fb2-bf5b-738d4c5a9eae,"Codex Agent (gpt-5.4, re=medium, mt=3)",1,capsule-6724161
+1aa86be5-20e2-4160-9817-f0916573e5f2,"Codex Agent (gpt-5.4, re=medium, mt=3)",1,capsule-6562149
+0184d0bf-f992-4b00-af2f-df9c5fe80314,"Codex Agent (gpt-5.4, re=medium, mt=3)",1,capsule-5360076
+9fa29d5f-fcef-4081-b034-44b760980d21,"Codex Agent (gpt-5, re=medium)",1,capsule-5360076
+2bfc2880-9095-4095-b7e2-2cd02d1af0af,"Codex Agent (gpt-5.4, re=medium, mt=3)",1,capsule-5007288
+2a8378dc-9ba4-4535-8f5d-930420c40316,"Codex Agent (gpt-5.4, re=medium, mt=3)",1,capsule-4407237
+86ab7f2a-a989-42fc-83d3-9a130e16274f,"Codex Agent (gpt-5.4, re=medium, mt=3)",1,capsule-4320893
+bee164aa-f99f-4061-ac05-d6f3889839de,"Codex Agent (gpt-5.4, re=medium, mt=3)",1,capsule-3990498
+2a595d37-f8a5-4fd0-af2c-a2e00c3c25ea,"Codex Agent (gpt-5.4, re=medium, mt=3)",1,capsule-2675546
+63c601c3-3b75-4b52-9994-5ced4c796c9a,"Codex Agent (gpt-5.4, re=medium, mt=3)",1,capsule-2151475
+6aeced46-730f-442c-bee0-9dfbe9d05ec7,"Codex Agent (gpt-5.4, re=medium, mt=3)",1,capsule-0811394
+df9cd571-ee1c-4f2c-a583-a89666806159,"Codex Agent (gpt-5.4, re=medium, mt=3)",1,capsule-0571975
+ea3c961d-501f-4e30-b5b2-c5b58c083c8f,"Codex Agent (gpt-5.4, re=medium, mt=1)",1,capsule-9419423
+e618947e-e388-45a6-9ff1-02c117d949b6,"Codex Agent (gpt-5.4, re=medium, mt=1)",1,capsule-9026204
+32345cbd-72df-4c9f-9053-e6057916866c,"Codex Agent (gpt-5.4, re=medium, mt=1)",1,capsule-8610546
+9f4c24b9-dc5f-4753-a29d-703f8e20d35c,"Codex Agent (gpt-5.4, re=medium, mt=1)",1,capsule-8467067
+037b036a-ab67-446f-9288-a25943cd1cdd,"Codex Agent (gpt-5.4, re=medium, mt=1)",1,capsule-8353473
+a1fad3dc-5fc1-4acd-82bb-c6d1ef4016e8,"Codex Agent (gpt-5.4, re=medium, mt=1)",1,capsule-8185407
+68436967-be7b-4442-ad4b-a23c294d9aa3,"Codex Agent (gpt-5, re=medium)",1,capsule-5172670
+cae4221b-4703-41c7-a4ba-2bfdfa1b87e6,"Codex Agent (gpt-5.4, re=medium, mt=1)",1,capsule-6724161
+8f3a3507-1ed0-42a7-97ce-b486ff7c44cf,"Codex Agent (gpt-5.4, re=medium, mt=1)",1,capsule-6562149
+167015e3-c861-4103-9a80-702f7c0c4de2,"Codex Agent (gpt-5.4, re=medium, mt=1)",1,capsule-5360076
+d270346b-290f-42a9-aa41-618cf9f46c90,"Codex Agent (gpt-5.4, re=medium, mt=1)",1,capsule-5172670
+75cd952c-7502-48ec-acae-81f3ef154d0c,"Codex Agent (gpt-5.4, re=medium, mt=1)",1,capsule-5007288
+76212b3b-c8ed-453e-b02a-d250acf71d2d,"Codex Agent (gpt-5.4, re=medium, mt=1)",1,capsule-4407237
+4bb82015-5ae3-4287-aa3b-934de8899a06,"Codex Agent (gpt-5.4, re=medium, mt=1)",1,capsule-4320893
+d7db1079-1ec1-4ce8-b35d-ee32403f80f5,"Codex Agent (gpt-5.4, re=medium, mt=1)",1,capsule-3990498
+b284d49e-1ee3-4c48-90a9-a839e899d4be,"Codex Agent (gpt-5.4, re=medium, mt=1)",1,capsule-2675546
+ca734386-b95a-44d9-9bfe-c6005fc5154e,"Codex Agent (gpt-5.4, re=medium, mt=1)",1,capsule-2151475
+c32f9142-1751-414e-aecf-b9004c5d9895,"Codex Agent (gpt-5.4, re=medium, mt=1)",1,capsule-0811394
+9ae29698-390f-4782-8a50-81d8879a4ae6,"Codex Agent (gpt-5.4, re=medium, mt=1)",1,capsule-0571975
+23ad7371-4c91-4ab2-bb36-07462ff377b9,"Codex Agent (gpt-5.4, re=medium)",1,capsule-9419423
+fa783572-033e-47dc-87d3-ac7bb1bc5c6f,"Codex Agent (gpt-5.4, re=medium)",1,capsule-9026204
+83312485-3d92-428e-bfff-bb3381823017,"Codex Agent (gpt-5.4, re=medium)",1,capsule-8610546
+2157fb01-3705-424f-888a-4eff961fcc27,"Codex Agent (gpt-5.4, re=medium)",1,capsule-8467067
+4f98c2e1-4404-4308-be9c-00e19f7769ca,"Codex Agent (gpt-5.4, re=medium)",1,capsule-8353473
+9f41b396-6800-4a05-83fb-e00fc18cc82e,"Codex Agent (gpt-5.4, re=medium)",1,capsule-8185407
+7579e29d-62d0-4fc3-9512-b669ff4c97af,"Codex Agent (gpt-5.4, re=medium)",1,capsule-7350043
+1fa098a6-2985-41f3-a192-ed33d09c5c36,"Codex Agent (gpt-5.4, re=medium)",1,capsule-6724161
+46a87bae-b0d5-4013-bd0e-0e21f624d2ae,"Codex Agent (gpt-5.4, re=medium)",1,capsule-6562149
+24ff6366-e58b-4308-8675-0770be5fe549,"Codex Agent (gpt-5.4, re=medium)",1,capsule-5360076
+3fe19fee-1dd9-482e-814f-ff6ac1e4a410,"Codex Agent (gpt-5, re=medium)",1,capsule-5007288
+78a0a5ee-0bf0-4d8b-a58f-a22f3447732b,"Codex Agent (gpt-5.4, re=medium)",1,capsule-5007288
+20307e69-5682-4698-a71d-ab7b73fd72b6,"Codex Agent (gpt-5.4, re=medium)",1,capsule-4407237
+48609312-91cf-4c2c-b627-c9f96b8e3b48,"Codex Agent (gpt-5.4, re=medium)",1,capsule-4320893
+937779db-5aba-4f14-8f1a-6cf72eca1ede,"Codex Agent (gpt-5.4, re=medium)",1,capsule-3990498
+f92042a2-0a76-45aa-a4e2-41089c574b94,"Codex Agent (gpt-5.4, re=medium)",1,capsule-2675546
+ee251393-21f7-4674-a72c-f372bcf4b8df,"Codex Agent (gpt-5.4, re=medium)",1,capsule-2151475
+6217c341-4cf4-449a-815b-922b2fee4660,"Codex Agent (gpt-5.4, re=medium)",1,capsule-0811394
+ffa0501c-6592-4e5e-93ea-7a663aeeadd6,"Codex Agent (gpt-5, re=medium)",1,capsule-4407237
+125fd7fe-9567-443a-864d-5965e416f672,"Codex Agent (gpt-5.4, re=low)",1,capsule-9419423
+6e824b79-7932-45ca-9c28-4a0958609102,"Codex Agent (gpt-5.4, re=low)",1,capsule-9026204
+b2e37299-70e4-4578-8c39-621fc6f609c2,"Codex Agent (gpt-5.4, re=low)",1,capsule-8610546
+06186e75-fd39-42c6-afe2-f2cbd182b7a8,"Codex Agent (gpt-5.4, re=low)",1,capsule-8467067
+94228830-4f93-4b71-bc8f-a09a7843ed05,"Codex Agent (gpt-5.4, re=low)",1,capsule-8353473
+8fb5dc78-034e-4e6a-8861-29dc07ed4e24,"Codex Agent (gpt-5.4, re=low)",1,capsule-8185407
+07ef809d-29c5-4e0a-9df1-89764311d072,"Codex Agent (gpt-5, re=medium)",1,capsule-4320893
+f139c0c5-bb6d-4c98-87b8-f015455a3a62,"Codex Agent (gpt-5.4, re=low)",1,capsule-6724161
+1d451044-a60b-4ae6-bfab-82e5cc087d94,"Codex Agent (gpt-5, re=medium)",1,capsule-3990498
+c9a76679-ccf9-49e1-91f1-cff3e6694346,"Codex Agent (gpt-5.4, re=low)",1,capsule-5360076
+27ee9cec-c5de-4327-9710-5073ca441eb0,"Codex Agent (gpt-5, re=medium)",1,capsule-2151475
+dd8aec3c-dfad-445c-8e44-99a87347eaa9,"Codex Agent (gpt-5.4, re=low)",1,capsule-5007288
+cccd1de2-09ee-4eb3-b6ff-e20f0338d4a1,"Codex Agent (gpt-5.4, re=low)",1,capsule-4407237
+4fa7e23d-9b45-4057-9cef-5ac220f23ded,"Codex Agent (gpt-5.4, re=low)",1,capsule-4320893
+4dfa3fe6-7056-4fd2-8525-b87d430500ff,"Codex Agent (gpt-5.4, re=low)",1,capsule-3990498
+d287ea96-517a-4188-81c4-e275f78f449b,"Codex Agent (gpt-5.4, re=low)",1,capsule-2675546
+fdf6fb63-46aa-4684-9179-c0ef81881c64,"Codex Agent (gpt-5.4, re=low)",1,capsule-2151475
+b4d6e4d5-c781-41f7-83d3-c857b09ba37a,"Codex Agent (gpt-5.4, re=low)",1,capsule-0811394
+63d6997e-4665-427d-95fa-bbf7c56e565b,"Codex Agent (gpt-5.4, re=low)",1,capsule-0571975
+ba71cd0e-d78d-47ec-8db4-6b7fc91b6f66,"Codex Agent (gpt-5.4, re=high)",1,capsule-9419423
+d5dc9c1a-78ed-4505-b41a-1abea78e81d4,"Codex Agent (gpt-5.4, re=high)",1,capsule-9026204
+77e99ea5-42ad-46f0-909b-c44297dbb5bb,"Codex Agent (gpt-5.4, re=high)",1,capsule-8610546
+3afa04f5-0252-485b-9953-897c64bb8c93,"Codex Agent (gpt-5.4, re=high)",1,capsule-8467067
+5b29df52-e6e8-4ce9-8d91-dd0244db49aa,"Codex Agent (gpt-5.4, re=high)",1,capsule-8353473
+5dfb17ec-a981-4936-aa98-d85da40f92f6,"Codex Agent (gpt-5.4, re=high)",1,capsule-8185407
+c8c80f3e-a27d-41db-bac5-a623419ccebb,"Codex Agent (gpt-5, re=medium)",1,capsule-0811394
+09088609-d362-4947-baec-bbc3648ce006,"Codex Agent (gpt-5.4, re=high)",1,capsule-6724161
+4aa560e7-c6c0-4779-ab40-48b8bd23853c,"Codex Agent (gpt-5.4, re=high)",1,capsule-6562149
+bf132824-1da2-48e8-b24a-c4058510fd5e,"Codex Agent (gpt-5.4, re=high)",1,capsule-5360076
+38fc9f54-87d2-4b87-909b-e4c817c6eef1,"Codex Agent (gpt-5, re=medium)",1,capsule-0571975
+dbd335aa-6ebe-4c91-a2e9-58eb3c9589bb,"Codex Agent (gpt-5.4, re=high)",1,capsule-5007288
+775069e5-c0b9-4e73-8cc0-b33f420646ef,"Codex Agent (gpt-5.4, re=high)",1,capsule-4407237
+93d56ec9-479a-4f76-a675-5aea1d2ebf5e,"Codex Agent (gpt-5.4, re=high)",1,capsule-4320893
+2beb1cca-80a3-4476-98c7-1dbd4bb30066,"Codex Agent (gpt-5.4, re=high)",1,capsule-3990498
+fe0ac6a3-8eef-498a-ac69-0f9233c2f833,"Codex Agent (gpt-5.4, re=high)",1,capsule-2675546
+e0e1e25c-65a7-4066-863b-b01484d64639,"Codex Agent (gpt-5.4, re=high)",1,capsule-2151475
+c3c468ba-6bc9-4bd3-80ef-bac47415c88e,"Codex Agent (gpt-5.4, re=high)",1,capsule-0811394
+29c8ef96-f6c4-47cc-b235-e3642877bebe,"Codex Agent (gpt-5.4, re=high)",1,capsule-0571975
+7632286b-fd5d-415a-8de4-d0f2c74e9f6e,"Codex Agent (gpt-5.3-codex, re=medium)",1,capsule-9419423
+e7fe25f0-354a-41ea-9a4c-646ef0ba4349,"Codex Agent (gpt-5.3-codex, re=medium)",1,capsule-9026204
+04489c2f-9a0e-4445-baa4-04062cda39bd,"Codex Agent (gpt-5.3-codex, re=medium)",1,capsule-8610546
+38497d4a-48ba-4925-8ff5-e865d6bcfc2e,"Codex Agent (gpt-5.3-codex, re=medium)",1,capsule-8467067
+37e34a9d-abb2-4c51-9689-6d5b6d8e7ffd,"Codex Agent (gpt-5.3-codex, re=medium)",1,capsule-8353473
+874b284a-428f-4069-8760-05d952d577eb,"Codex Agent (gpt-5.3-codex, re=medium)",1,capsule-8185407
+0845bba5-5cd6-4d05-9b44-b6fca603df62,"Codex Agent (gpt-5.3-codex, re=medium)",1,capsule-7350043
+6059929b-512c-4569-80f4-1610286fbaa7,"Codex Agent (gpt-5.3-codex, re=medium)",1,capsule-6724161
+3413119d-86f0-43d9-ae2e-658f08d5bfe8,"Codex Agent (gpt-5.4, re=xhigh)",1,capsule-9419423
+9585f074-1a12-4872-8514-899a844bd231,"Codex Agent (gpt-5.3-codex, re=medium)",1,capsule-5360076
+6d90f208-9793-4965-ab6d-b66706d1c95d,"Codex Agent (gpt-5.3-codex, re=medium)",1,capsule-5172670
+4a15dab3-f933-407f-b88b-2c6851116fa3,"Codex Agent (gpt-5.3-codex, re=medium)",1,capsule-5007288
+821269a1-2369-4d22-ac29-f69bd949c99d,"Codex Agent (gpt-5.3-codex, re=medium)",1,capsule-4407237
+9215e120-08a8-4288-8e0f-a817e0f50c2f,"Codex Agent (gpt-5.3-codex, re=medium)",1,capsule-4320893
+7b3b8774-0382-4193-9e78-6f0083018a86,"Codex Agent (gpt-5.3-codex, re=medium)",1,capsule-3990498
+d5a20ed3-2b70-401e-9054-048e20f9f39a,"Codex Agent (gpt-5.3-codex, re=medium)",1,capsule-2675546
+658ce4a1-808a-4020-b6e9-8372c04faab7,"Codex Agent (gpt-5.3-codex, re=medium)",1,capsule-2151475
+9bd28423-b019-41da-ae33-7d612cf30a9c,"Codex Agent (gpt-5.3-codex, re=medium)",1,capsule-0811394
+a5d984b6-5f05-4187-8f0f-9aeb625dc741,"Codex Agent (gpt-5.4, re=xhigh)",1,capsule-9026204
+477f7ab8-4859-49da-a2e1-739d6c0184ff,"Codex Agent (gpt-5.2, re=medium)",1,capsule-9419423
+7ae04fb3-be86-476c-9821-6a64b623e417,"Codex Agent (gpt-5.2, re=medium)",1,capsule-9026204
+f5ed3b40-818c-4726-a3b8-6e5f7354105a,"Codex Agent (gpt-5.2, re=medium)",1,capsule-8610546
+ded20c53-3cde-4b57-9c1d-6a5573d83247,"Codex Agent (gpt-5.2, re=medium)",1,capsule-8467067
+e380d1d6-78c4-4ebb-9c01-4fd59005946e,"Codex Agent (gpt-5.2, re=medium)",1,capsule-8353473
+01fe05ea-a85d-4cf8-ad61-43e7532246e0,"Codex Agent (gpt-5.2, re=medium)",1,capsule-8185407
+fe5f273e-2b3e-43d7-a491-fa843c375315,"Codex Agent (gpt-5.2, re=medium)",1,capsule-7350043
+29b2d791-06f1-489e-8f9b-8a8a8062634f,"Codex Agent (gpt-5.2, re=medium)",1,capsule-6724161
+23318f0b-3006-40af-b47d-cd5f5e89113b,"Codex Agent (gpt-5.2, re=medium)",1,capsule-6562149
+aea697c7-915d-4fc0-b744-eefaa1108d0f,"Codex Agent (gpt-5.2, re=medium)",1,capsule-5360076
+ecf23e46-e130-45fc-9231-de45b56d333f,"Codex Agent (gpt-5.2, re=medium)",1,capsule-5172670
+afaf7c55-ef5d-456a-af65-d723c51da4e1,"Codex Agent (gpt-5.2, re=medium)",1,capsule-5007288
+40d226a7-b1e3-4740-ba34-782581fc0d91,"Codex Agent (gpt-5.2, re=medium)",1,capsule-4407237
+cf0e9615-5f59-4434-a022-8b8ef437543e,"Codex Agent (gpt-5.2, re=medium)",1,capsule-4320893
+7b719d55-31f6-42ff-9cba-f9b2a47f097a,"Codex Agent (gpt-5.2, re=medium)",1,capsule-3990498
+104e393a-6931-4d6c-a3b5-eaf29ba9f8d7,"Codex Agent (gpt-5.2, re=medium)",1,capsule-2675546
+b8fde94b-85ab-4731-bafa-a0250887c096,"Codex Agent (gpt-5.2, re=medium)",1,capsule-2151475
+4689ac05-e522-4c40-bb6a-3c92d0edbc01,"Codex Agent (gpt-5.2, re=medium)",1,capsule-0811394
+0163ffe1-fca8-4d48-9ec0-e6958d739337,"Codex Agent (gpt-5.2, re=medium)",1,capsule-0571975
+ad243ac3-4d6a-4f8e-b609-68dad05c68e6,"Codex Agent (gpt-5.1, re=medium)",1,capsule-9419423
+b5b6b9e6-dfe0-45c1-831b-36efd6c2684f,"Codex Agent (gpt-5.1, re=medium)",1,capsule-9026204
+5aae798c-45ce-41dc-bb4b-0805da9c79de,"Codex Agent (gpt-5.1, re=medium)",1,capsule-8610546
+405efcdc-830f-470a-a0de-bda12d24a51b,"Codex Agent (gpt-5.1, re=medium)",1,capsule-8467067
+98dbbdea-7f1d-4a52-96a6-0d7e23c0dba8,"Codex Agent (gpt-5.1, re=medium)",1,capsule-8353473
+54b4e638-0ffb-4545-871c-5b53a4a5044d,"Codex Agent (gpt-5.1, re=medium)",1,capsule-8185407
+85a18447-3859-4f11-ae60-9b5fd23f412d,"Codex Agent (gpt-5.1, re=medium)",1,capsule-6724161
+a8dd39d6-3cc5-42a6-b8a5-071772330a12,"Codex Agent (gpt-5.1, re=medium)",1,capsule-6562149
+7ce066de-3de3-44fd-9f2a-8a1505a65c45,"Codex Agent (gpt-5.1, re=medium)",1,capsule-5360076
+ad9dd40d-964a-4014-832a-d866f272de45,"Codex Agent (gpt-5.1, re=medium)",1,capsule-5172670
+f81c5fa4-48a8-46dc-9609-e4bb6876c311,"Codex Agent (gpt-5.1, re=medium)",1,capsule-5007288
+a07ab580-a5c0-48c4-9494-e3e3117df691,"Codex Agent (gpt-5.1, re=medium)",1,capsule-4407237
+303d8cf5-d35f-4877-bb12-dfe7f685a57a,"Codex Agent (gpt-5.1, re=medium)",1,capsule-4320893
+489efa05-e599-49f4-94b2-c7aa56f2c700,"Codex Agent (gpt-5.1, re=medium)",1,capsule-3990498
+16409faf-e52d-4f2b-92fe-ded35df7a444,"Codex Agent (gpt-5.1, re=medium)",1,capsule-2675546
+4bfd476f-0efa-4727-8025-447ea7f8d07d,"Codex Agent (gpt-5.1, re=medium)",1,capsule-2151475
+923d31a8-93ac-4bad-b1fd-f717cc9e7bb3,"Codex Agent (gpt-5.1, re=medium)",1,capsule-0811394
+7473fe3e-6950-4e9d-9d7e-7eae021f144f,"Codex Agent (gpt-5.1, re=medium)",1,capsule-0571975

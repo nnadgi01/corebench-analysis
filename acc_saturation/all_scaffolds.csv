@@ -1,0 +1,781 @@
+agent_run_id,metadata.capsule_id,metadata.scaffold,metadata.scores.accuracy
+1b79aefc-f802-468a-a007-3e8d3160b16e,capsule-5136217,Open Code (anthropic/claude-opus-4-6),0
+663ca491-a682-411f-8a28-35395a748ef6,capsule-9477017,"Codex Agent (gpt-5.3-codex, re=medium)",0
+4a4ee06a-c077-48e4-9213-ee92a8488cc4,capsule-3821950,Open Code (anthropic/claude-opus-4-6),0
+bb486cd9-3446-4440-bce7-88eb249fb863,capsule-3593259,Open Code (anthropic/claude-opus-4-6),0
+fcc030f4-5848-4973-a902-507ba81f6e91,capsule-2804717,Open Code (anthropic/claude-opus-4-6),0
+0762930f-c10d-449f-8d9f-644fdcc5c23f,capsule-0152700,Open Code (anthropic/claude-opus-4-6),0
+e9c87b59-4290-45a4-a484-aa4c3260364d,capsule-9477017,"Open Code (anthropic/claude-opus-4-5, think=10000)",0
+fb9902fb-2936-4946-a52b-7d9bf68967b7,capsule-8807709,"Open Code (anthropic/claude-opus-4-5, think=10000)",0
+e95ce5ca-b3d8-4674-ad03-f826d19f1e6e,capsule-5136217,"Open Code (anthropic/claude-opus-4-5, think=10000)",0
+2fa665c5-ac54-4423-896c-3cdb459c6a9e,capsule-3821950,"Open Code (anthropic/claude-opus-4-5, think=10000)",0
+f5deaed0-94a9-4c84-ab16-2a969e570ed2,capsule-3762736,"Open Code (anthropic/claude-opus-4-5, think=10000)",0
+5b3f2bc8-130b-4810-b623-c5bdc78bee1e,capsule-3593259,"Open Code (anthropic/claude-opus-4-5, think=10000)",0
+06cdc64f-47d8-4c7c-b99b-0fdf4cfb41ac,capsule-2804717,"Open Code (anthropic/claude-opus-4-5, think=10000)",0
+12dc1a5d-568c-48fa-8056-51047ac79741,capsule-9832712,"Core Agent (gpt-5.4, steps=200)",0
+f0317a1a-a5b5-4967-80c0-e4b7f9fdba86,capsule-9294029,"Core Agent (gpt-5.4, steps=200)",0
+1bd824cf-02fb-4c89-ad83-2c3bfb375dcd,capsule-9477017,"Core Agent (gpt-5.4, steps=200)",0
+29800aff-d2cd-4445-abc7-60ffb1ba78ea,capsule-7800694,"Core Agent (gpt-5.4, steps=200)",0
+cb669b4f-3110-4484-85fc-e233d98b4cfb,capsule-7716865,"Core Agent (gpt-5.4, steps=200)",0
+b1837cee-c61a-422e-b821-dd0b077dd075,capsule-4252248,"Codex Agent (gpt-5.4, re=high)",0
+fb2ef567-c4bd-4988-85ee-952673264f7e,capsule-5136217,"Core Agent (gpt-5.4, steps=200)",0
+c2c8ca72-cc25-4857-b7ab-05f3b3df7cf1,capsule-4933686,"Core Agent (gpt-5.4, steps=200)",0
+5bccd973-12ce-418d-899e-9bad76304e41,capsule-4252248,Open Code (anthropic/claude-opus-4-6),0
+378b4673-a34e-4756-89a8-f2b2b41f0b11,capsule-4252248,"Core Agent (gpt-5.4, steps=200)",0
+4a2336fe-628e-40f4-8505-f49c7a898fab,capsule-3821950,"Core Agent (gpt-5.4, steps=200)",0
+c80e34a6-c159-4817-a5ef-2d9be497bb90,capsule-3762736,"Core Agent (gpt-5.4, steps=200)",0
+2a3633c5-5db1-43ae-9e82-a29e43a0c39b,capsule-3593259,"Core Agent (gpt-5.4, steps=200)",0
+2b797733-a505-402e-9cdd-a7cbd9cfdd2b,capsule-3449234,"Core Agent (gpt-5.4, steps=200)",0
+f9e45178-15d9-4dea-99b8-82506a92fde6,capsule-2345790,"Core Agent (gpt-5.4, steps=200)",0
+ac7e497a-774c-4f22-85b1-abb7c83d9618,capsule-2242462,"Core Agent (gpt-5.4, steps=200)",0
+d0d3269c-f945-4404-9e3d-9b892c45e900,capsule-1624349,"Core Agent (gpt-5.4, steps=200)",0
+c85bdebc-51d0-4ba8-aef2-f608b9981b17,capsule-1394704,"Core Agent (gpt-5.4, steps=200)",0
+2739a556-b4b4-4c41-9bfd-b3f2712bf4df,capsule-1175539,"Core Agent (gpt-5.4, steps=200)",0
+d3bb4949-1d35-4af5-b31a-fec4facab89c,capsule-0851068,"Core Agent (gpt-5.4, steps=200)",0
+e8e7fe97-d25d-4e18-ae54-94990d8ad8e4,capsule-4252248,"Core Agent (anthropic/claude-opus-4-6, steps=200)",0
+f1ae1dad-236c-420d-8ba7-b09d1b9b305f,capsule-4252248,"Core Agent (anthropic/claude-opus-4-5, steps=200)",0
+50d368ea-acd4-47e9-a984-b82661a398d8,capsule-3821950,"Core Agent (anthropic/claude-opus-4-5, steps=200)",0
+8d4905f9-009e-472a-9ce5-10227283c9a1,capsule-3639589,"Core Agent (anthropic/claude-opus-4-5, steps=200)",0
+856e1ed0-2240-4110-9450-b478a07191c0,capsule-3762736,"Core Agent (anthropic/claude-opus-4-5, steps=200)",0
+9fc353b4-38ee-4a80-8106-0f0422e6fa2f,capsule-3301293,"Core Agent (anthropic/claude-opus-4-5, steps=200)",0
+dd237094-4261-4dad-8d45-46ad4d24608d,capsule-1624349,"Core Agent (anthropic/claude-opus-4-5, steps=200)",0
+6fa0a00a-e08b-4a73-ae54-204804fe5ba4,capsule-0851068,"Core Agent (anthropic/claude-opus-4-5, steps=200)",0
+34d3fb9e-02f1-451f-b516-d2b2de9cd20a,capsule-9294029,"Open Code (openai/gpt-5.4, re=high)",0
+35262e11-74a4-481d-a33e-becbbd78dfe8,capsule-9832712,"Codex Agent (gpt-5, re=medium)",0
+9a3bd4c5-427e-4c14-84b7-9bfcdace1127,capsule-9477017,"Codex Agent (gpt-5, re=medium)",0
+709390a8-4627-4699-88a4-2ad02be10a19,capsule-5507257,"Codex Agent (gpt-5, re=medium)",0
+ca3b58f8-9880-4668-836e-b78d1ef3961b,capsule-4252248,"Codex Agent (gpt-5, re=medium)",0
+7453f8c2-ffb7-447e-97dd-a4ce6bf0352a,capsule-3449234,"Codex Agent (gpt-5, re=medium)",0
+5d93efc1-0dd2-4a13-930c-b70a3892e9a1,capsule-3418007,"Codex Agent (gpt-5, re=medium)",0
+c5afc548-9626-4e10-b58b-49b8aaadf789,capsule-4252248,"Codex Agent (gpt-5.4, re=xhigh)",0
+07343aaf-ed3b-46a4-ad75-c92a226e24f4,capsule-9477017,"Codex Agent (gpt-5.4, re=medium, mt=9)",0
+cffa9d1f-7470-438b-8379-8e9d47d62517,capsule-9477017,"Codex Agent (gpt-5.4, re=medium, mt=6)",0
+4197b961-e6c3-4e8d-9397-7387d21ca726,capsule-8807709,"Codex Agent (gpt-5.4, re=medium, mt=6)",0
+b86ed0fc-01fb-426b-857e-b616cf95e5be,capsule-4252248,"Codex Agent (gpt-5.4, re=medium, mt=6)",0
+40f80d02-9db9-4242-be34-412848773728,capsule-5136217,"Open Code (openai/gpt-5.4, re=high)",0
+584f722f-644b-429c-a74f-85bd02cd1705,capsule-4252248,"Codex Agent (gpt-5.4, re=medium, mt=3)",0
+e0dace6d-9fcf-4f9d-bdb1-e1566399f81f,capsule-9477017,"Codex Agent (gpt-5.4, re=medium, mt=1)",0
+1f4ded06-195b-428c-a6c0-8e187cda536f,capsule-4252248,"Codex Agent (gpt-5.4, re=medium, mt=1)",0
+30a73c32-d093-4064-b5ec-dc8c0f898c47,capsule-9477017,"Codex Agent (gpt-5.4, re=medium)",0
+1aabc86f-c2fc-47dd-b4a2-e6a4282a4eda,capsule-4252248,"Codex Agent (gpt-5.4, re=medium)",0
+3307b5ee-e8c8-4cff-8e26-ce0844f77331,capsule-9477017,"Codex Agent (gpt-5.4, re=low)",0
+5bbdd735-e391-4867-b85e-9e0ec086a0ec,capsule-3762736,"Open Code (openai/gpt-5.4, re=high)",0
+6c39fc85-f1fe-4f30-af76-c29f6febff57,capsule-3593259,"Open Code (openai/gpt-5.4, re=high)",0
+6cfca948-30b9-429b-8564-3a9102b132af,capsule-4252248,"Codex Agent (gpt-5.4, re=low)",0
+ab16a7c4-b681-4666-bcf7-4036f3d5bfc8,capsule-1394704,"Codex Agent (gpt-5.4, re=low)",0
+06c1d6ac-ca35-4d69-8c28-d8feb5ce8b24,capsule-8807709,Open Code (anthropic/claude-opus-4-6),0
+6f056147-0a0d-4cee-a5e7-ea2b1d029c25,capsule-2816027,"Open Code (openai/gpt-5.4, re=high)",0
+2d74dabc-ea44-4f51-9f05-ddc80f6176d3,capsule-9477017,"Codex Agent (gpt-5.2, re=medium)",0
+9c4d1ae5-64cf-4043-96ea-27bc54c09bca,capsule-8807709,"Codex Agent (gpt-5.2, re=medium)",0
+c2b5198d-f8f3-42f6-9b50-b1045bb061a6,capsule-9832712,"Codex Agent (gpt-5.1, re=medium)",0
+92642a69-f040-4438-829f-b345a333860d,capsule-4252248,"Codex Agent (gpt-5.1, re=medium)",0
+0690647a-08dd-4762-8c42-051ddbb619fe,capsule-3418007,"Codex Agent (gpt-5.1, re=medium)",0
+1b5d5a08-d731-47db-a1c4-b6dfe453972e,capsule-2804717,"Codex Agent (gpt-5.1, re=medium)",0
+35155904-fda9-480a-9309-1a696957fe62,capsule-0152700,"Codex Agent (gpt-5.1, re=medium)",0
+a38fa6f0-85c1-4e42-89b6-02af0bc7832d,capsule-9477017,Claude Code (anthropic/claude-opus-4-6),0
+95ebd35b-151c-4cfa-bd58-3afe75b13fb9,capsule-4252248,Claude Code (anthropic/claude-opus-4-6),0
+6fe24521-1bc7-4ee0-81b8-7d555466f9c2,capsule-2804717,Claude Code (anthropic/claude-opus-4-6),0
+819a6a84-56d2-4934-a070-d7caa111d817,capsule-0851068,Claude Code (anthropic/claude-opus-4-6),0
+c6c8127f-843b-457e-972e-8081a50b3581,capsule-0152700,"Open Code (openai/gpt-5.4, re=high)",0
+21e83666-5dd9-4ad6-91ab-8280466c3455,capsule-5136217,"Claude Code (anthropic/claude-opus-4-5, think=10000)",0
+7f1d6773-9e02-4135-8b33-6a9e663630c0,capsule-9477017,Open Code (anthropic/claude-opus-4-6),0
+19305489-c1a2-474e-97e3-bfe50bf37a82,capsule-4252248,"Claude Code (anthropic/claude-opus-4-5, think=10000)",0
+323034db-1674-49a6-a1f5-eb465112fea4,capsule-2804717,"Claude Code (anthropic/claude-opus-4-5, think=10000)",0
+71742361-6dc0-472b-8b39-dcfa45ee3b1d,capsule-0851068,"Claude Code (anthropic/claude-opus-4-5, think=10000)",0
+f2cd8b36-033e-40b6-bd8b-e2ae25ff6581,capsule-4671827,"Core Agent (gpt-5.4, steps=200)",0
+6f8b0902-c500-4de6-b5d6-9186855d16d8,capsule-9832712,"Codex Agent (gpt-5.4, re=high)",1
+b62192b3-b22a-409b-a71a-d82662b999ab,capsule-8412128,Open Code (anthropic/claude-opus-4-6),1
+a7c71e85-7813-4112-9408-e89f6072c383,capsule-7800694,Open Code (anthropic/claude-opus-4-6),1
+2f327a61-cb22-4b5a-8896-799a76f580fc,capsule-7716865,Open Code (anthropic/claude-opus-4-6),1
+dcb97ab9-a1af-42ec-8c22-a4c65054392c,capsule-7655932,Open Code (anthropic/claude-opus-4-6),1
+5852704e-c23b-4d59-909e-7b8949a54eb7,capsule-7186268,Open Code (anthropic/claude-opus-4-6),1
+b6c15842-dddb-4d9c-95f9-8c65946a8d4c,capsule-6295990,Open Code (anthropic/claude-opus-4-6),1
+0744be2d-529f-4841-a45a-9aa54c09b54d,capsule-6049678,Open Code (anthropic/claude-opus-4-6),1
+0e79bd85-b596-412d-bd1e-0b4d2bb0c96d,capsule-5507257,Open Code (anthropic/claude-opus-4-6),1
+f9597d2d-e40b-4bdd-b493-5e3267879bc4,capsule-4933686,Open Code (anthropic/claude-opus-4-6),1
+dbb40e41-ce34-4f3f-8737-abceb714b5a6,capsule-9477017,"Codex Agent (gpt-5.4, re=high)",1
+a3fc3e99-50bd-4672-a48c-624bd5d5e13f,capsule-4671827,Open Code (anthropic/claude-opus-4-6),1
+0eb41633-eef2-4881-9964-1592e702bd2e,capsule-4299879,Open Code (anthropic/claude-opus-4-6),1
+66e69848-bfcc-4548-aba6-ff9cf1a5cdd5,capsule-9294029,"Codex Agent (gpt-5.4, re=high)",1
+65ddfe61-d14b-4abb-9e1f-e52ec5001a41,capsule-9240688,"Codex Agent (gpt-5.4, re=high)",1
+eb82f11e-d1f2-48a3-aff9-362897f9da20,capsule-3639589,Open Code (anthropic/claude-opus-4-6),1
+0b1afca3-2d58-4ddc-9ff8-d93e7cf2e684,capsule-3762736,Open Code (anthropic/claude-opus-4-6),1
+b7fec945-a155-45d9-9f62-4db977d79430,capsule-9054015,"Codex Agent (gpt-5.4, re=high)",1
+5785af2b-c8c3-4456-a08b-5dcd7055889a,capsule-3449234,Open Code (anthropic/claude-opus-4-6),1
+4fc12bcb-6d57-4074-9071-1e5106d48d77,capsule-3418007,Open Code (anthropic/claude-opus-4-6),1
+d26d8132-00a0-4a3a-9537-e024c1ef1f92,capsule-3301293,Open Code (anthropic/claude-opus-4-6),1
+79a24a75-75e9-48ab-9d9c-3139b4c6e5e3,capsule-2816027,Open Code (anthropic/claude-opus-4-6),1
+c051bf6c-5c99-4b48-b98b-f79d3187a5a0,capsule-8807709,"Codex Agent (gpt-5.4, re=high)",1
+070d7a28-ee76-4217-86ad-591c1187ee81,capsule-2708693,Open Code (anthropic/claude-opus-4-6),1
+7dbab1ef-ba14-4362-935f-e3ac8a19d27e,capsule-2345790,Open Code (anthropic/claude-opus-4-6),1
+cbe3b3af-e2c5-403f-b9ea-80f762d9e42f,capsule-2242462,Open Code (anthropic/claude-opus-4-6),1
+e97614a3-af18-4e88-9e03-19da19dc77a8,capsule-1724988,Open Code (anthropic/claude-opus-4-6),1
+14477957-2074-4642-a8d5-d0152a341ee9,capsule-1624349,Open Code (anthropic/claude-opus-4-6),1
+bcb7f0b5-d5bc-441b-8002-675abd8c41ca,capsule-1175539,Open Code (anthropic/claude-opus-4-6),1
+35af748c-fe25-47a1-b238-662a59b59248,capsule-1394704,Open Code (anthropic/claude-opus-4-6),1
+d1e1e609-6013-4c5b-bec6-212d585bf6cb,capsule-0851068,Open Code (anthropic/claude-opus-4-6),1
+3d872127-0466-402a-8f63-99699c64eab3,capsule-0504157,Open Code (anthropic/claude-opus-4-6),1
+d34a25d3-4c95-4111-8b7e-a8659b2f9bcf,capsule-0201673,Open Code (anthropic/claude-opus-4-6),1
+28e44d0d-bf16-4d8c-a3a8-7f113186e8e7,capsule-8412128,"Codex Agent (gpt-5.4, re=high)",1
+29fa021f-a89a-4823-8d70-131ec0ef3819,capsule-9832712,"Open Code (anthropic/claude-opus-4-5, think=10000)",1
+fdaea91b-0cbf-456f-b55d-59c6b5e1454d,capsule-9294029,"Open Code (anthropic/claude-opus-4-5, think=10000)",1
+0dbd33f0-6b0d-4119-b1b6-7b24e2fd4bea,capsule-7800694,"Codex Agent (gpt-5.4, re=high)",1
+f2e1805f-5748-4846-9703-652f0eac8164,capsule-9240688,"Open Code (anthropic/claude-opus-4-5, think=10000)",1
+d70c63cb-a0ec-4ef9-80e3-bbdab5148cc1,capsule-9054015,"Open Code (anthropic/claude-opus-4-5, think=10000)",1
+e1fea3d0-a0c0-46dd-a76d-99e66d2c25e4,capsule-7716865,"Codex Agent (gpt-5.4, re=high)",1
+9dab8f52-79cd-4608-8a2d-fe09677b5be1,capsule-8412128,"Open Code (anthropic/claude-opus-4-5, think=10000)",1
+b8e904c9-7443-4e42-a86b-a288e918aed6,capsule-7800694,"Open Code (anthropic/claude-opus-4-5, think=10000)",1
+4d7b1faf-deb2-45ea-b29c-891271bce7fa,capsule-7655932,"Open Code (anthropic/claude-opus-4-5, think=10000)",1
+2dc0e520-9d86-40f0-a04d-d09c61d55aad,capsule-7716865,"Open Code (anthropic/claude-opus-4-5, think=10000)",1
+b9ae20bf-f53e-4af2-895c-c31049d42ced,capsule-7186268,"Open Code (anthropic/claude-opus-4-5, think=10000)",1
+ff0bf0fa-0201-4d35-8d58-6bb6635846d1,capsule-6295990,"Open Code (anthropic/claude-opus-4-5, think=10000)",1
+88cc4634-48db-4d3c-bcba-25757601643b,capsule-6049678,"Open Code (anthropic/claude-opus-4-5, think=10000)",1
+b6a6ae68-fcab-4bbc-ad72-db0f8371a2f9,capsule-5507257,"Open Code (anthropic/claude-opus-4-5, think=10000)",1
+9b8cc3d9-2540-41e2-b891-e613df881538,capsule-7655932,"Codex Agent (gpt-5.4, re=high)",1
+0623097d-73aa-436e-898e-fe5178b595b6,capsule-4933686,"Open Code (anthropic/claude-opus-4-5, think=10000)",1
+182e083c-0fcb-42fd-bb70-545651e6dca4,capsule-4671827,"Open Code (anthropic/claude-opus-4-5, think=10000)",1
+af0f7756-3d3d-457e-b2db-79ca8035a7f5,capsule-4299879,"Open Code (anthropic/claude-opus-4-5, think=10000)",1
+0348e023-99f5-4388-ad1c-0921de62e363,capsule-4252248,"Open Code (anthropic/claude-opus-4-5, think=10000)",1
+b49e1503-02be-40aa-9a97-c08e6dcefd69,capsule-7186268,"Codex Agent (gpt-5.4, re=high)",1
+72587187-b8e8-4874-92c2-ba5af4c5410a,capsule-6295990,"Codex Agent (gpt-5.4, re=high)",1
+b12949b4-2eb5-43e3-b879-44c9fbd2a8f7,capsule-3639589,"Open Code (anthropic/claude-opus-4-5, think=10000)",1
+c106442b-2fc7-4cf1-ab9d-5eae7a762c2b,capsule-6049678,"Codex Agent (gpt-5.4, re=high)",1
+e3ca2933-c4e3-4ae7-82bb-a85474565377,capsule-3449234,"Open Code (anthropic/claude-opus-4-5, think=10000)",1
+6f480d5f-7ec8-4529-ae91-9c49a77c1357,capsule-3418007,"Open Code (anthropic/claude-opus-4-5, think=10000)",1
+b6e1440e-d6c5-4197-94a8-0ce8dc2d9608,capsule-2816027,"Open Code (anthropic/claude-opus-4-5, think=10000)",1
+b2491e21-1306-473a-a127-7f1c98b8bd53,capsule-3301293,"Open Code (anthropic/claude-opus-4-5, think=10000)",1
+ece1d3cc-47c0-42ed-85ea-4da8c0a97f74,capsule-5507257,"Codex Agent (gpt-5.4, re=high)",1
+af920458-a754-4fd7-8f2b-78ab8d422b1d,capsule-2708693,"Open Code (anthropic/claude-opus-4-5, think=10000)",1
+a8b18e68-1a22-433b-865e-aad29f7eff48,capsule-2345790,"Open Code (anthropic/claude-opus-4-5, think=10000)",1
+66d6d247-7993-4f6a-8ae7-9f37150f6409,capsule-2242462,"Open Code (anthropic/claude-opus-4-5, think=10000)",1
+ba732c5c-890d-4689-96b3-b393590be552,capsule-1724988,"Open Code (anthropic/claude-opus-4-5, think=10000)",1
+33f90585-ed81-4f57-bef4-8770bf8fad31,capsule-1624349,"Open Code (anthropic/claude-opus-4-5, think=10000)",1
+6bfa53e8-d8d5-4fcd-9ff4-7b2d691072ab,capsule-1394704,"Open Code (anthropic/claude-opus-4-5, think=10000)",1
+0b5d6bac-708b-40c3-bcf4-c6972b00bc31,capsule-1175539,"Open Code (anthropic/claude-opus-4-5, think=10000)",1
+477de6dd-5c2b-4431-9c06-103bebf12ab6,capsule-0851068,"Open Code (anthropic/claude-opus-4-5, think=10000)",1
+66373279-8abd-440a-8097-208b493ab655,capsule-0504157,"Open Code (anthropic/claude-opus-4-5, think=10000)",1
+f269c7dd-0654-41e7-9970-4090d6faec8c,capsule-0201673,"Open Code (anthropic/claude-opus-4-5, think=10000)",1
+0d11ab40-d428-456b-a039-f32c28901d6c,capsule-0152700,"Open Code (anthropic/claude-opus-4-5, think=10000)",1
+2f9a5c63-8c1e-43e6-b43f-44c6ec21afd3,capsule-5136217,"Codex Agent (gpt-5.4, re=high)",1
+5df4f458-0202-4d9c-ac72-f7d917c630d4,capsule-4933686,"Codex Agent (gpt-5.4, re=high)",1
+b9a53888-9d36-4345-98df-9891b7246338,capsule-4671827,"Codex Agent (gpt-5.4, re=high)",1
+ca1967bc-225a-4e24-a1cd-f07787827e53,capsule-9240688,"Core Agent (gpt-5.4, steps=200)",1
+fd246303-bc07-4fd4-9d19-cf2311149cbf,capsule-9054015,"Core Agent (gpt-5.4, steps=200)",1
+8e08e75e-23ab-4bb9-a2b8-844cb1625c3e,capsule-8807709,"Core Agent (gpt-5.4, steps=200)",1
+4afccb64-95f8-4010-b47d-ed20cde5afc7,capsule-8412128,"Core Agent (gpt-5.4, steps=200)",1
+261d4c0e-d735-45c5-8393-e8d52a10840c,capsule-4299879,"Codex Agent (gpt-5.4, re=high)",1
+d6d55cd1-da4b-4c21-90e9-cffaa13a5cf5,capsule-3821950,"Codex Agent (gpt-5.4, re=high)",1
+342e6bca-40d7-4c1a-89c3-3f7edd51337c,capsule-7655932,"Core Agent (gpt-5.4, steps=200)",1
+87c815c9-f2e8-49a0-b451-bcd835e380e6,capsule-7186268,"Core Agent (gpt-5.4, steps=200)",1
+f2396067-99f7-48e5-bd61-0c77a157555e,capsule-6049678,"Core Agent (gpt-5.4, steps=200)",1
+680a27c6-9af8-462f-a31c-5f153076f7ab,capsule-6295990,"Core Agent (gpt-5.4, steps=200)",1
+0eda4e23-32f1-40ae-b35b-b2cac374cae0,capsule-5507257,"Core Agent (gpt-5.4, steps=200)",1
+137efa50-b530-4f53-8784-32e42721b6fa,capsule-3762736,"Codex Agent (gpt-5.4, re=high)",1
+a1fcfa6e-339d-435d-bbe0-3006eff90168,capsule-3639589,"Codex Agent (gpt-5.4, re=high)",1
+65927608-0fc8-43ab-9166-29755c7a5f5b,capsule-3593259,"Codex Agent (gpt-5.4, re=high)",1
+03888c43-eb25-4b14-b6cc-d8db4bc7cb91,capsule-4299879,"Core Agent (gpt-5.4, steps=200)",1
+4f36b816-8198-4a5f-aeac-f100ff19feb4,capsule-3449234,"Codex Agent (gpt-5.4, re=high)",1
+48a4df72-5519-48b7-ba4b-25f4b9b60af1,capsule-3418007,"Codex Agent (gpt-5.4, re=high)",1
+bfe79b7b-4bec-4da7-ac46-f9e1ca71d640,capsule-3301293,"Codex Agent (gpt-5.4, re=high)",1
+632f398d-bc13-4c92-88e3-f41adf1bbc62,capsule-3639589,"Core Agent (gpt-5.4, steps=200)",1
+7ebb566d-80bc-4a46-88f8-add0d6be39b6,capsule-2816027,"Codex Agent (gpt-5.4, re=high)",1
+ccf73b3d-2b22-449c-90f5-3d6fe005ed3a,capsule-2804717,"Codex Agent (gpt-5.4, re=high)",1
+78491a81-740a-4793-9622-d2790d55b754,capsule-3418007,"Core Agent (gpt-5.4, steps=200)",1
+5459004c-def9-4801-ac8c-54552137dd04,capsule-3301293,"Core Agent (gpt-5.4, steps=200)",1
+11ed0158-cd90-4e85-a22b-3012853ecc67,capsule-2816027,"Core Agent (gpt-5.4, steps=200)",1
+5b73a244-e81b-4fec-8987-03eded695d7b,capsule-2804717,"Core Agent (gpt-5.4, steps=200)",1
+f63c9a83-cd2f-42f6-8642-454a797f1b46,capsule-2708693,"Core Agent (gpt-5.4, steps=200)",1
+0e482983-f044-4ccd-bde7-7752b7876cd8,capsule-2708693,"Codex Agent (gpt-5.4, re=high)",1
+10a947fe-b124-4410-9e67-29fc9e3b3f92,capsule-2345790,"Codex Agent (gpt-5.4, re=high)",1
+fa9fa6e4-c61d-4567-8873-5f5c5103bfd9,capsule-1724988,"Core Agent (gpt-5.4, steps=200)",1
+9be5b1cc-0359-4dfb-8f5d-3ade18d92805,capsule-2242462,"Codex Agent (gpt-5.4, re=high)",1
+31c2ac78-dd04-465c-bfec-e5e3cb573ac3,capsule-1724988,"Codex Agent (gpt-5.4, re=high)",1
+5b62166a-5efa-4c8e-94d6-d3b14d240f13,capsule-1624349,"Codex Agent (gpt-5.4, re=high)",1
+a37ab5da-998f-4099-a804-dab47153d913,capsule-1394704,"Codex Agent (gpt-5.4, re=high)",1
+c04e7d7c-fdd4-4b85-85b9-06f0de9792f3,capsule-0504157,"Core Agent (gpt-5.4, steps=200)",1
+3baa87ba-7478-43de-8ee4-aeef5a776cb5,capsule-0152700,"Core Agent (gpt-5.4, steps=200)",1
+22d957e1-30d5-4a92-8b19-e7586d6beaeb,capsule-0201673,"Core Agent (gpt-5.4, steps=200)",1
+e68d2109-4274-4f3a-a24a-f04f6ce3c694,capsule-9832712,"Core Agent (anthropic/claude-opus-4-6, steps=200)",1
+66f550a9-30f6-47fb-b99a-9c7b2b16a7f0,capsule-9477017,"Core Agent (anthropic/claude-opus-4-6, steps=200)",1
+f7ac1217-e463-42cc-9a6c-466e961edd86,capsule-9294029,"Core Agent (anthropic/claude-opus-4-6, steps=200)",1
+d64c1748-54ed-4ba1-8d81-9166edfffed5,capsule-9240688,"Core Agent (anthropic/claude-opus-4-6, steps=200)",1
+6a1929e6-2ff8-4854-b7b5-c0835b7d0e02,capsule-9054015,"Core Agent (anthropic/claude-opus-4-6, steps=200)",1
+4c7b3b8d-d7da-4ace-983a-ffa802812f13,capsule-8807709,"Core Agent (anthropic/claude-opus-4-6, steps=200)",1
+c61f8e2b-99c2-4f3e-8ae2-00c80bc79322,capsule-8412128,"Core Agent (anthropic/claude-opus-4-6, steps=200)",1
+187288b3-f42d-4ea8-b799-db29045613ca,capsule-7800694,"Core Agent (anthropic/claude-opus-4-6, steps=200)",1
+e38a2139-9bb7-4688-bcd2-688379ba36d0,capsule-7716865,"Core Agent (anthropic/claude-opus-4-6, steps=200)",1
+c5d9c12b-bdea-4ba5-abe0-9ce52e654e12,capsule-7655932,"Core Agent (anthropic/claude-opus-4-6, steps=200)",1
+dd75562d-4600-4548-847b-52df00a9a925,capsule-7186268,"Core Agent (anthropic/claude-opus-4-6, steps=200)",1
+2eba09d1-eb9d-40ac-912f-0df576118d15,capsule-6295990,"Core Agent (anthropic/claude-opus-4-6, steps=200)",1
+14e8119c-0ae7-4022-bb15-b2fc00aede1d,capsule-6049678,"Core Agent (anthropic/claude-opus-4-6, steps=200)",1
+fc21d24e-28af-40a1-9fde-5a9aef4f9fcb,capsule-5507257,"Core Agent (anthropic/claude-opus-4-6, steps=200)",1
+c06c14f9-91c1-4ee9-84b7-9789cc372a7c,capsule-5136217,"Core Agent (anthropic/claude-opus-4-6, steps=200)",1
+e0cc51f9-5d4f-485a-ba33-6fc386184072,capsule-4933686,"Core Agent (anthropic/claude-opus-4-6, steps=200)",1
+220e3ad5-7190-45c5-ad72-63f22e2e7b03,capsule-4671827,"Core Agent (anthropic/claude-opus-4-6, steps=200)",1
+74ccdd68-8266-4925-aa95-e83c2da262a1,capsule-4299879,"Core Agent (anthropic/claude-opus-4-6, steps=200)",1
+ba379959-b13a-41e9-adc1-521772bd3439,capsule-1175539,"Codex Agent (gpt-5.4, re=high)",1
+cf4aaa72-063c-4921-b810-d359d5345201,capsule-3821950,"Core Agent (anthropic/claude-opus-4-6, steps=200)",1
+8a254c42-99ca-4184-be5c-02aedfa686a3,capsule-3762736,"Core Agent (anthropic/claude-opus-4-6, steps=200)",1
+617f18ac-2ae9-4e57-9cca-d038566c8387,capsule-3639589,"Core Agent (anthropic/claude-opus-4-6, steps=200)",1
+d76c16ff-fde7-485a-8867-e7d0e1345f11,capsule-3593259,"Core Agent (anthropic/claude-opus-4-6, steps=200)",1
+1806a8ec-d87a-48cb-a47e-3ab6bbd302e3,capsule-3449234,"Core Agent (anthropic/claude-opus-4-6, steps=200)",1
+ec2aed36-70c6-4bb0-b9e5-79f5a7308322,capsule-3418007,"Core Agent (anthropic/claude-opus-4-6, steps=200)",1
+6d042564-ba37-458e-bd0a-8cc2c1476c45,capsule-3301293,"Core Agent (anthropic/claude-opus-4-6, steps=200)",1
+8e190cce-48bd-4960-b119-a515555bb524,capsule-2816027,"Core Agent (anthropic/claude-opus-4-6, steps=200)",1
+81de2b15-23d1-40d5-ae00-5a0bc57d947e,capsule-2804717,"Core Agent (anthropic/claude-opus-4-6, steps=200)",1
+791fab14-3802-41ff-bd0b-c1c65300f1c4,capsule-2708693,"Core Agent (anthropic/claude-opus-4-6, steps=200)",1
+f13d7737-5727-423c-ac81-505bf07cacde,capsule-2345790,"Core Agent (anthropic/claude-opus-4-6, steps=200)",1
+5e8352e3-2261-48b8-9585-f8f1a157e8c9,capsule-2242462,"Core Agent (anthropic/claude-opus-4-6, steps=200)",1
+2ce8efbe-6791-4ed0-880f-3464c47c0b05,capsule-1724988,"Core Agent (anthropic/claude-opus-4-6, steps=200)",1
+20abbffc-c450-4606-8bee-fcc8544c8f72,capsule-1624349,"Core Agent (anthropic/claude-opus-4-6, steps=200)",1
+87a15e87-8fed-4237-873c-c925d51c0be6,capsule-1394704,"Core Agent (anthropic/claude-opus-4-6, steps=200)",1
+16626f33-d7fb-4be2-a859-0d263649ea13,capsule-1175539,"Core Agent (anthropic/claude-opus-4-6, steps=200)",1
+81f1b577-5109-425d-8585-8dbf43c96929,capsule-0851068,"Core Agent (anthropic/claude-opus-4-6, steps=200)",1
+4334cfc7-2d1d-4fa6-8716-8a9e58f59422,capsule-0504157,"Core Agent (anthropic/claude-opus-4-6, steps=200)",1
+18f98cbc-79dc-4eb1-999e-ee5a48c35473,capsule-0201673,"Core Agent (anthropic/claude-opus-4-6, steps=200)",1
+b6288b89-32f5-4e54-aa92-0c072d0d7d52,capsule-0152700,"Core Agent (anthropic/claude-opus-4-6, steps=200)",1
+f8d726af-ba61-498c-aea8-09c20bf2aa0b,capsule-9832712,"Core Agent (anthropic/claude-opus-4-5, steps=200)",1
+82c0107e-3e6e-4685-b991-cd40a2ba410e,capsule-9477017,"Core Agent (anthropic/claude-opus-4-5, steps=200)",1
+afc92697-5e0b-4f2d-a12e-913d43beb1ae,capsule-9294029,"Core Agent (anthropic/claude-opus-4-5, steps=200)",1
+f7e44703-b01e-4fb2-b6d8-a609ab705f17,capsule-9054015,"Core Agent (anthropic/claude-opus-4-5, steps=200)",1
+f6987321-cfcc-4665-af4d-44a7211f903f,capsule-9240688,"Core Agent (anthropic/claude-opus-4-5, steps=200)",1
+735a982e-5dd3-4fc4-9c42-f93c594db64d,capsule-8807709,"Core Agent (anthropic/claude-opus-4-5, steps=200)",1
+1839fb47-61a7-47d0-ba30-b11d004319cd,capsule-8412128,"Core Agent (anthropic/claude-opus-4-5, steps=200)",1
+e08d1c87-17e2-4971-bcaf-88cbdc93c97e,capsule-7800694,"Core Agent (anthropic/claude-opus-4-5, steps=200)",1
+597ec02f-5e74-46d6-8d73-791249fc3758,capsule-7716865,"Core Agent (anthropic/claude-opus-4-5, steps=200)",1
+4443ee6a-8f9a-41fc-b79c-8730918c1ec3,capsule-7186268,"Core Agent (anthropic/claude-opus-4-5, steps=200)",1
+02ce9e97-8b78-47d3-a33c-ca3fd497d65a,capsule-7655932,"Core Agent (anthropic/claude-opus-4-5, steps=200)",1
+8d0b1b51-098a-411f-bf5c-4fa93b3aa41b,capsule-6295990,"Core Agent (anthropic/claude-opus-4-5, steps=200)",1
+c57b1bd9-f377-40cf-998a-ab1df2b9162f,capsule-6049678,"Core Agent (anthropic/claude-opus-4-5, steps=200)",1
+3721bb3c-ea47-4152-a2ca-f128e626ddd5,capsule-5507257,"Core Agent (anthropic/claude-opus-4-5, steps=200)",1
+b7862d83-13e8-4ee9-8beb-9e6ca1d0273a,capsule-5136217,"Core Agent (anthropic/claude-opus-4-5, steps=200)",1
+9fab07df-d170-4412-818d-77b50b9a58d5,capsule-4933686,"Core Agent (anthropic/claude-opus-4-5, steps=200)",1
+67dbe704-881b-4488-ba41-fdf7f379c707,capsule-4671827,"Core Agent (anthropic/claude-opus-4-5, steps=200)",1
+dd94e69a-4e54-470c-aa8a-e72dc6727c49,capsule-4299879,"Core Agent (anthropic/claude-opus-4-5, steps=200)",1
+92f92744-d832-486d-bd2e-d0a3f3a0fba7,capsule-0851068,"Codex Agent (gpt-5.4, re=high)",1
+89e19b6c-9ce6-4505-9aaa-445327a0f6e1,capsule-0504157,"Codex Agent (gpt-5.4, re=high)",1
+7748231c-c08e-4241-aed1-21c06713551c,capsule-0201673,"Codex Agent (gpt-5.4, re=high)",1
+40a14c69-e7c4-46b0-bdd4-03de19bf2696,capsule-0152700,"Codex Agent (gpt-5.4, re=high)",1
+4660b304-393c-4f27-ac4f-d435dd774993,capsule-3593259,"Core Agent (anthropic/claude-opus-4-5, steps=200)",1
+c286d94d-10c3-4574-9583-db43c1d9b4dc,capsule-3449234,"Core Agent (anthropic/claude-opus-4-5, steps=200)",1
+3a65fdcf-22cc-4c78-a2f6-68e41787a640,capsule-3418007,"Core Agent (anthropic/claude-opus-4-5, steps=200)",1
+8b647df9-45c0-486c-b3c6-78e7c2f448ce,capsule-9832712,"Open Code (openai/gpt-5.4, re=high)",1
+94c71bc6-ba04-41dd-b3a0-e81927e8a71c,capsule-2816027,"Core Agent (anthropic/claude-opus-4-5, steps=200)",1
+8a54cb56-fa63-4a08-9105-aa636aa515aa,capsule-2804717,"Core Agent (anthropic/claude-opus-4-5, steps=200)",1
+adebf381-2e9a-4435-92e5-dea722b8b1b2,capsule-2708693,"Core Agent (anthropic/claude-opus-4-5, steps=200)",1
+4afee3d0-5f49-40b0-b9a8-abc0f3009356,capsule-2345790,"Core Agent (anthropic/claude-opus-4-5, steps=200)",1
+d872f004-a1be-4000-89fe-16fbce1b43dd,capsule-2242462,"Core Agent (anthropic/claude-opus-4-5, steps=200)",1
+80721e36-4bc1-42e5-b0e2-cb4e5c6605c1,capsule-1724988,"Core Agent (anthropic/claude-opus-4-5, steps=200)",1
+499c174b-2338-49ec-84b6-906f6474d823,capsule-9477017,"Open Code (openai/gpt-5.4, re=high)",1
+b58fec69-aae0-4710-9e94-9834e901f1a4,capsule-1394704,"Core Agent (anthropic/claude-opus-4-5, steps=200)",1
+ca637221-9724-4c81-b2fe-ee2dd04eb5da,capsule-1175539,"Core Agent (anthropic/claude-opus-4-5, steps=200)",1
+f58852c4-dc49-415d-9f3a-784763772dd5,capsule-9054015,"Open Code (openai/gpt-5.4, re=high)",1
+59132a4a-0e8a-4858-beef-dd709623036a,capsule-0504157,"Core Agent (anthropic/claude-opus-4-5, steps=200)",1
+06475b15-482e-4345-b96e-bc139b887d93,capsule-0201673,"Core Agent (anthropic/claude-opus-4-5, steps=200)",1
+f487cfe4-158d-4b91-b46a-493e9dc33590,capsule-9240688,"Open Code (openai/gpt-5.4, re=high)",1
+08b4b909-c0bc-457a-ba86-72402da0c160,capsule-0152700,"Core Agent (anthropic/claude-opus-4-5, steps=200)",1
+5a5a0723-116a-4d4c-9c88-6b266b46e0f1,capsule-8807709,"Open Code (openai/gpt-5.4, re=high)",1
+c3847c8f-5225-443a-bec1-294fa3eaaadb,capsule-9294029,"Codex Agent (gpt-5, re=medium)",1
+d5634c35-ad36-4f4f-8bde-989e92144338,capsule-9240688,"Codex Agent (gpt-5, re=medium)",1
+3d56fc67-fd49-4d03-8378-fc2b68aa81d3,capsule-9054015,"Codex Agent (gpt-5, re=medium)",1
+0ab28403-580f-45cc-af7e-d3a2c9cae723,capsule-8807709,"Codex Agent (gpt-5, re=medium)",1
+224dbcca-d12a-4bc0-9add-4c3af280ac63,capsule-8412128,"Codex Agent (gpt-5, re=medium)",1
+ed02e4a4-4d1d-4204-8bd8-04c005c8022f,capsule-7800694,"Codex Agent (gpt-5, re=medium)",1
+5c93c248-edf1-4d08-accb-d31487fe2cca,capsule-7716865,"Codex Agent (gpt-5, re=medium)",1
+fa974f90-6cc8-4cfd-9b5d-ea68cb9e5646,capsule-7655932,"Codex Agent (gpt-5, re=medium)",1
+994c41c1-625a-42e5-92ff-0b4e7c44ab51,capsule-7186268,"Codex Agent (gpt-5, re=medium)",1
+3cbe6fce-89fc-430f-be82-40a06bd89b9f,capsule-6295990,"Codex Agent (gpt-5, re=medium)",1
+a03f48c8-19c2-4b9a-968c-65b130183db3,capsule-6049678,"Codex Agent (gpt-5, re=medium)",1
+788cb4b3-d2e9-43fa-8c7e-fb0fc0d36a8e,capsule-8412128,"Open Code (openai/gpt-5.4, re=high)",1
+fac5155e-b514-46f0-9b88-3b1cecc2576f,capsule-5136217,"Codex Agent (gpt-5, re=medium)",1
+aef817b0-e3df-4991-9181-61639dc4f855,capsule-4671827,"Codex Agent (gpt-5, re=medium)",1
+8cd6c937-626b-413a-a022-6f1d48c9d888,capsule-4933686,"Codex Agent (gpt-5, re=medium)",1
+60dd9f3e-1e5a-4ba4-a279-b2a74b730626,capsule-4299879,"Codex Agent (gpt-5, re=medium)",1
+f2cf5b38-817b-4565-b5f3-1d9d641dfc1e,capsule-7800694,"Open Code (openai/gpt-5.4, re=high)",1
+b69b991c-cc43-4793-8f80-ee1aa161eee8,capsule-3821950,"Codex Agent (gpt-5, re=medium)",1
+1cdece9c-bb17-4ccf-9bf6-b39b39516170,capsule-3762736,"Codex Agent (gpt-5, re=medium)",1
+65a90494-7853-41cc-a836-5bd8bab2ca52,capsule-3639589,"Codex Agent (gpt-5, re=medium)",1
+7a4527d7-90a8-4406-ae3e-c359b1b80ef8,capsule-3593259,"Codex Agent (gpt-5, re=medium)",1
+5c1ba865-fe58-42bb-b110-47d24fda0ce3,capsule-7716865,"Open Code (openai/gpt-5.4, re=high)",1
+667cbd73-4179-41aa-bb7f-b26ad4649425,capsule-7655932,"Open Code (openai/gpt-5.4, re=high)",1
+6592f91d-4066-4aa9-82e1-c63b7f837dd0,capsule-3301293,"Codex Agent (gpt-5, re=medium)",1
+b04b2031-71b1-48ad-a6de-b53183f16cbc,capsule-2816027,"Codex Agent (gpt-5, re=medium)",1
+d569eca7-014b-4043-b71d-2bb6693be00b,capsule-2804717,"Codex Agent (gpt-5, re=medium)",1
+9fde1439-89c0-4c82-b82f-2dfe65393488,capsule-2708693,"Codex Agent (gpt-5, re=medium)",1
+0626192d-af6c-4283-887c-b2e94673efd6,capsule-2345790,"Codex Agent (gpt-5, re=medium)",1
+0b3257fe-b634-4992-b4b3-4eb5e97ce807,capsule-2242462,"Codex Agent (gpt-5, re=medium)",1
+c7017c71-a44b-4dcf-8c71-05448688fead,capsule-1724988,"Codex Agent (gpt-5, re=medium)",1
+9234384d-71e6-4020-a288-012b28d115e4,capsule-1624349,"Codex Agent (gpt-5, re=medium)",1
+182fb2a1-604f-4bd9-81eb-7382f1bb8b51,capsule-1394704,"Codex Agent (gpt-5, re=medium)",1
+a5165b23-d1bd-43c1-8b92-fb1dcd243d55,capsule-1175539,"Codex Agent (gpt-5, re=medium)",1
+29d45ab1-6dff-4629-95fe-dc811b35c902,capsule-0851068,"Codex Agent (gpt-5, re=medium)",1
+0c19c3b9-3dfd-4735-b04e-b97ce3202b82,capsule-0504157,"Codex Agent (gpt-5, re=medium)",1
+789b850a-731e-4fbd-b171-c50ee18aa267,capsule-0201673,"Codex Agent (gpt-5, re=medium)",1
+b501fa7b-e9bc-430d-bc83-39046804acdb,capsule-0152700,"Codex Agent (gpt-5, re=medium)",1
+797a7426-ab0e-419d-8bb9-7d8a64e0f5dd,capsule-9832712,"Codex Agent (gpt-5.4, re=xhigh)",1
+0035c678-bd30-434f-97c0-f648e6450bfc,capsule-9477017,"Codex Agent (gpt-5.4, re=xhigh)",1
+5eaaee1f-fc73-4b4a-bf47-beea69b888eb,capsule-9294029,"Codex Agent (gpt-5.4, re=xhigh)",1
+094d81b5-2cff-4885-916c-2826aac08e22,capsule-9240688,"Codex Agent (gpt-5.4, re=xhigh)",1
+01864c3e-8b56-4bbb-a321-9ea807b0bd09,capsule-9054015,"Codex Agent (gpt-5.4, re=xhigh)",1
+bcb94841-d1cb-4766-9d05-6685b3580125,capsule-8807709,"Codex Agent (gpt-5.4, re=xhigh)",1
+77ee59cd-9ca6-4130-8552-174fba0e8586,capsule-8412128,"Codex Agent (gpt-5.4, re=xhigh)",1
+8a1502b5-2945-47f5-8929-cf0b1622a1c8,capsule-7800694,"Codex Agent (gpt-5.4, re=xhigh)",1
+24b916e5-9cc1-4a1b-8f70-368b659abeeb,capsule-7716865,"Codex Agent (gpt-5.4, re=xhigh)",1
+dbdaeafb-832b-48f1-95fe-8beb6011d92a,capsule-7655932,"Codex Agent (gpt-5.4, re=xhigh)",1
+69ac0c46-e1cf-4384-a9f5-aa471beb4819,capsule-7186268,"Codex Agent (gpt-5.4, re=xhigh)",1
+e6c91de5-55fd-4531-9792-7d82ad3b50b5,capsule-6295990,"Codex Agent (gpt-5.4, re=xhigh)",1
+90b5670c-252b-4fc8-b87d-5f90bc04017b,capsule-6049678,"Codex Agent (gpt-5.4, re=xhigh)",1
+d8f9ca1e-4426-4e29-be22-4e4b5e160a1a,capsule-5507257,"Codex Agent (gpt-5.4, re=xhigh)",1
+235874a3-f5ba-4cbd-a70e-87380eb1de69,capsule-5136217,"Codex Agent (gpt-5.4, re=xhigh)",1
+34101f7b-cf34-47fb-b53c-7203725d4afa,capsule-4933686,"Codex Agent (gpt-5.4, re=xhigh)",1
+3b8e3058-7271-42f8-8a00-51f78ae16cbc,capsule-4671827,"Codex Agent (gpt-5.4, re=xhigh)",1
+0c71a761-aa43-4c28-83bb-cc6f6a30ba0f,capsule-4299879,"Codex Agent (gpt-5.4, re=xhigh)",1
+df787aaa-42b0-4e3f-bdd4-cf30d3c72728,capsule-6295990,"Open Code (openai/gpt-5.4, re=high)",1
+714caca8-8baf-4d95-ae84-92fa4be63490,capsule-3821950,"Codex Agent (gpt-5.4, re=xhigh)",1
+35172903-17d0-4e2c-a465-e828aea90a48,capsule-3762736,"Codex Agent (gpt-5.4, re=xhigh)",1
+4041a135-0835-4436-ab5d-5e91bfc16cfd,capsule-3639589,"Codex Agent (gpt-5.4, re=xhigh)",1
+fc3b5fee-21d4-47da-92c4-1c1398112bf9,capsule-3593259,"Codex Agent (gpt-5.4, re=xhigh)",1
+f3ef446f-5f64-447a-888e-5038fedb1512,capsule-3449234,"Codex Agent (gpt-5.4, re=xhigh)",1
+9effbe9c-0c17-4e8f-8b84-2034e1aa9042,capsule-3418007,"Codex Agent (gpt-5.4, re=xhigh)",1
+29e2b159-c5e3-4520-9ff8-5528821a438a,capsule-3301293,"Codex Agent (gpt-5.4, re=xhigh)",1
+e709d777-739a-4d6d-af5a-f9c2f92b2a94,capsule-2816027,"Codex Agent (gpt-5.4, re=xhigh)",1
+a4ce0fe0-18bb-4353-9cb1-3a6d6f9684fe,capsule-2804717,"Codex Agent (gpt-5.4, re=xhigh)",1
+30b15ada-d7f0-4853-80a1-993fc518759b,capsule-2708693,"Codex Agent (gpt-5.4, re=xhigh)",1
+2cb22161-c9c7-41bc-ad22-244dd3c25660,capsule-2345790,"Codex Agent (gpt-5.4, re=xhigh)",1
+86a22d04-8a94-4c78-b841-0d92755c2114,capsule-2242462,"Codex Agent (gpt-5.4, re=xhigh)",1
+6bc749a6-5b0f-44e8-bae6-98cdb9a0898b,capsule-1724988,"Codex Agent (gpt-5.4, re=xhigh)",1
+9ee50d09-8306-46fa-bdba-31cd5a78bf5c,capsule-1624349,"Codex Agent (gpt-5.4, re=xhigh)",1
+75552265-896d-4276-b221-92a006f76dc2,capsule-1175539,"Codex Agent (gpt-5.4, re=xhigh)",1
+1030c70f-c237-41bc-b594-f327e9d8401b,capsule-1394704,"Codex Agent (gpt-5.4, re=xhigh)",1
+754558f1-a348-4055-9a7f-dbe90f085310,capsule-0851068,"Codex Agent (gpt-5.4, re=xhigh)",1
+ba69624c-8ae0-43db-a01c-3c525f2b2854,capsule-0504157,"Codex Agent (gpt-5.4, re=xhigh)",1
+27a75634-f69f-44dc-bff4-3328dda0bb11,capsule-0201673,"Codex Agent (gpt-5.4, re=xhigh)",1
+3d8b7f09-4692-49a3-be94-70df0c99b71b,capsule-0152700,"Codex Agent (gpt-5.4, re=xhigh)",1
+1359ee55-b1d8-4ed0-b6d8-1d36dc3d6fda,capsule-9832712,"Codex Agent (gpt-5.4, re=medium, mt=9)",1
+d361cd73-2550-4e75-a3fa-496142e5f89e,capsule-9294029,"Codex Agent (gpt-5.4, re=medium, mt=9)",1
+3bb9041b-377a-484e-90a5-9ee2dbefbdb5,capsule-7186268,"Open Code (openai/gpt-5.4, re=high)",1
+382f40ef-f56c-443c-a34d-db41c0f81ff0,capsule-9240688,"Codex Agent (gpt-5.4, re=medium, mt=9)",1
+c6f19e9e-c45e-4b02-a724-f70c6a727006,capsule-9054015,"Codex Agent (gpt-5.4, re=medium, mt=9)",1
+f308449c-12fd-4476-9b0e-623eb28fdcab,capsule-8807709,"Codex Agent (gpt-5.4, re=medium, mt=9)",1
+135d950d-be85-4385-8263-9774232703bd,capsule-8412128,"Codex Agent (gpt-5.4, re=medium, mt=9)",1
+b36b15f3-58e3-456c-b4a0-fc5cd9e98f55,capsule-7716865,"Codex Agent (gpt-5.4, re=medium, mt=9)",1
+116b6dc1-5ae7-4dfe-ba6a-f6a2de3de870,capsule-7800694,"Codex Agent (gpt-5.4, re=medium, mt=9)",1
+5522cb36-2f01-413b-8c01-7a3b6b8ce149,capsule-7655932,"Codex Agent (gpt-5.4, re=medium, mt=9)",1
+dfc9bb60-cf46-4303-b998-890ccabd5676,capsule-7186268,"Codex Agent (gpt-5.4, re=medium, mt=9)",1
+f10f6636-4320-435f-8887-382208b3b7c8,capsule-6295990,"Codex Agent (gpt-5.4, re=medium, mt=9)",1
+f2c62188-2f02-4470-911c-25fd08c47e0f,capsule-6049678,"Codex Agent (gpt-5.4, re=medium, mt=9)",1
+cd4bc0ae-b52d-4468-889e-bde903a80275,capsule-5507257,"Codex Agent (gpt-5.4, re=medium, mt=9)",1
+1f687b6b-d7c8-4291-9fe5-637983379dac,capsule-5136217,"Codex Agent (gpt-5.4, re=medium, mt=9)",1
+b5a333aa-b030-4f4a-b73b-b1a0e2321706,capsule-4933686,"Codex Agent (gpt-5.4, re=medium, mt=9)",1
+11651d80-c280-4572-a7e2-66e12e6ba9ec,capsule-4671827,"Codex Agent (gpt-5.4, re=medium, mt=9)",1
+2c35c4e3-d2e4-48f0-a203-996790b37358,capsule-4299879,"Codex Agent (gpt-5.4, re=medium, mt=9)",1
+f6435c9a-8343-4967-91b9-84cdbba0ac3d,capsule-4252248,"Codex Agent (gpt-5.4, re=medium, mt=9)",1
+e3cdb168-7d9b-4ca9-9c9c-82a0871fa16a,capsule-3821950,"Codex Agent (gpt-5.4, re=medium, mt=9)",1
+4c1c080b-aceb-41da-bd3c-e0066c53e24b,capsule-3762736,"Codex Agent (gpt-5.4, re=medium, mt=9)",1
+39a61d41-ded8-43b4-8ec4-8d4e16425c0b,capsule-3593259,"Codex Agent (gpt-5.4, re=medium, mt=9)",1
+15568795-ef15-4463-9920-297a36fb7afd,capsule-3639589,"Codex Agent (gpt-5.4, re=medium, mt=9)",1
+d835bd10-5da8-490e-8210-a6a10399b7a2,capsule-3449234,"Codex Agent (gpt-5.4, re=medium, mt=9)",1
+d4f446cf-8d9c-490a-9da0-c1f335c64afa,capsule-3418007,"Codex Agent (gpt-5.4, re=medium, mt=9)",1
+589ac7e5-fb6f-431f-a0b2-28ae32f3797f,capsule-3301293,"Codex Agent (gpt-5.4, re=medium, mt=9)",1
+e48b0724-ae3c-42ca-bba6-13ceb2506720,capsule-2816027,"Codex Agent (gpt-5.4, re=medium, mt=9)",1
+8ff5ee36-1667-4c54-be0e-703a834d12ca,capsule-2804717,"Codex Agent (gpt-5.4, re=medium, mt=9)",1
+29a73fe0-c0c2-44e3-81cc-7d45dc560854,capsule-2708693,"Codex Agent (gpt-5.4, re=medium, mt=9)",1
+9045c216-a1f9-4b5b-8e67-6a71cbe42ecb,capsule-2345790,"Codex Agent (gpt-5.4, re=medium, mt=9)",1
+ef298bc6-b76f-40d0-9377-33d858f97ca9,capsule-2242462,"Codex Agent (gpt-5.4, re=medium, mt=9)",1
+1ef67664-7681-4e4f-b618-02b9e0d67154,capsule-1724988,"Codex Agent (gpt-5.4, re=medium, mt=9)",1
+d0d6374d-c191-4892-9100-99f25a7972a4,capsule-1394704,"Codex Agent (gpt-5.4, re=medium, mt=9)",1
+6d97f8e7-82d9-4720-8214-3b44fdde0499,capsule-1624349,"Codex Agent (gpt-5.4, re=medium, mt=9)",1
+6b89b7b8-507c-4a44-8b2d-5db703238434,capsule-1175539,"Codex Agent (gpt-5.4, re=medium, mt=9)",1
+08f1c725-3c48-4751-970d-686b58cf0ee7,capsule-0851068,"Codex Agent (gpt-5.4, re=medium, mt=9)",1
+6027c9f7-d791-4b73-ac8a-7480aab1787b,capsule-0504157,"Codex Agent (gpt-5.4, re=medium, mt=9)",1
+321cddca-c04b-4496-ba87-aa03eb9ca21c,capsule-0201673,"Codex Agent (gpt-5.4, re=medium, mt=9)",1
+f652fbc2-ae34-40b2-9ef3-9c4139f5aa12,capsule-0152700,"Codex Agent (gpt-5.4, re=medium, mt=9)",1
+b4f9b544-05f9-4b5a-ae73-e268c6a5be65,capsule-9832712,"Codex Agent (gpt-5.4, re=medium, mt=6)",1
+1d712070-e34d-4588-935f-e13338b1b6e5,capsule-6049678,"Open Code (openai/gpt-5.4, re=high)",1
+99befacb-d09d-48bc-add1-f8a83a534ce4,capsule-9294029,"Codex Agent (gpt-5.4, re=medium, mt=6)",1
+ac5beb39-3374-4206-9869-c53b9031554d,capsule-9240688,"Codex Agent (gpt-5.4, re=medium, mt=6)",1
+112e723e-8d73-49bd-88cc-42f3eedaf93a,capsule-9054015,"Codex Agent (gpt-5.4, re=medium, mt=6)",1
+04b81aee-7acb-421c-b6f6-3b64b4c2abdf,capsule-5507257,"Open Code (openai/gpt-5.4, re=high)",1
+ed7edfc4-f5c6-4f93-8f35-2ae1c1870c3e,capsule-8412128,"Codex Agent (gpt-5.4, re=medium, mt=6)",1
+6b7ccea9-4c3c-4435-ba2d-26639595b072,capsule-7800694,"Codex Agent (gpt-5.4, re=medium, mt=6)",1
+f2be657e-3626-480b-8bc1-725660beae4b,capsule-7655932,"Codex Agent (gpt-5.4, re=medium, mt=6)",1
+9003530d-a5b3-40ba-b2d4-72d8245da79b,capsule-7716865,"Codex Agent (gpt-5.4, re=medium, mt=6)",1
+0d2abc57-d88d-4ff9-8be8-72b72b2fab56,capsule-7186268,"Codex Agent (gpt-5.4, re=medium, mt=6)",1
+8f936387-331f-442d-b698-68e865d36f45,capsule-6295990,"Codex Agent (gpt-5.4, re=medium, mt=6)",1
+4e88b0d3-eef4-4d50-871e-71e9aa88bcc4,capsule-6049678,"Codex Agent (gpt-5.4, re=medium, mt=6)",1
+ada4bccc-972a-4b49-b88c-fa2bafad2098,capsule-5507257,"Codex Agent (gpt-5.4, re=medium, mt=6)",1
+da8ed4b6-854f-4b61-be17-e5e902e9d68c,capsule-5136217,"Codex Agent (gpt-5.4, re=medium, mt=6)",1
+ced23cc6-a34d-426d-b504-c689afa1437b,capsule-4933686,"Codex Agent (gpt-5.4, re=medium, mt=6)",1
+ab5d9769-f1f7-40a8-a4ef-368ef4e59bf1,capsule-4671827,"Codex Agent (gpt-5.4, re=medium, mt=6)",1
+a930a119-a31f-4615-a164-a801c61d5df9,capsule-4299879,"Codex Agent (gpt-5.4, re=medium, mt=6)",1
+5518c261-5fe9-4eb1-95c7-35ab9c635599,capsule-4933686,"Open Code (openai/gpt-5.4, re=high)",1
+c02ac13d-8921-4c1c-873e-9d1aa6f291a9,capsule-3821950,"Codex Agent (gpt-5.4, re=medium, mt=6)",1
+a0725650-f10b-4116-b1dd-085f8741a036,capsule-3762736,"Codex Agent (gpt-5.4, re=medium, mt=6)",1
+8f1b86e2-63c8-47d4-b774-ee0fe3bf2b57,capsule-3639589,"Codex Agent (gpt-5.4, re=medium, mt=6)",1
+e0055ed0-9bcd-4b7a-9634-dc918d49081c,capsule-3593259,"Codex Agent (gpt-5.4, re=medium, mt=6)",1
+b6c4f2c5-6a39-42b7-9454-8955835e03ca,capsule-3449234,"Codex Agent (gpt-5.4, re=medium, mt=6)",1
+8d7d02a9-9455-4e70-aad9-ae4dae309133,capsule-3418007,"Codex Agent (gpt-5.4, re=medium, mt=6)",1
+fdd8ec22-ac88-47ac-9e33-613bdbaa5b9a,capsule-3301293,"Codex Agent (gpt-5.4, re=medium, mt=6)",1
+678898bf-3070-4cb0-9a8d-1506bfef5218,capsule-2816027,"Codex Agent (gpt-5.4, re=medium, mt=6)",1
+fbdd208a-dbb4-454a-bded-e4bbaf3ec9d9,capsule-2804717,"Codex Agent (gpt-5.4, re=medium, mt=6)",1
+b75cb41b-41e3-4d41-acc1-3c0da645444c,capsule-2708693,"Codex Agent (gpt-5.4, re=medium, mt=6)",1
+f062bb83-822d-49dc-a37e-20c5a08425ee,capsule-2345790,"Codex Agent (gpt-5.4, re=medium, mt=6)",1
+6d78d788-cfdf-437f-a232-be3c39a35731,capsule-2242462,"Codex Agent (gpt-5.4, re=medium, mt=6)",1
+312b9f45-2f28-4741-bcd4-6c234f818799,capsule-1724988,"Codex Agent (gpt-5.4, re=medium, mt=6)",1
+2c509c77-b52d-4745-9f20-8a8f7fd3629b,capsule-1624349,"Codex Agent (gpt-5.4, re=medium, mt=6)",1
+323b28d1-d65d-4db0-97d3-da70785161fc,capsule-1394704,"Codex Agent (gpt-5.4, re=medium, mt=6)",1
+21ef2f92-2f3f-462d-ae52-4502b8fd3743,capsule-1175539,"Codex Agent (gpt-5.4, re=medium, mt=6)",1
+3ff3c305-b100-49fa-8a38-61b8a127312f,capsule-0851068,"Codex Agent (gpt-5.4, re=medium, mt=6)",1
+214d15a8-79ac-48ab-bd0f-49584057981e,capsule-0504157,"Codex Agent (gpt-5.4, re=medium, mt=6)",1
+cdaa58c2-bfc6-4d8c-960c-6e5cb202a6b1,capsule-0201673,"Codex Agent (gpt-5.4, re=medium, mt=6)",1
+8fb37e3d-4550-4d45-8c44-8e14891a93ac,capsule-0152700,"Codex Agent (gpt-5.4, re=medium, mt=6)",1
+7a4ea74a-f427-45fc-b626-d35a890f8b75,capsule-9832712,"Codex Agent (gpt-5.4, re=medium, mt=3)",1
+85d2c3c8-fe42-4d5d-9048-c3bc84859ab6,capsule-9477017,"Codex Agent (gpt-5.4, re=medium, mt=3)",1
+ab178c4e-7cee-473a-a496-369b364abe1e,capsule-9294029,"Codex Agent (gpt-5.4, re=medium, mt=3)",1
+2068be5b-4989-4df1-b914-fd79553bb946,capsule-9240688,"Codex Agent (gpt-5.4, re=medium, mt=3)",1
+d7ebccf6-8b13-4ddc-a29f-e525acc14661,capsule-8807709,"Codex Agent (gpt-5.4, re=medium, mt=3)",1
+193c431b-ef2a-4343-a761-a2599df6b019,capsule-9054015,"Codex Agent (gpt-5.4, re=medium, mt=3)",1
+7f93058e-47bd-409a-852f-4ac73f8229e1,capsule-8412128,"Codex Agent (gpt-5.4, re=medium, mt=3)",1
+346a9600-8740-4f4e-bde7-78201e976563,capsule-7800694,"Codex Agent (gpt-5.4, re=medium, mt=3)",1
+dacea014-bddc-4b6f-a1a2-9e3a3fa6603c,capsule-7716865,"Codex Agent (gpt-5.4, re=medium, mt=3)",1
+b4f313b7-11c0-49bb-999b-a0c07233496a,capsule-7655932,"Codex Agent (gpt-5.4, re=medium, mt=3)",1
+2478f4d2-ecc8-400e-990d-a48ca1e44567,capsule-7186268,"Codex Agent (gpt-5.4, re=medium, mt=3)",1
+4bf24ed6-8760-4a74-b21e-d8dad535c768,capsule-6295990,"Codex Agent (gpt-5.4, re=medium, mt=3)",1
+cd417b7c-b615-461d-b760-218826214144,capsule-6049678,"Codex Agent (gpt-5.4, re=medium, mt=3)",1
+a7adddad-e97c-43dd-aee8-070eb34e4b0d,capsule-5507257,"Codex Agent (gpt-5.4, re=medium, mt=3)",1
+bacfe5d4-e444-4c90-9855-1a53c00975da,capsule-5136217,"Codex Agent (gpt-5.4, re=medium, mt=3)",1
+2a20d9dd-e18d-46f9-be9d-27878f178b5e,capsule-4933686,"Codex Agent (gpt-5.4, re=medium, mt=3)",1
+afe85889-6513-4874-ae19-035083edbe6f,capsule-4671827,"Codex Agent (gpt-5.4, re=medium, mt=3)",1
+6c3abf32-8890-416d-839e-73f8c84d5ac2,capsule-4299879,"Codex Agent (gpt-5.4, re=medium, mt=3)",1
+8d2d03b1-c180-4012-9943-19587ab30f78,capsule-4671827,"Open Code (openai/gpt-5.4, re=high)",1
+49f87f59-1b61-4b8d-a48c-323b26788b62,capsule-3821950,"Codex Agent (gpt-5.4, re=medium, mt=3)",1
+dcca3a38-fb88-40d2-816d-c9edac38f131,capsule-3762736,"Codex Agent (gpt-5.4, re=medium, mt=3)",1
+ee219e27-b2f4-4c29-bd0b-2fc9241fb83b,capsule-3639589,"Codex Agent (gpt-5.4, re=medium, mt=3)",1
+5bee649e-565b-4ad3-be69-22bf661048c8,capsule-3593259,"Codex Agent (gpt-5.4, re=medium, mt=3)",1
+72815dd9-4842-4c94-9f15-9cb4a8d68015,capsule-3449234,"Codex Agent (gpt-5.4, re=medium, mt=3)",1
+ff176e2e-758d-4082-92ee-643b8b370f58,capsule-3418007,"Codex Agent (gpt-5.4, re=medium, mt=3)",1
+046bfb91-1143-4c84-8afe-eba23cdbcb7e,capsule-3301293,"Codex Agent (gpt-5.4, re=medium, mt=3)",1
+b9ee44a4-8acf-447c-a34a-20f03c02a798,capsule-2816027,"Codex Agent (gpt-5.4, re=medium, mt=3)",1
+5b3d369c-b2ff-4fcb-ad65-edce658f1930,capsule-2804717,"Codex Agent (gpt-5.4, re=medium, mt=3)",1
+201d98da-fa60-45e2-bacb-0d335a11ed3d,capsule-2708693,"Codex Agent (gpt-5.4, re=medium, mt=3)",1
+e326f8a1-453f-4002-97c7-b12cc915e4e7,capsule-2345790,"Codex Agent (gpt-5.4, re=medium, mt=3)",1
+8efdf647-8625-42f8-bb2a-ccc0b2e88eda,capsule-2242462,"Codex Agent (gpt-5.4, re=medium, mt=3)",1
+70fa2ada-6963-451e-a27b-5b7b5b07fd6e,capsule-1724988,"Codex Agent (gpt-5.4, re=medium, mt=3)",1
+aeb6ab99-2c10-48c3-80e6-07f049f323e2,capsule-1624349,"Codex Agent (gpt-5.4, re=medium, mt=3)",1
+d8837404-4ecb-42fa-ab4c-200aa74c4a11,capsule-1394704,"Codex Agent (gpt-5.4, re=medium, mt=3)",1
+d9161a17-b9bc-48e0-b530-6bac6884bba0,capsule-1175539,"Codex Agent (gpt-5.4, re=medium, mt=3)",1
+6555c6f0-c388-496c-ae61-3e47fc98b0c1,capsule-0851068,"Codex Agent (gpt-5.4, re=medium, mt=3)",1
+43717347-543a-4394-b1fa-a56d130df167,capsule-0504157,"Codex Agent (gpt-5.4, re=medium, mt=3)",1
+ea27d68d-0fb8-4a94-a05f-3d302b056059,capsule-0201673,"Codex Agent (gpt-5.4, re=medium, mt=3)",1
+a67467d6-4ddd-4fbd-92b0-994bd0a9c7a6,capsule-0152700,"Codex Agent (gpt-5.4, re=medium, mt=3)",1
+0b96c1a4-6770-4594-8822-4d7062bb131f,capsule-9832712,"Codex Agent (gpt-5.4, re=medium, mt=1)",1
+68c3486f-5671-4326-ad53-1c2d24539c49,capsule-4299879,"Open Code (openai/gpt-5.4, re=high)",1
+e5e353f5-22a3-4783-858a-9c878e7a2082,capsule-9294029,"Codex Agent (gpt-5.4, re=medium, mt=1)",1
+344b33d6-30f6-47d8-b374-d9127c60503b,capsule-9240688,"Codex Agent (gpt-5.4, re=medium, mt=1)",1
+962ed579-6f7a-40a7-999d-d3fe1aaecf99,capsule-9054015,"Codex Agent (gpt-5.4, re=medium, mt=1)",1
+f67bc0fd-2d0a-46c6-be24-ba6adaa1edbb,capsule-8807709,"Codex Agent (gpt-5.4, re=medium, mt=1)",1
+02d602f4-2d36-4754-82c9-f2b240e95680,capsule-8412128,"Codex Agent (gpt-5.4, re=medium, mt=1)",1
+1ff18ae5-7f84-4460-97c7-1a8a0a14fe88,capsule-7800694,"Codex Agent (gpt-5.4, re=medium, mt=1)",1
+f4f1eed5-efdf-4bf2-86b5-0cab3c145d65,capsule-7716865,"Codex Agent (gpt-5.4, re=medium, mt=1)",1
+83e85fa4-30a7-4e69-9555-cfa588fa0674,capsule-7655932,"Codex Agent (gpt-5.4, re=medium, mt=1)",1
+292fcaa4-6b3e-4aab-a379-b66f920809aa,capsule-7186268,"Codex Agent (gpt-5.4, re=medium, mt=1)",1
+e4f80508-cde7-477e-b50d-5d8d7cba41f4,capsule-6295990,"Codex Agent (gpt-5.4, re=medium, mt=1)",1
+b9ac8b8d-f0e5-4ac9-948c-42064d8b3c00,capsule-6049678,"Codex Agent (gpt-5.4, re=medium, mt=1)",1
+395efa17-3a22-48f2-925f-322c88e00d0b,capsule-5507257,"Codex Agent (gpt-5.4, re=medium, mt=1)",1
+7b81c089-2e38-4d68-accc-daffe4b7cdbe,capsule-5136217,"Codex Agent (gpt-5.4, re=medium, mt=1)",1
+a2821919-5cbc-4ed0-b72b-5741a86c524c,capsule-4933686,"Codex Agent (gpt-5.4, re=medium, mt=1)",1
+c29c5588-4714-4987-9b3e-63abe4954595,capsule-4671827,"Codex Agent (gpt-5.4, re=medium, mt=1)",1
+287310d1-cc38-4289-8ee8-3bcbc8614d15,capsule-4299879,"Codex Agent (gpt-5.4, re=medium, mt=1)",1
+e16ad325-9c14-4cf0-af88-cfcb9a24adc7,capsule-4252248,"Open Code (openai/gpt-5.4, re=high)",1
+b3e28453-2912-4d20-8467-66f605fb7df9,capsule-3762736,"Codex Agent (gpt-5.4, re=medium, mt=1)",1
+9f4a53e5-5c48-44eb-b37e-51712e4e11bd,capsule-3821950,"Codex Agent (gpt-5.4, re=medium, mt=1)",1
+95aa0947-b9b4-4f8a-80e2-f87958a1dcab,capsule-3639589,"Codex Agent (gpt-5.4, re=medium, mt=1)",1
+34db62e9-3529-437f-9893-82d727d5619d,capsule-3593259,"Codex Agent (gpt-5.4, re=medium, mt=1)",1
+2ca5fb4c-5eb5-4641-af65-6612ff4e8060,capsule-3449234,"Codex Agent (gpt-5.4, re=medium, mt=1)",1
+7c20aeae-2623-47da-91dc-78a0cb3ed14d,capsule-3418007,"Codex Agent (gpt-5.4, re=medium, mt=1)",1
+a624af64-2f3b-405b-85b6-c904f57244ed,capsule-3301293,"Codex Agent (gpt-5.4, re=medium, mt=1)",1
+70d8fe56-661a-42f6-b9b9-232d46a0f563,capsule-2816027,"Codex Agent (gpt-5.4, re=medium, mt=1)",1
+e2a6f78d-d486-488c-9f78-3f682e5f3873,capsule-2804717,"Codex Agent (gpt-5.4, re=medium, mt=1)",1
+9b028fb0-ddd1-4a76-b46e-f823fed8ae55,capsule-2708693,"Codex Agent (gpt-5.4, re=medium, mt=1)",1
+e094a7f5-8d4e-4171-a2d3-54852a8e6935,capsule-2345790,"Codex Agent (gpt-5.4, re=medium, mt=1)",1
+2d21c034-db76-40dd-ae5a-3c158e66786d,capsule-2242462,"Codex Agent (gpt-5.4, re=medium, mt=1)",1
+2e4e1c3c-f400-4592-a933-f71d55e9f10d,capsule-1724988,"Codex Agent (gpt-5.4, re=medium, mt=1)",1
+da8b061a-7f5e-4adf-9f1e-13822244e131,capsule-1394704,"Codex Agent (gpt-5.4, re=medium, mt=1)",1
+7bceab92-18fa-4e70-9e4f-e4b12056ac1c,capsule-1624349,"Codex Agent (gpt-5.4, re=medium, mt=1)",1
+9b384f19-8c66-4ea5-96e5-9ff024744c3c,capsule-1175539,"Codex Agent (gpt-5.4, re=medium, mt=1)",1
+b83d6a02-f138-43e8-8283-261245531126,capsule-0851068,"Codex Agent (gpt-5.4, re=medium, mt=1)",1
+4a3aa0b2-22a6-4ce4-b981-cd77f27cdb71,capsule-0504157,"Codex Agent (gpt-5.4, re=medium, mt=1)",1
+66e9336c-24e3-487e-8936-d06de33dcf18,capsule-0201673,"Codex Agent (gpt-5.4, re=medium, mt=1)",1
+1b8749d2-239a-4a3a-9e3f-6f06b60ebf79,capsule-0152700,"Codex Agent (gpt-5.4, re=medium, mt=1)",1
+70f04305-2904-4404-8ecb-8b4190547aee,capsule-3821950,"Open Code (openai/gpt-5.4, re=high)",1
+1bdb6819-4394-40dc-b8ac-e9409b1806c4,capsule-9832712,"Codex Agent (gpt-5.4, re=medium)",1
+d938db88-88fe-44fa-9637-ec1c6d917fc4,capsule-9294029,"Codex Agent (gpt-5.4, re=medium)",1
+dbf22f7d-8a38-4e29-9f46-c41c8961e73e,capsule-9240688,"Codex Agent (gpt-5.4, re=medium)",1
+5c35fab2-a682-4cc0-9d1f-4619e08ebedf,capsule-9054015,"Codex Agent (gpt-5.4, re=medium)",1
+5d1eb164-9cc2-477b-aadb-ae2337c1324e,capsule-8807709,"Codex Agent (gpt-5.4, re=medium)",1
+3cf510e1-264f-402e-916d-f40a298b0823,capsule-8412128,"Codex Agent (gpt-5.4, re=medium)",1
+7326a1df-25a4-401d-92af-d0f3340a053c,capsule-7800694,"Codex Agent (gpt-5.4, re=medium)",1
+e35379b7-f744-4226-b677-124ddac5abbc,capsule-7655932,"Codex Agent (gpt-5.4, re=medium)",1
+73bfafff-06d6-46de-a4e8-8f7738a0dd61,capsule-7716865,"Codex Agent (gpt-5.4, re=medium)",1
+f82fb314-1def-45b6-8c2e-0481427c5b41,capsule-7186268,"Codex Agent (gpt-5.4, re=medium)",1
+0050c4e6-d41a-4905-bcd4-8764d7e8bcf8,capsule-6295990,"Codex Agent (gpt-5.4, re=medium)",1
+608467bb-3c6d-4ccb-81eb-264da527825c,capsule-6049678,"Codex Agent (gpt-5.4, re=medium)",1
+cd4318a3-d5c1-4e47-8373-c20245a454c2,capsule-5507257,"Codex Agent (gpt-5.4, re=medium)",1
+ccf69853-0b75-4f92-9846-47642fb89e4a,capsule-5136217,"Codex Agent (gpt-5.4, re=medium)",1
+df7e534c-c1ed-4c04-93d5-05d7b74bb3c7,capsule-4933686,"Codex Agent (gpt-5.4, re=medium)",1
+b633ae0c-4708-445d-902d-b4b23d142ae7,capsule-4299879,"Codex Agent (gpt-5.4, re=medium)",1
+5dc0b74e-21fd-4399-bafb-94d25697b6c9,capsule-4671827,"Codex Agent (gpt-5.4, re=medium)",1
+9ed84551-ce99-4f21-8d5b-cdabd1106cdb,capsule-3639589,"Open Code (openai/gpt-5.4, re=high)",1
+c6ebab22-c9e3-4109-809a-cdc43d639670,capsule-3821950,"Codex Agent (gpt-5.4, re=medium)",1
+da1d51ae-86e3-4a95-a5b6-58fa81fdaeaf,capsule-3762736,"Codex Agent (gpt-5.4, re=medium)",1
+80ffc6b3-93e8-4aa7-bd51-bf3777b7120a,capsule-3639589,"Codex Agent (gpt-5.4, re=medium)",1
+96ee3a76-136f-4695-a413-e7f029170969,capsule-3593259,"Codex Agent (gpt-5.4, re=medium)",1
+b60e9253-d7c5-4226-b18a-91e569dd1f6b,capsule-3449234,"Codex Agent (gpt-5.4, re=medium)",1
+f18961ed-25fb-47b7-8d38-fa2018ec0e84,capsule-3418007,"Codex Agent (gpt-5.4, re=medium)",1
+db2e7248-8fd5-46af-8294-378cf0c8f77a,capsule-3301293,"Codex Agent (gpt-5.4, re=medium)",1
+656f3c49-d4c9-4805-873d-e8c23a139ea5,capsule-2816027,"Codex Agent (gpt-5.4, re=medium)",1
+4fe3a6cb-7468-48ac-8cdd-3c5be2dacd69,capsule-2708693,"Codex Agent (gpt-5.4, re=medium)",1
+1a52eef8-8d86-4738-a0d2-5c9a3318ea68,capsule-2804717,"Codex Agent (gpt-5.4, re=medium)",1
+a1e06e3e-dd05-4457-b14e-197c49cc3027,capsule-2345790,"Codex Agent (gpt-5.4, re=medium)",1
+9fa32350-6c0d-480e-8d08-b172ce9a9ba0,capsule-2242462,"Codex Agent (gpt-5.4, re=medium)",1
+b6c07be4-4d96-48d1-8aa2-6ab73cf394d2,capsule-1724988,"Codex Agent (gpt-5.4, re=medium)",1
+498059c8-19c9-43f4-8106-36220f9b71d1,capsule-1624349,"Codex Agent (gpt-5.4, re=medium)",1
+007f4800-7315-456c-b6aa-33c62da3a23f,capsule-1394704,"Codex Agent (gpt-5.4, re=medium)",1
+6c735729-7631-4c2a-8e0c-badc55da89de,capsule-0851068,"Codex Agent (gpt-5.4, re=medium)",1
+56b8682c-adba-4f40-9705-10474739d132,capsule-1175539,"Codex Agent (gpt-5.4, re=medium)",1
+24d83dd6-c72d-483e-ad41-862fa92b6ea6,capsule-0504157,"Codex Agent (gpt-5.4, re=medium)",1
+b243e862-e36a-43a8-ab2d-7e620cbcac95,capsule-0201673,"Codex Agent (gpt-5.4, re=medium)",1
+a9587832-81a9-4678-85b5-56eb120a8779,capsule-0152700,"Codex Agent (gpt-5.4, re=medium)",1
+f4fd7e0d-8e04-419c-be51-0c64666f63bd,capsule-9832712,"Codex Agent (gpt-5.4, re=low)",1
+b70b3660-38fb-4d2d-8c11-d86710055f51,capsule-9294029,"Codex Agent (gpt-5.4, re=low)",1
+208af098-7a82-495d-a556-17fcf57d4e2f,capsule-3449234,"Open Code (openai/gpt-5.4, re=high)",1
+bf2af4c9-113f-42c0-a49a-14bab9da97a3,capsule-9240688,"Codex Agent (gpt-5.4, re=low)",1
+733e1aac-6fc3-4951-ac92-8460218e8fe8,capsule-9054015,"Codex Agent (gpt-5.4, re=low)",1
+2d0e906d-2e60-40e5-bc14-295b824db383,capsule-8807709,"Codex Agent (gpt-5.4, re=low)",1
+7542ed8d-9aa3-44d3-a78d-c8bcd6b3dd53,capsule-8412128,"Codex Agent (gpt-5.4, re=low)",1
+cd819ff3-78a5-4f51-827b-f77bd14fe405,capsule-7716865,"Codex Agent (gpt-5.4, re=low)",1
+02e26724-a23f-420f-b348-b44dd1c3e0b6,capsule-7800694,"Codex Agent (gpt-5.4, re=low)",1
+63a0f2b3-efd5-4ed7-bbb7-ca94f5f17575,capsule-7655932,"Codex Agent (gpt-5.4, re=low)",1
+c60e260a-26f6-4931-a229-f3a558dba726,capsule-7186268,"Codex Agent (gpt-5.4, re=low)",1
+f70d325b-63d2-4fce-baa1-092022713cde,capsule-6295990,"Codex Agent (gpt-5.4, re=low)",1
+15944204-6323-4d09-95a8-e8b71d8edb66,capsule-6049678,"Codex Agent (gpt-5.4, re=low)",1
+83242a24-a273-43c2-b3c8-298a6e026213,capsule-5507257,"Codex Agent (gpt-5.4, re=low)",1
+3b1f0d05-1357-4203-9cca-da43af867592,capsule-5136217,"Codex Agent (gpt-5.4, re=low)",1
+9d17f31e-2e85-48a5-90aa-5307ffd64ae4,capsule-4671827,"Codex Agent (gpt-5.4, re=low)",1
+58e97247-3aa0-4ba6-b481-761f2569c24a,capsule-4933686,"Codex Agent (gpt-5.4, re=low)",1
+fe452aeb-f965-44d8-8ebb-b97bbb872b83,capsule-4299879,"Codex Agent (gpt-5.4, re=low)",1
+6fce6f1f-8830-494e-832b-9c479a57f257,capsule-3418007,"Open Code (openai/gpt-5.4, re=high)",1
+8b8535e9-a750-445f-b145-40637cb46203,capsule-3821950,"Codex Agent (gpt-5.4, re=low)",1
+e26d6ae3-f696-4fd7-859c-82704213bd75,capsule-3762736,"Codex Agent (gpt-5.4, re=low)",1
+b1402c5b-7007-46ad-8928-a62521b7262f,capsule-3639589,"Codex Agent (gpt-5.4, re=low)",1
+4d0b979e-e3e4-4219-a1b6-3c503d1cf197,capsule-3593259,"Codex Agent (gpt-5.4, re=low)",1
+37883b66-62fd-46b4-a167-11f410b1a6f5,capsule-3449234,"Codex Agent (gpt-5.4, re=low)",1
+87522b5a-498c-4638-be90-eb4e54be8eee,capsule-3418007,"Codex Agent (gpt-5.4, re=low)",1
+8de9ae5b-faa8-4531-bbea-a6472a974b54,capsule-3301293,"Codex Agent (gpt-5.4, re=low)",1
+afc92af5-1e66-4ca3-adcf-e6ce72e8ba51,capsule-2816027,"Codex Agent (gpt-5.4, re=low)",1
+9273806c-b86f-48af-8a1c-84d513a159af,capsule-2804717,"Codex Agent (gpt-5.4, re=low)",1
+fafb4637-16f2-4091-a00f-df8b44fb86c3,capsule-2345790,"Codex Agent (gpt-5.4, re=low)",1
+668eb2ff-7b68-43ec-9027-dd0dafdaa37e,capsule-2708693,"Codex Agent (gpt-5.4, re=low)",1
+9a5537e8-040b-4b17-ae11-ed4ffb0dc068,capsule-2242462,"Codex Agent (gpt-5.4, re=low)",1
+835b227a-bfa1-4a34-92f9-4fbec810bf79,capsule-1724988,"Codex Agent (gpt-5.4, re=low)",1
+51a925fc-9c56-4810-ad36-3edd6e26cfec,capsule-1624349,"Codex Agent (gpt-5.4, re=low)",1
+e0513fe2-cad5-4a2d-83bc-59b8e8e9a62e,capsule-3301293,"Open Code (openai/gpt-5.4, re=high)",1
+33de85b8-5091-4c5e-9785-4556214984c9,capsule-1175539,"Codex Agent (gpt-5.4, re=low)",1
+770c1ec3-4335-4435-bac6-5721fd6bf73b,capsule-0851068,"Codex Agent (gpt-5.4, re=low)",1
+28592eab-6082-4e22-a450-72cd1560b0dc,capsule-0504157,"Codex Agent (gpt-5.4, re=low)",1
+d2d8f144-bcea-4984-b8a0-09ec70251848,capsule-0201673,"Codex Agent (gpt-5.4, re=low)",1
+a21e57a1-eae6-4ee8-bf8f-b870dd83ccb9,capsule-0152700,"Codex Agent (gpt-5.4, re=low)",1
+11824a55-a202-48e8-9560-bfff6ade9f09,capsule-9832712,"Codex Agent (gpt-5.3-codex, re=medium)",1
+85251817-dae8-45c2-8937-8a2509f41681,capsule-2804717,"Open Code (openai/gpt-5.4, re=high)",1
+dcb3a67a-7a1c-4d4b-9171-da17e7be046b,capsule-9294029,"Codex Agent (gpt-5.3-codex, re=medium)",1
+a0cc2616-9051-4671-a4ff-5bb8da8f0ed2,capsule-9240688,"Codex Agent (gpt-5.3-codex, re=medium)",1
+fb502b12-59ef-40bb-8ec4-d4a070aa21cc,capsule-9054015,"Codex Agent (gpt-5.3-codex, re=medium)",1
+06ac2a60-4837-4ff4-a485-861df3a80fed,capsule-8807709,"Codex Agent (gpt-5.3-codex, re=medium)",1
+fd94b5a0-83f6-44cf-aeb7-e660cb07eca7,capsule-8412128,"Codex Agent (gpt-5.3-codex, re=medium)",1
+15dba506-cdb8-45d9-bad5-5047dd68c8e0,capsule-7800694,"Codex Agent (gpt-5.3-codex, re=medium)",1
+f61488a8-a062-4914-b3f0-73c52f08188e,capsule-7716865,"Codex Agent (gpt-5.3-codex, re=medium)",1
+b04d305b-c88f-4c5b-9c2b-3435ef6e6e3c,capsule-7655932,"Codex Agent (gpt-5.3-codex, re=medium)",1
+d54b2837-22b0-46e4-9d40-e948dc17e17d,capsule-7186268,"Codex Agent (gpt-5.3-codex, re=medium)",1
+6bc8557b-f933-4738-8922-74791b9ebf37,capsule-6295990,"Codex Agent (gpt-5.3-codex, re=medium)",1
+96bf330f-f61f-46af-a7ce-491c412b2f72,capsule-6049678,"Codex Agent (gpt-5.3-codex, re=medium)",1
+283ab415-6096-4588-8e49-ea23c2d1c3d3,capsule-5507257,"Codex Agent (gpt-5.3-codex, re=medium)",1
+a9e82484-40a9-41d6-b23a-0c7c5bf12686,capsule-5136217,"Codex Agent (gpt-5.3-codex, re=medium)",1
+a6f1bfea-6770-4afc-9585-7ca69881bd2f,capsule-4933686,"Codex Agent (gpt-5.3-codex, re=medium)",1
+490344fd-37ca-4e12-967b-992d3da6bcbd,capsule-4671827,"Codex Agent (gpt-5.3-codex, re=medium)",1
+9467d20e-e666-425b-976b-4fd27212211c,capsule-4299879,"Codex Agent (gpt-5.3-codex, re=medium)",1
+3258dcec-40e6-4577-b560-4aa211f44b02,capsule-4252248,"Codex Agent (gpt-5.3-codex, re=medium)",1
+1f964abe-b6cf-413b-abdf-095af06dd488,capsule-3821950,"Codex Agent (gpt-5.3-codex, re=medium)",1
+5894340f-62f7-45dc-82bb-bb8bd1323c01,capsule-3762736,"Codex Agent (gpt-5.3-codex, re=medium)",1
+fd47f2f1-e2d5-452b-b005-c0f327ec3cfb,capsule-3639589,"Codex Agent (gpt-5.3-codex, re=medium)",1
+d1ef8136-2864-4d73-a29b-74e6a68665ad,capsule-3593259,"Codex Agent (gpt-5.3-codex, re=medium)",1
+eb5215fa-87d9-4296-982b-4e0b7f6c0e58,capsule-3449234,"Codex Agent (gpt-5.3-codex, re=medium)",1
+029f2c5e-ebe8-462e-b856-af3862bc02e8,capsule-3418007,"Codex Agent (gpt-5.3-codex, re=medium)",1
+e7825ef7-07b8-4793-8dfc-607429187664,capsule-3301293,"Codex Agent (gpt-5.3-codex, re=medium)",1
+d8d731a8-8e24-491f-85c0-94e8275f9bff,capsule-2816027,"Codex Agent (gpt-5.3-codex, re=medium)",1
+7bfd4329-5df7-4ea8-a538-7bcf64bb884a,capsule-2804717,"Codex Agent (gpt-5.3-codex, re=medium)",1
+f3608547-dd04-4836-9077-0fb50811f0c2,capsule-2708693,"Codex Agent (gpt-5.3-codex, re=medium)",1
+7dafcf1b-ef88-4f2a-b3a1-23d9d21a222d,capsule-2345790,"Codex Agent (gpt-5.3-codex, re=medium)",1
+3ac891f1-8888-4785-ae0f-a2e3444987ad,capsule-2242462,"Codex Agent (gpt-5.3-codex, re=medium)",1
+f48886fc-84ca-49f7-b82a-0fab68e46b7d,capsule-1724988,"Codex Agent (gpt-5.3-codex, re=medium)",1
+92915570-d46d-4650-b5e2-6efb8d87d566,capsule-1624349,"Codex Agent (gpt-5.3-codex, re=medium)",1
+3dfefe8a-2c04-4770-9b68-f31f47bbe098,capsule-1394704,"Codex Agent (gpt-5.3-codex, re=medium)",1
+4aeadc11-1964-4e90-9548-f88de003a667,capsule-1175539,"Codex Agent (gpt-5.3-codex, re=medium)",1
+7efcfa05-ff19-4f71-8c87-cf6673cde752,capsule-0851068,"Codex Agent (gpt-5.3-codex, re=medium)",1
+0d94a68b-8af0-478b-b61e-7cdf723c5eb3,capsule-0504157,"Codex Agent (gpt-5.3-codex, re=medium)",1
+c9e8b10c-e011-4e34-8407-ea413cd9a126,capsule-0201673,"Codex Agent (gpt-5.3-codex, re=medium)",1
+d1c8c148-6907-4322-88f3-3b36bfe2bc97,capsule-0152700,"Codex Agent (gpt-5.3-codex, re=medium)",1
+ca0b8e75-df2d-47f9-9259-696896bbfa64,capsule-9832712,"Codex Agent (gpt-5.2, re=medium)",1
+3187e56c-0d84-44d7-bda3-ee905f4f1fa5,capsule-2708693,"Open Code (openai/gpt-5.4, re=high)",1
+13be0f55-31c7-4f99-97f0-8f91fa4bd5cc,capsule-9294029,"Codex Agent (gpt-5.2, re=medium)",1
+ea783463-32ef-46a6-9c80-6b1196057e78,capsule-9240688,"Codex Agent (gpt-5.2, re=medium)",1
+f5c0ea8d-cca4-4199-8e4f-dca8e43cdae6,capsule-9054015,"Codex Agent (gpt-5.2, re=medium)",1
+f1e34e5f-dc67-440c-8358-8f3c17a63bbb,capsule-2345790,"Open Code (openai/gpt-5.4, re=high)",1
+7bf404f4-aa1c-4cb2-bbcc-120866db085d,capsule-8412128,"Codex Agent (gpt-5.2, re=medium)",1
+d22d346e-b799-4a94-8489-141932cfa478,capsule-7800694,"Codex Agent (gpt-5.2, re=medium)",1
+349d3167-390e-451e-856b-f56a4eecbbe8,capsule-7716865,"Codex Agent (gpt-5.2, re=medium)",1
+333e478e-333b-4595-a6cf-dc99631224bd,capsule-7655932,"Codex Agent (gpt-5.2, re=medium)",1
+ac1548ba-954c-4442-99ff-8782f3abf766,capsule-7186268,"Codex Agent (gpt-5.2, re=medium)",1
+86cf07c9-a4d5-44f2-9f91-6696c661287f,capsule-6295990,"Codex Agent (gpt-5.2, re=medium)",1
+1446639b-95fa-4aa1-800f-38eefa951706,capsule-6049678,"Codex Agent (gpt-5.2, re=medium)",1
+3004e2dc-7aa6-4f2e-bc3f-1ed3fa1dd2ca,capsule-5507257,"Codex Agent (gpt-5.2, re=medium)",1
+edcfefcb-1b42-420f-b461-e5df24317536,capsule-5136217,"Codex Agent (gpt-5.2, re=medium)",1
+551fe10b-8cf8-4cf4-bdf9-b4fb4c378b5b,capsule-4933686,"Codex Agent (gpt-5.2, re=medium)",1
+8e281119-54cf-4764-b87f-08fda4f2eea9,capsule-4671827,"Codex Agent (gpt-5.2, re=medium)",1
+ed47aa6a-15aa-4a24-bfc0-40dc393c2e0a,capsule-4299879,"Codex Agent (gpt-5.2, re=medium)",1
+64f6cb7d-c258-4c92-a409-faf624acc42d,capsule-4252248,"Codex Agent (gpt-5.2, re=medium)",1
+65da5d9a-adaa-4d14-9c15-ca31418028b0,capsule-3821950,"Codex Agent (gpt-5.2, re=medium)",1
+d29ce5f7-51ec-48c9-9671-24d48e621a81,capsule-3762736,"Codex Agent (gpt-5.2, re=medium)",1
+86c0172a-a203-4857-a44e-0d64359cc20c,capsule-3639589,"Codex Agent (gpt-5.2, re=medium)",1
+6b18d212-c4aa-4e0d-af63-bf83b2c77733,capsule-3593259,"Codex Agent (gpt-5.2, re=medium)",1
+698e6eb7-1165-4c64-ac3f-18e1d321e445,capsule-3449234,"Codex Agent (gpt-5.2, re=medium)",1
+2f0cc213-8890-4221-8dd2-e0669237514a,capsule-3418007,"Codex Agent (gpt-5.2, re=medium)",1
+81afc230-f27e-4cb3-9afb-ff0a9f1d44a6,capsule-3301293,"Codex Agent (gpt-5.2, re=medium)",1
+f25cffbd-920b-4123-bba9-7f4163933f53,capsule-2816027,"Codex Agent (gpt-5.2, re=medium)",1
+96b5a617-1067-4d2c-be3d-4e54eb861912,capsule-2804717,"Codex Agent (gpt-5.2, re=medium)",1
+26d189c8-462b-4a81-9920-cec02e48024f,capsule-2708693,"Codex Agent (gpt-5.2, re=medium)",1
+1f377cfa-51e9-459c-8fc4-90c1edef45d8,capsule-2345790,"Codex Agent (gpt-5.2, re=medium)",1
+3247c4d9-4120-4609-8072-7dd65525ee85,capsule-2242462,"Codex Agent (gpt-5.2, re=medium)",1
+d26b0049-4aa0-475d-92b7-ca35347dd164,capsule-1724988,"Codex Agent (gpt-5.2, re=medium)",1
+e3ed903c-66d6-4bb4-ac24-ca95a7e19ca3,capsule-1624349,"Codex Agent (gpt-5.2, re=medium)",1
+fe914c3c-3fc2-480e-8397-e47480ccf131,capsule-1394704,"Codex Agent (gpt-5.2, re=medium)",1
+d76103a0-f850-4463-b237-b82d8973fc50,capsule-1175539,"Codex Agent (gpt-5.2, re=medium)",1
+41e88ef2-ef0e-49bf-ba13-824fbdfffc7c,capsule-0851068,"Codex Agent (gpt-5.2, re=medium)",1
+3288256b-e636-43f5-8a6f-a5c6d4e71d7b,capsule-0504157,"Codex Agent (gpt-5.2, re=medium)",1
+abda245a-bc41-4343-80c1-bb71d0f14608,capsule-0201673,"Codex Agent (gpt-5.2, re=medium)",1
+3446d389-63da-4f42-90eb-80b4545ce5a2,capsule-0152700,"Codex Agent (gpt-5.2, re=medium)",1
+9930a853-da92-4365-81d6-91dbb683a29c,capsule-2242462,"Open Code (openai/gpt-5.4, re=high)",1
+62e94922-e02b-4099-b384-d7065de7d700,capsule-9477017,"Codex Agent (gpt-5.1, re=medium)",1
+1a20e513-08f8-4404-92f4-5b2d101a52bb,capsule-9294029,"Codex Agent (gpt-5.1, re=medium)",1
+97d23646-8142-4b04-acf6-bc9a82112a43,capsule-9240688,"Codex Agent (gpt-5.1, re=medium)",1
+32326fb2-6098-4245-a243-eb058639bd02,capsule-9054015,"Codex Agent (gpt-5.1, re=medium)",1
+8ddc2933-74ec-4f8c-9f5f-9d0dd885e3b6,capsule-8807709,"Codex Agent (gpt-5.1, re=medium)",1
+0600c9b0-c1e8-4cab-99a1-17516855804f,capsule-8412128,"Codex Agent (gpt-5.1, re=medium)",1
+5319b355-4cd6-4c3d-8100-90ccceaf1d46,capsule-7800694,"Codex Agent (gpt-5.1, re=medium)",1
+b2ea44bc-10ec-4fb6-baa9-e7504a2f5b8a,capsule-7716865,"Codex Agent (gpt-5.1, re=medium)",1
+2f52ca14-7c24-4733-92c7-d3d355286705,capsule-7655932,"Codex Agent (gpt-5.1, re=medium)",1
+7516548b-90ff-472f-b132-b4ca10eac23c,capsule-7186268,"Codex Agent (gpt-5.1, re=medium)",1
+23c23031-ec69-4340-b0d5-f6ae688d251f,capsule-6295990,"Codex Agent (gpt-5.1, re=medium)",1
+09066be2-812a-4345-ad83-94c3b113e6ba,capsule-6049678,"Codex Agent (gpt-5.1, re=medium)",1
+417fcd3a-a037-4a5a-918e-009fea44db5d,capsule-5507257,"Codex Agent (gpt-5.1, re=medium)",1
+93139e50-944d-49b8-9657-e9d78bc23ec4,capsule-5136217,"Codex Agent (gpt-5.1, re=medium)",1
+1d6c4eaa-5974-4e4f-b43f-ec73cd43c9dc,capsule-4933686,"Codex Agent (gpt-5.1, re=medium)",1
+907c904b-a1ef-49ca-9484-880f9aa974a1,capsule-4671827,"Codex Agent (gpt-5.1, re=medium)",1
+76049ecb-b934-4c8f-99dd-23ac32a65a0d,capsule-4299879,"Codex Agent (gpt-5.1, re=medium)",1
+f7b7c49f-06d9-42ce-8afe-6d8558c5abe1,capsule-1724988,"Open Code (openai/gpt-5.4, re=high)",1
+72a20ac3-05a6-4267-b394-a5302aae8678,capsule-3821950,"Codex Agent (gpt-5.1, re=medium)",1
+24d2b209-d683-48d9-a92c-dd6772a7a554,capsule-3762736,"Codex Agent (gpt-5.1, re=medium)",1
+8908d59a-b04c-46a2-ad0f-f3a35bc8d421,capsule-3639589,"Codex Agent (gpt-5.1, re=medium)",1
+0ac81043-f1e1-4887-a663-a849095b67e5,capsule-3593259,"Codex Agent (gpt-5.1, re=medium)",1
+92c3e88e-8c46-4536-81ed-8d3a550ab99d,capsule-3449234,"Codex Agent (gpt-5.1, re=medium)",1
+5e42e914-7303-47f5-b372-c2054329b363,capsule-1624349,"Open Code (openai/gpt-5.4, re=high)",1
+9c20304f-db16-4298-bbf7-0033ee7960df,capsule-3301293,"Codex Agent (gpt-5.1, re=medium)",1
+570e696b-a1b8-4b42-95df-1392c7924904,capsule-2816027,"Codex Agent (gpt-5.1, re=medium)",1
+84755140-4317-45e3-ac8c-12b477d2c27e,capsule-1175539,"Open Code (openai/gpt-5.4, re=high)",1
+4df17059-a156-47bc-8ad1-55039b2d087d,capsule-2708693,"Codex Agent (gpt-5.1, re=medium)",1
+c3f37c1b-19c3-419c-9238-ae5a0e741350,capsule-2345790,"Codex Agent (gpt-5.1, re=medium)",1
+dc6da02e-421a-485d-babe-8b975ba0fc8b,capsule-2242462,"Codex Agent (gpt-5.1, re=medium)",1
+323319ab-ddaa-4630-b832-8a70f8058012,capsule-1724988,"Codex Agent (gpt-5.1, re=medium)",1
+8a0976a5-c985-435c-9178-e99ecef8049a,capsule-1394704,"Codex Agent (gpt-5.1, re=medium)",1
+0428d192-1b1f-4bb5-a9fb-cac771bb99e6,capsule-1624349,"Codex Agent (gpt-5.1, re=medium)",1
+be384be9-3f53-47c6-9d63-8bad2366a9fb,capsule-1175539,"Codex Agent (gpt-5.1, re=medium)",1
+fe3c33ac-9425-4f75-afc2-89800ff1a77c,capsule-0851068,"Codex Agent (gpt-5.1, re=medium)",1
+452d6ec7-8f12-455e-ba3c-5bf161f387a6,capsule-0504157,"Codex Agent (gpt-5.1, re=medium)",1
+494e3703-711a-476e-a985-5c62a24ecbbe,capsule-0201673,"Codex Agent (gpt-5.1, re=medium)",1
+067cfb24-5228-476e-af77-5f4a00d4d635,capsule-1394704,"Open Code (openai/gpt-5.4, re=high)",1
+d67e7d15-1bcf-4ebc-bdce-e067f308a139,capsule-9832712,Claude Code (anthropic/claude-opus-4-6),1
+abbef3fd-3193-44fd-b369-c119240131a7,capsule-0851068,"Open Code (openai/gpt-5.4, re=high)",1
+e743ba36-c538-4c14-8387-a7c7f46ef774,capsule-9294029,Claude Code (anthropic/claude-opus-4-6),1
+932f0ca3-ac2a-420b-be27-cd2980e2e25c,capsule-9240688,Claude Code (anthropic/claude-opus-4-6),1
+b180868d-ecfd-4933-809c-a26676197ab8,capsule-9054015,Claude Code (anthropic/claude-opus-4-6),1
+15b290ee-6296-47d3-9d3f-e8db0ad73e20,capsule-8807709,Claude Code (anthropic/claude-opus-4-6),1
+13a4423c-a35f-483b-864b-173132cc4b1f,capsule-8412128,Claude Code (anthropic/claude-opus-4-6),1
+e773b039-5b0a-41ab-9096-baffc7cacbd4,capsule-7800694,Claude Code (anthropic/claude-opus-4-6),1
+4e7c76df-71ca-4436-84c8-2e1e5817b824,capsule-7716865,Claude Code (anthropic/claude-opus-4-6),1
+3e9d48d0-91ae-443e-b391-347e2b4230da,capsule-7655932,Claude Code (anthropic/claude-opus-4-6),1
+807c2248-5349-432e-b4ad-0072ad1f2e4d,capsule-6295990,Claude Code (anthropic/claude-opus-4-6),1
+52bbc2ab-d297-421f-b977-dc2cb63ae534,capsule-7186268,Claude Code (anthropic/claude-opus-4-6),1
+06330792-be0b-4f04-8be9-426e3b9e5f30,capsule-6049678,Claude Code (anthropic/claude-opus-4-6),1
+2c85d272-a2d2-41d5-b109-fea133f2981b,capsule-5507257,Claude Code (anthropic/claude-opus-4-6),1
+006d7383-b856-415b-a614-59d059134727,capsule-5136217,Claude Code (anthropic/claude-opus-4-6),1
+e0a6d0fd-dd19-46fe-8385-2214dcc16cd6,capsule-4933686,Claude Code (anthropic/claude-opus-4-6),1
+f9e856f9-9cf6-4aaf-bd73-49b5ee64059d,capsule-4671827,Claude Code (anthropic/claude-opus-4-6),1
+70122fd1-81c8-4148-9017-c12b4a4748c2,capsule-4299879,Claude Code (anthropic/claude-opus-4-6),1
+7534dca5-9abd-4e74-b395-08b7c8d82597,capsule-0504157,"Open Code (openai/gpt-5.4, re=high)",1
+91b79428-55a7-49a6-997e-abe2d808de99,capsule-3821950,Claude Code (anthropic/claude-opus-4-6),1
+9d992b1c-8c6e-4506-b254-79c6cbfcabf8,capsule-3762736,Claude Code (anthropic/claude-opus-4-6),1
+03ae6256-11bd-4910-b8c0-24cc451b1def,capsule-3639589,Claude Code (anthropic/claude-opus-4-6),1
+a1213c0d-4e3c-4a99-980c-4a7f24b42408,capsule-3593259,Claude Code (anthropic/claude-opus-4-6),1
+33a45d99-1845-4f3a-933a-64d8ae24c9d0,capsule-3449234,Claude Code (anthropic/claude-opus-4-6),1
+084d66b9-226c-41c5-abf0-5a6e3344bd3d,capsule-3418007,Claude Code (anthropic/claude-opus-4-6),1
+c1bac9d2-f61d-48df-bf82-ae9f2e21ebf5,capsule-3301293,Claude Code (anthropic/claude-opus-4-6),1
+e34ad6ba-94ff-4cf8-836e-329e64c46108,capsule-2816027,Claude Code (anthropic/claude-opus-4-6),1
+ff9917a2-7ed3-460d-ad6d-d14cb6c387d0,capsule-0201673,"Open Code (openai/gpt-5.4, re=high)",1
+3688d4dc-2641-4ec9-b10c-ea4adca760e1,capsule-2708693,Claude Code (anthropic/claude-opus-4-6),1
+c4502d3b-ae43-4802-987e-253a815aaf36,capsule-2345790,Claude Code (anthropic/claude-opus-4-6),1
+45f46371-11c9-4f68-9acb-9e69e8b6fb76,capsule-2242462,Claude Code (anthropic/claude-opus-4-6),1
+a158aed2-7d63-4fba-a3fa-980988dea2ce,capsule-1724988,Claude Code (anthropic/claude-opus-4-6),1
+645ace50-3c68-4b37-8fab-741d76026aee,capsule-1624349,Claude Code (anthropic/claude-opus-4-6),1
+ecf4f1d7-7889-4741-a7bd-375769b53d88,capsule-1394704,Claude Code (anthropic/claude-opus-4-6),1
+da6bf98e-80e7-44f4-803e-e9f394b0e0ef,capsule-1175539,Claude Code (anthropic/claude-opus-4-6),1
+66b10a27-dd55-4913-9cc5-dd5df8c88928,capsule-9832712,Open Code (anthropic/claude-opus-4-6),1
+147e02bc-ef92-43d6-9dcf-2242279167fb,capsule-0504157,Claude Code (anthropic/claude-opus-4-6),1
+9be4cf66-4d1d-4d2b-8d00-00ccd2002f71,capsule-0201673,Claude Code (anthropic/claude-opus-4-6),1
+ad26d338-4dc7-4b11-a050-de2148bcb2c1,capsule-0152700,Claude Code (anthropic/claude-opus-4-6),1
+801d60f8-ba1b-4fd5-82a9-c4fc10a171cb,capsule-9477017,"Claude Code (anthropic/claude-opus-4-5, think=10000)",1
+32c0d13e-dd8a-4aee-97e6-243d7145c554,capsule-9832712,"Claude Code (anthropic/claude-opus-4-5, think=10000)",1
+afdeb8c0-e285-4785-a7bf-a21a2d47158e,capsule-9294029,"Claude Code (anthropic/claude-opus-4-5, think=10000)",1
+a6af3d83-1b36-4a40-bd2c-c2397aa238be,capsule-9240688,"Claude Code (anthropic/claude-opus-4-5, think=10000)",1
+9882c355-03b9-469a-9579-02e85dc2308a,capsule-9054015,"Claude Code (anthropic/claude-opus-4-5, think=10000)",1
+9f6f5e4a-fb7e-4da7-bb0e-2cfbd7d95efa,capsule-8807709,"Claude Code (anthropic/claude-opus-4-5, think=10000)",1
+d265e0cc-fdd3-427e-af3f-d37a25d7b340,capsule-8412128,"Claude Code (anthropic/claude-opus-4-5, think=10000)",1
+a53f8e0f-3e9c-4946-813e-19c678167dd5,capsule-7800694,"Claude Code (anthropic/claude-opus-4-5, think=10000)",1
+773f4aa5-fbf3-476a-8ede-999b04272a35,capsule-7716865,"Claude Code (anthropic/claude-opus-4-5, think=10000)",1
+e3b32b2e-6350-43f0-bea9-d333f2042573,capsule-7655932,"Claude Code (anthropic/claude-opus-4-5, think=10000)",1
+f99dc88d-13e7-4d3e-bc68-d2a099f37941,capsule-6295990,"Claude Code (anthropic/claude-opus-4-5, think=10000)",1
+a5891d23-069f-4882-9298-d172136b3eaf,capsule-7186268,"Claude Code (anthropic/claude-opus-4-5, think=10000)",1
+a96003ac-f397-485e-893d-fa48602b9d51,capsule-6049678,"Claude Code (anthropic/claude-opus-4-5, think=10000)",1
+8b7953b7-c7bb-44a0-a90f-a0ba0a21c25c,capsule-5507257,"Claude Code (anthropic/claude-opus-4-5, think=10000)",1
+69b68e48-918a-4d66-b8b2-673d859c60cc,capsule-9294029,Open Code (anthropic/claude-opus-4-6),1
+2db3d6c3-90ac-4cbd-98f1-31e0ddafce4b,capsule-4933686,"Claude Code (anthropic/claude-opus-4-5, think=10000)",1
+4dbc82d7-efdf-43d0-8445-55605b107e58,capsule-4671827,"Claude Code (anthropic/claude-opus-4-5, think=10000)",1
+42b2c29b-0e30-40e8-b883-dc5cddb35eb7,capsule-4299879,"Claude Code (anthropic/claude-opus-4-5, think=10000)",1
+13af5f05-7d3e-4655-8451-b4b296edacf0,capsule-9240688,Open Code (anthropic/claude-opus-4-6),1
+95b7e5f3-11db-45bd-aff3-1574867bacd2,capsule-3762736,"Claude Code (anthropic/claude-opus-4-5, think=10000)",1
+8abdd944-019a-456b-9aac-0aa6de4be259,capsule-3821950,"Claude Code (anthropic/claude-opus-4-5, think=10000)",1
+03772723-d01a-4a34-b41c-b036e5aa7263,capsule-3639589,"Claude Code (anthropic/claude-opus-4-5, think=10000)",1
+b7cd09ee-5e0e-406f-9703-7c7fb4e9b2a6,capsule-3593259,"Claude Code (anthropic/claude-opus-4-5, think=10000)",1
+b0fd2afe-c9eb-42d0-a6da-2558f5b6402a,capsule-3449234,"Claude Code (anthropic/claude-opus-4-5, think=10000)",1
+0dfd9a45-d672-4010-8579-96e01d403340,capsule-3418007,"Claude Code (anthropic/claude-opus-4-5, think=10000)",1
+bba5b107-f68c-4361-9ed2-3fcf6b475aff,capsule-3301293,"Claude Code (anthropic/claude-opus-4-5, think=10000)",1
+be85d5fc-9db8-4f71-a580-811ad324f347,capsule-2816027,"Claude Code (anthropic/claude-opus-4-5, think=10000)",1
+f94b2869-4c99-40c5-a620-c9c07f9b479b,capsule-9054015,Open Code (anthropic/claude-opus-4-6),1
+f01edd8e-ff4c-4ebc-b3f9-4e88e4840524,capsule-2708693,"Claude Code (anthropic/claude-opus-4-5, think=10000)",1
+eb32af3a-7b6a-4cf8-8153-66764caa612f,capsule-2345790,"Claude Code (anthropic/claude-opus-4-5, think=10000)",1
+02fe214a-2c93-4906-8e73-6eb886ba972f,capsule-2242462,"Claude Code (anthropic/claude-opus-4-5, think=10000)",1
+862cb024-2200-49c1-97f3-b7046f62650d,capsule-1724988,"Claude Code (anthropic/claude-opus-4-5, think=10000)",1
+d069894b-80b8-40a4-ad9a-f9e6c14744b1,capsule-1624349,"Claude Code (anthropic/claude-opus-4-5, think=10000)",1
+e22180bc-8052-4423-a5cd-52c484643770,capsule-1394704,"Claude Code (anthropic/claude-opus-4-5, think=10000)",1
+5f3d0ff9-bce7-4ab9-a95d-89bccf96bea4,capsule-1175539,"Claude Code (anthropic/claude-opus-4-5, think=10000)",1
+bce8aa31-e7b0-46cf-ba7e-801fbffd2471,capsule-0504157,"Claude Code (anthropic/claude-opus-4-5, think=10000)",1
+e1d0bc5b-db07-4ba7-bc91-438fc559464d,capsule-0201673,"Claude Code (anthropic/claude-opus-4-5, think=10000)",1
+c4ba3032-53de-47d3-8566-3c8d12f1d047,capsule-0152700,"Claude Code (anthropic/claude-opus-4-5, think=10000)",1
