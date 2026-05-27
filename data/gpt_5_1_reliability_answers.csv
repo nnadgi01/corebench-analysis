@@ -1,0 +1,306 @@
+capsule_id,rep_idx,question,gold_answer,submitted_answer,no_answer,exact_match
+capsule-5507257,0,Report the test accuracy of 'mouth talking'.,96.12499135323452,95.19554267100158,False,True
+capsule-3449234,0,"fig From the figure containing the standard deviation for the Essen data, report the name of the model with the highest standard deviation between time 0 and 10.",SN,SN,False,True
+capsule-8807709,0,"fig For the third subplot in the visualization of the experiments, report the color of the line with the greatest number of nodes at epoch 15.",blue,blue,False,True
+capsule-8807709,0,fig Report the name of the first subplot in the visualization of the experiments.,ill,ill.s,False,False
+capsule-6049678,0,Report the f1 score for the Musk1+ dataset with the svm classifier.,87.516,86.693,False,True
+capsule-6049678,0,Report the f1 score for the Musk1+ dataset with the j48 classifier.,79.813,66.587,False,False
+capsule-2804717,0,"fig From the Network Density plot (Figure 4), report the label for the red line (ignore spaces).",TS#1,PandemicH1N12009,False,False
+capsule-3418007,0,Report the F1 score for statistical general only.,0.7536528881857651,,True,False
+capsule-3418007,0,fig Report the proposed model's AUC from the ROC curves figure. Ignore the confidence interval.,0.98,,True,False
+capsule-1624349,0,Report the best accuracy of the hybrid filter wrapper strategy.,0.9506166187739464,0.9517631566112276,False,True
+capsule-1624349,0,fig Report the name of the feature with the highest I-Gain.,RAWRED-MEAN,RAWRED-MEAN,False,True
+capsule-9832712,0,"fig From Figure 2 in the cleaned results, report the percentage of 'Not Available' analysis scripts for Pre-RC (2008-09)",100,100.0,False,True
+capsule-9832712,0,"fig From Table 1 in the cleaned results, report the number of Included Articles After.OS",255,252,False,False
+capsule-2816027,0,"fig For CTCF Signature Enrichment, report the name of the group with the highest median GSVA score.",MCF7_D538G,MCF7_Y537S,False,False
+capsule-3821950,0,"fig Report the name of the material with the highest Depth Below Surface at 10,000 calibrated years BP.",charcoal,Unavailable: requires ktc11 R package functions and calibrated radiocarbon ages not reproducible with provided tools.,False,False
+capsule-3821950,0,fig Report the name of the material with the highest mass (g) and 5000 years cal. BP.,ceramics,"Unavailable: requires ktc11 R package functions (e.g., plot_ceramic_and_stone_artefact_mass) and calibrated age–mass relationships not reproducible here.",False,False
+capsule-9054015,0,"fig Report the percentage sensitivity for cancers A and B that has the highest number of cancers detected per 1,000 women for a 1.0% prevalance of cancer B.",90,90.0,False,True
+capsule-3301293,0,Report the test RMSE of the model.,26.21204,,True,False
+capsule-1724988,0,fig Report the task name with the higher median walking speed (m/s).,Walk,Walk,False,True
+capsule-1724988,0,fig Report the task name with the higher median straightness ratio.,Search,Search,False,True
+capsule-4299879,0,"fig From the figure measuring homicide rate per 100k in the last 12 months, report the name of the sample with the lower homicide rate per 100k in 2000.",Colombia,UNKNOWN_RSCRIPT_NOT_AVAILABLE,False,False
+capsule-0851068,0,Report the final AUC after training.,0.9157952669235003,ERROR: demo.sh failed because dataset directory /data/covid/val is missing; AUC cannot be computed.,False,False
+capsule-1394704,0,fig Report the name of the method with the higher R0.,ML,ML,False,True
+capsule-1394704,0,Report the R0 of EG.,1.035213,1.035213,False,True
+capsule-0504157,0,"fig From figure 1, report the CS presentation time with the greatest mean EC effect (ignore units).",1000,1000,False,True
+capsule-3593259,0,"fig From the violin plot of the energy comsumption of tap, report the name of the framework that consumes the most energy.",Appium,Appium,False,True
+capsule-3639589,0,"fig Report the color of the line with the highest maximum activation for target memory activation, DM.",blue,blue,False,True
+capsule-2345790,0,"From Study 1, report the mean of the response rate across all participants.",97.82,97.81538461538462,False,True
+capsule-2345790,0,"From Study 2, report the mean of the response rate across all participants.",99.41,99.40767973856208,False,True
+capsule-7716865,0,"fig From Table 1, report the sensitivity for 80% power and recalculated mean (regulation).",1.31,0.77,False,False
+capsule-4933686,0,"fig From Figure 2 plot A, report Fisher's P. If the value is in scientific notion, convert it to a floating point number.",0.0182,0.0312824001188216,False,False
+capsule-4933686,0,"fig From Figure 1 plot A, measuring time vs. metastasis-free survival, report the numerical value of HR (ignore the confidence interval).",2.15,2.14742374947523,False,True
+capsule-9240688,0,"From table 1, report the portion relevant in both corpora.",0.44,0.438,False,True
+capsule-1175539,0,fig Report the name of the patient group with the greater median concentricity.,SCZ,SCZ,False,True
+capsule-2708693,0,"fig From table 1, report the k value for the medicine discipline.",81,79,False,False
+capsule-2708693,0,"fig From table 3, report n for 'percentage of studies with at least one outcome discrepancy that disclose an outcome discrepancy'.",620,56,False,False
+capsule-4252248,0,"fig Report the overall AUC from the PR curve generated with the CTRPv2 sensitivity dataset, tested against ATC annotations and drug-target information from CHEMBL.",0.4929241,,True,False
+capsule-4671827,0,fig Report the name of the mapping with the higher execution time at 44 elements.,Semantic-based,Semantic-based,False,True
+capsule-7186268,0,"fig From laboratory test 18262-6, report the name of the method with the higher missing rate at gap 30.",By Window,By Individual,False,False
+capsule-7186268,0,"fig From laboratory test 2160-0 Creatinine, report the ID number with the highest laboratory result at window 2.",109,36,False,False
+capsule-5136217,0,"fig From figure 3 from the figures for publication, report the name of the party ID with the lowest share of political news from portals.",Lean DEM,,True,False
+capsule-7800694,0,Which model has the highest Macro F1?,CatBoost,XGBoost,False,False
+capsule-7800694,0,What is the ROC AUC (macro OvR) of the best performing model?,0.957,0.9925619834710744,False,False
+capsule-8412128,0,What is the mean of the snf_effectiveness_index?,0.5791337825021187,0.5791337825021187,False,True
+capsule-8412128,0,What is the median of the dignity_score?,0.5888590852515395,0.5888590852515395,False,True
+capsule-7655932,0,What is the point estimate (deaths averted synthetic) from the child wasting impact model? Give results as integer.,280000,280000,False,True
+capsule-7655932,0,What is the child wasting impact model reported 95% interval (synthetic)? Give a list of 2 integer value for the confidence interval.,"[196000, 364000]","[196000, 364000]",False,True
+capsule-9294029,0,fig what location has the lowest median enrichment score?,H,H,False,True
+capsule-6295990,0,What is the LBP model ROC-AUC (weighted),0.7142857,0.7142857,False,True
+capsule-6295990,0,What is the percent AUC-Improvement? Give an integer,25,25,False,True
+capsule-9477017,0,"fig Pearson correlation coefficients between the estimated proportions of different cell types were calculated, what is the highest pearson correlation related to? Give response in a list of strings","['Smooth.1', 'Endo.1']",['Smooth.1 and Endo.1 in TCGA.Endo.test'],False,False
+capsule-0201673,0,What is the mean_gdp_gain_pct?,0.9999005880537901,0.9999005880537901,False,True
+capsule-0201673,0,What is the p95?,1.1643528158326386,1.1643528158326386,False,True
+capsule-0201673,0,What is the p50?,0.9999966483532146,0.9999966483532146,False,True
+capsule-0152700,0,fig are there more than 2 features with accuracy exceeding 0.4? Respond with yes or no.,yes,yes,False,True
+capsule-0152700,0,fig which joint has the lowest absolute spearman correlation for acceleration?,ankle,heel,False,False
+capsule-0152700,0,"Given the Kruskal-Wallis for Group 0-2 (Group 1 vs. Group 3), what is the p-value?",2.341092434893948e-10,0.043,False,False
+capsule-2242462,0,"What is the Chromosome chr1 with positioning 1013983, IsNGGMatch status?",True,FALSE,False,False
+capsule-2242462,0,"What is the Chromosome chr1 with positioning 1319313, ABE8e_NG status?",False,0,False,False
+capsule-3762736,0,What is the Task1_Only macro f1?,0.7012,,True,False
+capsule-3762736,0,What is the Winner_SCL RMSE?,0.4708,,True,False
+capsule-5507257,1,Report the test accuracy of 'mouth talking'.,96.12499135323452,96.12499135323452,False,True
+capsule-3449234,1,"fig From the figure containing the standard deviation for the Essen data, report the name of the model with the highest standard deviation between time 0 and 10.",SN,SN,False,True
+capsule-8807709,1,"fig For the third subplot in the visualization of the experiments, report the color of the line with the greatest number of nodes at epoch 15.",blue,UNKNOWN_due_to_environment_permissions,False,False
+capsule-8807709,1,fig Report the name of the first subplot in the visualization of the experiments.,ill,UNKNOWN_due_to_environment_permissions,False,False
+capsule-6049678,1,Report the f1 score for the Musk1+ dataset with the svm classifier.,87.516,86.002,False,False
+capsule-6049678,1,Report the f1 score for the Musk1+ dataset with the j48 classifier.,79.813,77.5747,False,False
+capsule-2804717,1,"fig From the Network Density plot (Figure 4), report the label for the red line (ignore spaces).",TS#1,networkdensity,False,False
+capsule-3418007,1,Report the F1 score for statistical general only.,0.7536528881857651,0.873,False,False
+capsule-3418007,1,fig Report the proposed model's AUC from the ROC curves figure. Ignore the confidence interval.,0.98,0.98,False,True
+capsule-1624349,1,Report the best accuracy of the hybrid filter wrapper strategy.,0.9506166187739464,,True,False
+capsule-1624349,1,fig Report the name of the feature with the highest I-Gain.,RAWRED-MEAN,,True,False
+capsule-9832712,1,"fig From Figure 2 in the cleaned results, report the percentage of 'Not Available' analysis scripts for Pre-RC (2008-09)",100,99.42528735632183,False,True
+capsule-9832712,1,"fig From Table 1 in the cleaned results, report the number of Included Articles After.OS",255,252,False,False
+capsule-2816027,1,"fig For CTCF Signature Enrichment, report the name of the group with the highest median GSVA score.",MCF7_D538G,MCF7_Y537S,False,False
+capsule-3821950,1,"fig Report the name of the material with the highest Depth Below Surface at 10,000 calibrated years BP.",charcoal,shell,False,False
+capsule-3821950,1,fig Report the name of the material with the highest mass (g) and 5000 years cal. BP.,ceramics,Neoradina prasongi,False,False
+capsule-9054015,1,"fig Report the percentage sensitivity for cancers A and B that has the highest number of cancers detected per 1,000 women for a 1.0% prevalance of cancer B.",90,80.0,False,False
+capsule-3301293,1,Report the test RMSE of the model.,26.21204,"Cannot be computed: required Python packages (torch, sklearn, h5py) are not installed and the environment forbids installing new packages.",False,False
+capsule-1724988,1,fig Report the task name with the higher median walking speed (m/s).,Walk,Walk,False,True
+capsule-1724988,1,fig Report the task name with the higher median straightness ratio.,Search,Search,False,True
+capsule-4299879,1,"fig From the figure measuring homicide rate per 100k in the last 12 months, report the name of the sample with the lower homicide rate per 100k in 2000.",Colombia,Antioquia,False,False
+capsule-0851068,1,Report the final AUC after training.,0.9157952669235003,0.9157952669235003,False,True
+capsule-1394704,1,fig Report the name of the method with the higher R0.,ML,ML,False,True
+capsule-1394704,1,Report the R0 of EG.,1.035213,NA,False,False
+capsule-0504157,1,"fig From figure 1, report the CS presentation time with the greatest mean EC effect (ignore units).",1000,1000 ms,False,False
+capsule-3593259,1,"fig From the violin plot of the energy comsumption of tap, report the name of the framework that consumes the most energy.",Appium,Appium,False,True
+capsule-3639589,1,"fig Report the color of the line with the highest maximum activation for target memory activation, DM.",blue,blue,False,True
+capsule-2345790,1,"From Study 1, report the mean of the response rate across all participants.",97.82,1.0,False,False
+capsule-2345790,1,"From Study 2, report the mean of the response rate across all participants.",99.41,1.0,False,False
+capsule-7716865,1,"fig From Table 1, report the sensitivity for 80% power and recalculated mean (regulation).",1.31,0.77,False,False
+capsule-4933686,1,"fig From Figure 2 plot A, report Fisher's P. If the value is in scientific notion, convert it to a floating point number.",0.0182,0.0182408476,False,True
+capsule-4933686,1,"fig From Figure 1 plot A, measuring time vs. metastasis-free survival, report the numerical value of HR (ignore the confidence interval).",2.15,2.1474,False,True
+capsule-9240688,1,"From table 1, report the portion relevant in both corpora.",0.44,0.438,False,True
+capsule-1175539,1,fig Report the name of the patient group with the greater median concentricity.,SCZ,SCZ,False,True
+capsule-2708693,1,"fig From table 1, report the k value for the medicine discipline.",81,81,False,True
+capsule-2708693,1,"fig From table 3, report n for 'percentage of studies with at least one outcome discrepancy that disclose an outcome discrepancy'.",620,620.0,False,True
+capsule-4252248,1,"fig Report the overall AUC from the PR curve generated with the CTRPv2 sensitivity dataset, tested against ATC annotations and drug-target information from CHEMBL.",0.4929241,0.285,False,False
+capsule-4671827,1,fig Report the name of the mapping with the higher execution time at 44 elements.,Semantic-based,Combination,False,False
+capsule-7186268,1,"fig From laboratory test 18262-6, report the name of the method with the higher missing rate at gap 30.",By Window,By Window,False,True
+capsule-7186268,1,"fig From laboratory test 2160-0 Creatinine, report the ID number with the highest laboratory result at window 2.",109,36,False,False
+capsule-5136217,1,"fig From figure 3 from the figures for publication, report the name of the party ID with the lowest share of political news from portals.",Lean DEM,Strong DEM,False,False
+capsule-7800694,1,Which model has the highest Macro F1?,CatBoost,CatBoost,False,True
+capsule-7800694,1,What is the ROC AUC (macro OvR) of the best performing model?,0.957,0.9470916316668925,False,False
+capsule-8412128,1,What is the mean of the snf_effectiveness_index?,0.5791337825021187,0.5791337825021187,False,True
+capsule-8412128,1,What is the median of the dignity_score?,0.5888590852515395,0.5888590852515395,False,True
+capsule-7655932,1,What is the point estimate (deaths averted synthetic) from the child wasting impact model? Give results as integer.,280000,280000,False,True
+capsule-7655932,1,What is the child wasting impact model reported 95% interval (synthetic)? Give a list of 2 integer value for the confidence interval.,"[196000, 364000]","[196000, 364000]",False,True
+capsule-9294029,1,fig what location has the lowest median enrichment score?,H,C,False,False
+capsule-6295990,1,What is the LBP model ROC-AUC (weighted),0.7142857,0.7142857,False,True
+capsule-6295990,1,What is the percent AUC-Improvement? Give an integer,25,25,False,True
+capsule-9477017,1,"fig Pearson correlation coefficients between the estimated proportions of different cell types were calculated, what is the highest pearson correlation related to? Give response in a list of strings","['Smooth.1', 'Endo.1']",['Smooth.1 and Endo.1 in the TCGA_Endo dataset'],False,False
+capsule-0201673,1,What is the mean_gdp_gain_pct?,0.9999005880537901,0.9999005880537901,False,True
+capsule-0201673,1,What is the p95?,1.1643528158326386,1.1643528158326386,False,True
+capsule-0201673,1,What is the p50?,0.9999966483532146,0.9999966483532146,False,True
+capsule-0152700,1,fig are there more than 2 features with accuracy exceeding 0.4? Respond with yes or no.,yes,yes,False,True
+capsule-0152700,1,fig which joint has the lowest absolute spearman correlation for acceleration?,ankle,small toe,False,False
+capsule-0152700,1,"Given the Kruskal-Wallis for Group 0-2 (Group 1 vs. Group 3), what is the p-value?",2.341092434893948e-10,0.0616473328671439,False,False
+capsule-2242462,1,"What is the Chromosome chr1 with positioning 1013983, IsNGGMatch status?",True,True,False,True
+capsule-2242462,1,"What is the Chromosome chr1 with positioning 1319313, ABE8e_NG status?",False,False,False,True
+capsule-3762736,1,What is the Task1_Only macro f1?,0.7012,0.701201729990186,False,True
+capsule-3762736,1,What is the Winner_SCL RMSE?,0.4708,0.4707822886271859,False,True
+capsule-5507257,2,Report the test accuracy of 'mouth talking'.,96.12499135323452,UNABLE_TO_COMPUTE_DUE_TO_MISSING_TENSORFLOW_KERAS,False,False
+capsule-3449234,2,"fig From the figure containing the standard deviation for the Essen data, report the name of the model with the highest standard deviation between time 0 and 10.",SN,convLSTM,False,False
+capsule-8807709,2,"fig For the third subplot in the visualization of the experiments, report the color of the line with the greatest number of nodes at epoch 15.",blue,tab:brown,False,False
+capsule-8807709,2,fig Report the name of the first subplot in the visualization of the experiments.,ill,Epidemic process,False,False
+capsule-6049678,2,Report the f1 score for the Musk1+ dataset with the svm classifier.,87.516,86.5217,False,False
+capsule-6049678,2,Report the f1 score for the Musk1+ dataset with the j48 classifier.,79.813,77.9059,False,False
+capsule-2804717,2,"fig From the Network Density plot (Figure 4), report the label for the red line (ignore spaces).",TS#1,NetworkDensity,False,False
+capsule-3418007,2,Report the F1 score for statistical general only.,0.7536528881857651,0.9458262870133395,False,False
+capsule-3418007,2,fig Report the proposed model's AUC from the ROC curves figure. Ignore the confidence interval.,0.98,0.98,False,True
+capsule-1624349,2,Report the best accuracy of the hybrid filter wrapper strategy.,0.9506166187739464,,True,False
+capsule-1624349,2,fig Report the name of the feature with the highest I-Gain.,RAWRED-MEAN,,True,False
+capsule-9832712,2,"fig From Figure 2 in the cleaned results, report the percentage of 'Not Available' analysis scripts for Pre-RC (2008-09)",100,,True,False
+capsule-9832712,2,"fig From Table 1 in the cleaned results, report the number of Included Articles After.OS",255,,True,False
+capsule-2816027,2,"fig For CTCF Signature Enrichment, report the name of the group with the highest median GSVA score.",MCF7_D538G,MCF7_Y537S,False,False
+capsule-3821950,2,"fig Report the name of the material with the highest Depth Below Surface at 10,000 calibrated years BP.",charcoal,shell,False,False
+capsule-3821950,2,fig Report the name of the material with the highest mass (g) and 5000 years cal. BP.,ceramics,shell,False,False
+capsule-9054015,2,"fig Report the percentage sensitivity for cancers A and B that has the highest number of cancers detected per 1,000 women for a 1.0% prevalance of cancer B.",90,80.0,False,False
+capsule-3301293,2,Report the test RMSE of the model.,26.21204,"unavailable: scikit-learn/torch cannot be installed in this environment, so run_prediction.py cannot be executed",False,False
+capsule-1724988,2,fig Report the task name with the higher median walking speed (m/s).,Walk,Walk,False,True
+capsule-1724988,2,fig Report the task name with the higher median straightness ratio.,Search,Search,False,True
+capsule-4299879,2,"fig From the figure measuring homicide rate per 100k in the last 12 months, report the name of the sample with the lower homicide rate per 100k in 2000.",Colombia,Colombia,False,True
+capsule-0851068,2,Report the final AUC after training.,0.9157952669235003,unavailable: test.py crashes because required data /data/covid/val and model /data/final_model.pth are missing in this environment,False,False
+capsule-1394704,2,fig Report the name of the method with the higher R0.,ML,,True,False
+capsule-1394704,2,Report the R0 of EG.,1.035213,,True,False
+capsule-0504157,2,"fig From figure 1, report the CS presentation time with the greatest mean EC effect (ignore units).",1000,250,False,False
+capsule-3593259,2,"fig From the violin plot of the energy comsumption of tap, report the name of the framework that consumes the most energy.",Appium,Appium,False,True
+capsule-3639589,2,"fig Report the color of the line with the highest maximum activation for target memory activation, DM.",blue,blue,False,True
+capsule-2345790,2,"From Study 1, report the mean of the response rate across all participants.",97.82,97.81538461538462,False,True
+capsule-2345790,2,"From Study 2, report the mean of the response rate across all participants.",99.41,99.40767973856208,False,True
+capsule-7716865,2,"fig From Table 1, report the sensitivity for 80% power and recalculated mean (regulation).",1.31,1.0,False,False
+capsule-4933686,2,"fig From Figure 2 plot A, report Fisher's P. If the value is in scientific notion, convert it to a floating point number.",0.0182,0.0182408475996513,False,True
+capsule-4933686,2,"fig From Figure 1 plot A, measuring time vs. metastasis-free survival, report the numerical value of HR (ignore the confidence interval).",2.15,2.26805966942754,False,False
+capsule-9240688,2,"From table 1, report the portion relevant in both corpora.",0.44,0.44,False,True
+capsule-1175539,2,fig Report the name of the patient group with the greater median concentricity.,SCZ,SCZ,False,True
+capsule-2708693,2,"fig From table 1, report the k value for the medicine discipline.",81,81,False,True
+capsule-2708693,2,"fig From table 3, report n for 'percentage of studies with at least one outcome discrepancy that disclose an outcome discrepancy'.",620,620,False,True
+capsule-4252248,2,"fig Report the overall AUC from the PR curve generated with the CTRPv2 sensitivity dataset, tested against ATC annotations and drug-target information from CHEMBL.",0.4929241,,True,False
+capsule-4671827,2,fig Report the name of the mapping with the higher execution time at 44 elements.,Semantic-based,Semantic-based,False,True
+capsule-7186268,2,"fig From laboratory test 18262-6, report the name of the method with the higher missing rate at gap 30.",By Window,By Individual,False,False
+capsule-7186268,2,"fig From laboratory test 2160-0 Creatinine, report the ID number with the highest laboratory result at window 2.",109,36,False,False
+capsule-5136217,2,"fig From figure 3 from the figures for publication, report the name of the party ID with the lowest share of political news from portals.",Lean DEM,Lean DEM,False,True
+capsule-7800694,2,Which model has the highest Macro F1?,CatBoost,CatBoost,False,True
+capsule-7800694,2,What is the ROC AUC (macro OvR) of the best performing model?,0.957,0.965,False,True
+capsule-8412128,2,What is the mean of the snf_effectiveness_index?,0.5791337825021187,0.5791337825021187,False,True
+capsule-8412128,2,What is the median of the dignity_score?,0.5888590852515395,0.5888590852515395,False,True
+capsule-7655932,2,What is the point estimate (deaths averted synthetic) from the child wasting impact model? Give results as integer.,280000,280000,False,True
+capsule-7655932,2,What is the child wasting impact model reported 95% interval (synthetic)? Give a list of 2 integer value for the confidence interval.,"[196000, 364000]","[196000, 364000]",False,True
+capsule-9294029,2,fig what location has the lowest median enrichment score?,H,H,False,True
+capsule-6295990,2,What is the LBP model ROC-AUC (weighted),0.7142857,0.7142857,False,True
+capsule-6295990,2,What is the percent AUC-Improvement? Give an integer,25,25,False,True
+capsule-9477017,2,"fig Pearson correlation coefficients between the estimated proportions of different cell types were calculated, what is the highest pearson correlation related to? Give response in a list of strings","['Smooth.1', 'Endo.1']",['Smooth.1 and Endo.1'],False,False
+capsule-0201673,2,What is the mean_gdp_gain_pct?,0.9999005880537901,0.9999005880537899,False,True
+capsule-0201673,2,What is the p95?,1.1643528158326386,1.1643528158326386,False,True
+capsule-0201673,2,What is the p50?,0.9999966483532146,0.9999966483532146,False,True
+capsule-0152700,2,fig are there more than 2 features with accuracy exceeding 0.4? Respond with yes or no.,yes,no,False,False
+capsule-0152700,2,fig which joint has the lowest absolute spearman correlation for acceleration?,ankle,ankle,False,True
+capsule-0152700,2,"Given the Kruskal-Wallis for Group 0-2 (Group 1 vs. Group 3), what is the p-value?",2.341092434893948e-10,0.12121651956224781,False,False
+capsule-2242462,2,"What is the Chromosome chr1 with positioning 1013983, IsNGGMatch status?",True,False,False,False
+capsule-2242462,2,"What is the Chromosome chr1 with positioning 1319313, ABE8e_NG status?",False,False,False,True
+capsule-3762736,2,What is the Task1_Only macro f1?,0.7012,0.7012,False,True
+capsule-3762736,2,What is the Winner_SCL RMSE?,0.4708,0.4708,False,True
+capsule-5507257,3,Report the test accuracy of 'mouth talking'.,96.12499135323452,96.12499135323452,False,True
+capsule-3449234,3,"fig From the figure containing the standard deviation for the Essen data, report the name of the model with the highest standard deviation between time 0 and 10.",SN,convLSTM,False,False
+capsule-8807709,3,"fig For the third subplot in the visualization of the experiments, report the color of the line with the greatest number of nodes at epoch 15.",blue,blue,False,True
+capsule-8807709,3,fig Report the name of the first subplot in the visualization of the experiments.,ill,SIR model,False,False
+capsule-6049678,3,Report the f1 score for the Musk1+ dataset with the svm classifier.,87.516,86.2659,False,False
+capsule-6049678,3,Report the f1 score for the Musk1+ dataset with the j48 classifier.,79.813,77.8106,False,False
+capsule-2804717,3,"fig From the Network Density plot (Figure 4), report the label for the red line (ignore spaces).",TS#1,leader,False,False
+capsule-3418007,3,Report the F1 score for statistical general only.,0.7536528881857651,0.9458262870133395,False,False
+capsule-3418007,3,fig Report the proposed model's AUC from the ROC curves figure. Ignore the confidence interval.,0.98,0.98,False,True
+capsule-1624349,3,Report the best accuracy of the hybrid filter wrapper strategy.,0.9506166187739464,0.9506166187739464,False,True
+capsule-1624349,3,fig Report the name of the feature with the highest I-Gain.,RAWRED-MEAN,RAWRED-MEAN,False,True
+capsule-9832712,3,"fig From Figure 2 in the cleaned results, report the percentage of 'Not Available' analysis scripts for Pre-RC (2008-09)",100,REPRODUCTION_FAILED_NO_ACCESS_TO_/root/environment,False,False
+capsule-9832712,3,"fig From Table 1 in the cleaned results, report the number of Included Articles After.OS",255,REPRODUCTION_FAILED_NO_ACCESS_TO_/root/environment,False,False
+capsule-2816027,3,"fig For CTCF Signature Enrichment, report the name of the group with the highest median GSVA score.",MCF7_D538G,MCF7_WT_E2,False,False
+capsule-3821950,3,"fig Report the name of the material with the highest Depth Below Surface at 10,000 calibrated years BP.",charcoal,shell,False,False
+capsule-3821950,3,fig Report the name of the material with the highest mass (g) and 5000 years cal. BP.,ceramics,shell,False,False
+capsule-9054015,3,"fig Report the percentage sensitivity for cancers A and B that has the highest number of cancers detected per 1,000 women for a 1.0% prevalance of cancer B.",90,0.9,False,False
+capsule-3301293,3,Report the test RMSE of the model.,26.21204,26.21204,False,True
+capsule-1724988,3,fig Report the task name with the higher median walking speed (m/s).,Walk,Walk,False,True
+capsule-1724988,3,fig Report the task name with the higher median straightness ratio.,Search,Search,False,True
+capsule-4299879,3,"fig From the figure measuring homicide rate per 100k in the last 12 months, report the name of the sample with the lower homicide rate per 100k in 2000.",Colombia,Colombia,False,True
+capsule-0851068,3,Report the final AUC after training.,0.9157952669235003,N/A - torch not installable / test.py cannot run in this environment,False,False
+capsule-1394704,3,fig Report the name of the method with the higher R0.,ML,ML,False,True
+capsule-1394704,3,Report the R0 of EG.,1.035213,Not computable: Rscript unavailable; precomputed R0 table not parsable from HTML.,False,False
+capsule-0504157,3,"fig From figure 1, report the CS presentation time with the greatest mean EC effect (ignore units).",1000,1000 ms,False,False
+capsule-3593259,3,"fig From the violin plot of the energy comsumption of tap, report the name of the framework that consumes the most energy.",Appium,Appium,False,True
+capsule-3639589,3,"fig Report the color of the line with the highest maximum activation for target memory activation, DM.",blue,blue,False,True
+capsule-2345790,3,"From Study 1, report the mean of the response rate across all participants.",97.82,97.82,False,True
+capsule-2345790,3,"From Study 2, report the mean of the response rate across all participants.",99.41,99.41,False,True
+capsule-7716865,3,"fig From Table 1, report the sensitivity for 80% power and recalculated mean (regulation).",1.31,1.310389,False,True
+capsule-4933686,3,"fig From Figure 2 plot A, report Fisher's P. If the value is in scientific notion, convert it to a floating point number.",0.0182,0.01824085,False,True
+capsule-4933686,3,"fig From Figure 1 plot A, measuring time vs. metastasis-free survival, report the numerical value of HR (ignore the confidence interval).",2.15,2.147424,False,True
+capsule-9240688,3,"From table 1, report the portion relevant in both corpora.",0.44,0.438,False,True
+capsule-1175539,3,fig Report the name of the patient group with the greater median concentricity.,SCZ,SCZ,False,True
+capsule-2708693,3,"fig From table 1, report the k value for the medicine discipline.",81,81,False,True
+capsule-2708693,3,"fig From table 3, report n for 'percentage of studies with at least one outcome discrepancy that disclose an outcome discrepancy'.",620,620,False,True
+capsule-4252248,3,"fig Report the overall AUC from the PR curve generated with the CTRPv2 sensitivity dataset, tested against ATC annotations and drug-target information from CHEMBL.",0.4929241,,True,False
+capsule-4671827,3,fig Report the name of the mapping with the higher execution time at 44 elements.,Semantic-based,Semantic-based,False,True
+capsule-7186268,3,"fig From laboratory test 18262-6, report the name of the method with the higher missing rate at gap 30.",By Window,By Individual,False,False
+capsule-7186268,3,"fig From laboratory test 2160-0 Creatinine, report the ID number with the highest laboratory result at window 2.",109,36,False,False
+capsule-5136217,3,"fig From figure 3 from the figures for publication, report the name of the party ID with the lowest share of political news from portals.",Lean DEM,Republican,False,False
+capsule-7800694,3,Which model has the highest Macro F1?,CatBoost,CatBoost,False,True
+capsule-7800694,3,What is the ROC AUC (macro OvR) of the best performing model?,0.957,0.957,False,True
+capsule-8412128,3,What is the mean of the snf_effectiveness_index?,0.5791337825021187,0.5791337825021187,False,True
+capsule-8412128,3,What is the median of the dignity_score?,0.5888590852515395,0.5888590852515395,False,True
+capsule-7655932,3,What is the point estimate (deaths averted synthetic) from the child wasting impact model? Give results as integer.,280000,280000,False,True
+capsule-7655932,3,What is the child wasting impact model reported 95% interval (synthetic)? Give a list of 2 integer value for the confidence interval.,"[196000, 364000]","[196000, 364000]",False,True
+capsule-9294029,3,fig what location has the lowest median enrichment score?,H,Central lesion (C),False,False
+capsule-6295990,3,What is the LBP model ROC-AUC (weighted),0.7142857,0.7142857,False,True
+capsule-6295990,3,What is the percent AUC-Improvement? Give an integer,25,25,False,True
+capsule-9477017,3,"fig Pearson correlation coefficients between the estimated proportions of different cell types were calculated, what is the highest pearson correlation related to? Give response in a list of strings","['Smooth.1', 'Endo.1']",['Smooth.1 and Endo.1'],False,False
+capsule-0201673,3,What is the mean_gdp_gain_pct?,0.9999005880537901,0.9999005880537901,False,True
+capsule-0201673,3,What is the p95?,1.1643528158326386,1.1643528158326386,False,True
+capsule-0201673,3,What is the p50?,0.9999966483532146,0.9999966483532146,False,True
+capsule-0152700,3,fig are there more than 2 features with accuracy exceeding 0.4? Respond with yes or no.,yes,unknown,False,False
+capsule-0152700,3,fig which joint has the lowest absolute spearman correlation for acceleration?,ankle,unknown,False,False
+capsule-0152700,3,"Given the Kruskal-Wallis for Group 0-2 (Group 1 vs. Group 3), what is the p-value?",2.341092434893948e-10,unknown,False,False
+capsule-2242462,3,"What is the Chromosome chr1 with positioning 1013983, IsNGGMatch status?",True,True,False,True
+capsule-2242462,3,"What is the Chromosome chr1 with positioning 1319313, ABE8e_NG status?",False,False,False,True
+capsule-3762736,3,What is the Task1_Only macro f1?,0.7012,,True,False
+capsule-3762736,3,What is the Winner_SCL RMSE?,0.4708,,True,False
+capsule-5507257,4,Report the test accuracy of 'mouth talking'.,96.12499135323452,,True,False
+capsule-3449234,4,"fig From the figure containing the standard deviation for the Essen data, report the name of the model with the highest standard deviation between time 0 and 10.",SN,convLSTM,False,False
+capsule-8807709,4,"fig For the third subplot in the visualization of the experiments, report the color of the line with the greatest number of nodes at epoch 15.",blue,unknown,False,False
+capsule-8807709,4,fig Report the name of the first subplot in the visualization of the experiments.,ill,unknown,False,False
+capsule-6049678,4,Report the f1 score for the Musk1+ dataset with the svm classifier.,87.516,87.3885,False,True
+capsule-6049678,4,Report the f1 score for the Musk1+ dataset with the j48 classifier.,79.813,80.2752,False,True
+capsule-2804717,4,"fig From the Network Density plot (Figure 4), report the label for the red line (ignore spaces).",TS#1,,True,False
+capsule-3418007,4,Report the F1 score for statistical general only.,0.7536528881857651,0.9458262870133395,False,False
+capsule-3418007,4,fig Report the proposed model's AUC from the ROC curves figure. Ignore the confidence interval.,0.98,0.9848327559583407,False,True
+capsule-1624349,4,Report the best accuracy of the hybrid filter wrapper strategy.,0.9506166187739464,0.9558441558441558,False,True
+capsule-1624349,4,fig Report the name of the feature with the highest I-Gain.,RAWRED-MEAN,RAWRED-MEAN,False,True
+capsule-9832712,4,"fig From Figure 2 in the cleaned results, report the percentage of 'Not Available' analysis scripts for Pre-RC (2008-09)",100,,True,False
+capsule-9832712,4,"fig From Table 1 in the cleaned results, report the number of Included Articles After.OS",255,,True,False
+capsule-2816027,4,"fig For CTCF Signature Enrichment, report the name of the group with the highest median GSVA score.",MCF7_D538G,MCF7_Y537S,False,False
+capsule-3821950,4,"fig Report the name of the material with the highest Depth Below Surface at 10,000 calibrated years BP.",charcoal,NOT_AVAILABLE_RSCRIPT_MISSING,False,False
+capsule-3821950,4,fig Report the name of the material with the highest mass (g) and 5000 years cal. BP.,ceramics,NOT_AVAILABLE_RSCRIPT_MISSING,False,False
+capsule-9054015,4,"fig Report the percentage sensitivity for cancers A and B that has the highest number of cancers detected per 1,000 women for a 1.0% prevalance of cancer B.",90,90,False,True
+capsule-3301293,4,Report the test RMSE of the model.,26.21204,26.21204,False,True
+capsule-1724988,4,fig Report the task name with the higher median walking speed (m/s).,Walk,,True,False
+capsule-1724988,4,fig Report the task name with the higher median straightness ratio.,Search,,True,False
+capsule-4299879,4,"fig From the figure measuring homicide rate per 100k in the last 12 months, report the name of the sample with the lower homicide rate per 100k in 2000.",Colombia,Colombia,False,True
+capsule-0851068,4,Report the final AUC after training.,0.9157952669235003,0.9157952669235003,False,True
+capsule-1394704,4,fig Report the name of the method with the higher R0.,ML,EG,False,False
+capsule-1394704,4,Report the R0 of EG.,1.035213,2.5,False,False
+capsule-0504157,4,"fig From figure 1, report the CS presentation time with the greatest mean EC effect (ignore units).",1000,250,False,False
+capsule-3593259,4,"fig From the violin plot of the energy comsumption of tap, report the name of the framework that consumes the most energy.",Appium,Appium,False,True
+capsule-3639589,4,"fig Report the color of the line with the highest maximum activation for target memory activation, DM.",blue,orange,False,False
+capsule-2345790,4,"From Study 1, report the mean of the response rate across all participants.",97.82,97.81538461538462,False,True
+capsule-2345790,4,"From Study 2, report the mean of the response rate across all participants.",99.41,99.40767973856208,False,True
+capsule-7716865,4,"fig From Table 1, report the sensitivity for 80% power and recalculated mean (regulation).",1.31,"[1.310389, 29.22222]",False,False
+capsule-4933686,4,"fig From Figure 2 plot A, report Fisher's P. If the value is in scientific notion, convert it to a floating point number.",0.0182,0.0182408475996513,False,True
+capsule-4933686,4,"fig From Figure 1 plot A, measuring time vs. metastasis-free survival, report the numerical value of HR (ignore the confidence interval).",2.15,2.15,False,True
+capsule-9240688,4,"From table 1, report the portion relevant in both corpora.",0.44,0.438,False,True
+capsule-1175539,4,fig Report the name of the patient group with the greater median concentricity.,SCZ,SCZ,False,True
+capsule-2708693,4,"fig From table 1, report the k value for the medicine discipline.",81,0.67,False,False
+capsule-2708693,4,"fig From table 3, report n for 'percentage of studies with at least one outcome discrepancy that disclose an outcome discrepancy'.",620,14,False,False
+capsule-4252248,4,"fig Report the overall AUC from the PR curve generated with the CTRPv2 sensitivity dataset, tested against ATC annotations and drug-target information from CHEMBL.",0.4929241,,True,False
+capsule-4671827,4,fig Report the name of the mapping with the higher execution time at 44 elements.,Semantic-based,12 Elements,False,False
+capsule-7186268,4,"fig From laboratory test 18262-6, report the name of the method with the higher missing rate at gap 30.",By Window,By Individual,False,False
+capsule-7186268,4,"fig From laboratory test 2160-0 Creatinine, report the ID number with the highest laboratory result at window 2.",109,36,False,False
+capsule-5136217,4,"fig From figure 3 from the figures for publication, report the name of the party ID with the lowest share of political news from portals.",Lean DEM,Republican,False,False
+capsule-7800694,4,Which model has the highest Macro F1?,CatBoost,CatBoost,False,True
+capsule-7800694,4,What is the ROC AUC (macro OvR) of the best performing model?,0.957,0.957,False,True
+capsule-8412128,4,What is the mean of the snf_effectiveness_index?,0.5791337825021187,0.5791337825021187,False,True
+capsule-8412128,4,What is the median of the dignity_score?,0.5888590852515395,0.5888590852515395,False,True
+capsule-7655932,4,What is the point estimate (deaths averted synthetic) from the child wasting impact model? Give results as integer.,280000,280000,False,True
+capsule-7655932,4,What is the child wasting impact model reported 95% interval (synthetic)? Give a list of 2 integer value for the confidence interval.,"[196000, 364000]","[196000, 364000]",False,True
+capsule-9294029,4,fig what location has the lowest median enrichment score?,H,C,False,False
+capsule-6295990,4,What is the LBP model ROC-AUC (weighted),0.7142857,0.7142857,False,True
+capsule-6295990,4,What is the percent AUC-Improvement? Give an integer,25,25,False,True
+capsule-9477017,4,"fig Pearson correlation coefficients between the estimated proportions of different cell types were calculated, what is the highest pearson correlation related to? Give response in a list of strings","['Smooth.1', 'Endo.1']",['between Smooth.1 and Endo.1'],False,False
+capsule-0201673,4,What is the mean_gdp_gain_pct?,0.9999005880537901,0.9999,False,True
+capsule-0201673,4,What is the p95?,1.1643528158326386,1.1641,False,True
+capsule-0201673,4,What is the p50?,0.9999966483532146,0.9999,False,True
+capsule-0152700,4,fig are there more than 2 features with accuracy exceeding 0.4? Respond with yes or no.,yes,unknown,False,False
+capsule-0152700,4,fig which joint has the lowest absolute spearman correlation for acceleration?,ankle,unknown,False,False
+capsule-0152700,4,"Given the Kruskal-Wallis for Group 0-2 (Group 1 vs. Group 3), what is the p-value?",2.341092434893948e-10,unknown,False,False
+capsule-2242462,4,"What is the Chromosome chr1 with positioning 1013983, IsNGGMatch status?",True,False,False,False
+capsule-2242462,4,"What is the Chromosome chr1 with positioning 1319313, ABE8e_NG status?",False,False,False,True
+capsule-3762736,4,What is the Task1_Only macro f1?,0.7012,0.701201729990186,False,True
+capsule-3762736,4,What is the Winner_SCL RMSE?,0.4708,0.4707822886271859,False,True
