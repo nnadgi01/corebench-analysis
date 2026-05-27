@@ -2,6 +2,56 @@
 
 TKTK
 
+## Paper section 3: Multidimensional evaluation of agent performance
+
+**Data tables** — three files in `./data/` back every §3 figure; anything more granular can be re-aggregated from `runs.parquet`.
+
+`./data/runs.parquet` (also exported as `./data/runs.csv`): one row per (run\_id, config\_dir, capsule\_id, rep\_idx)
+- Source of truth for all §3 figures
+- Adds two derived columns: `cost` (post-correction per-row cost) and `agent_id` (`config_dir` with the reliability `_kN` rep-suffix stripped so reliability reps collapse to one identity)
+
+`./data/efficiency_per_agent.csv`: per `(agent_id, split)` cell
+- Columns: `n`, `accuracy`, `tot_tok_mean / _median / _std`, `cost_mean / _median / _std`
+- Backs the bar charts and tokens / cost-vs-accuracy scatters (§3.2)
+
+`./data/reliability_per_agent.csv`: per `agent_id` over the k=5 reliability split
+- Columns: `pass_at_1`, `pass_at_least_1_of_k`, `pass_all_k`, `outcome_consistency`, `resource_consistency`, `confidence_mean`, `confidence_median`
+- Backs the consistency and predictability figures (§3.1)
+
+`./data/uplift_rct.csv`: per-run RCT data
+- Also used by `./analysis/uplift_figures.py` to generate the uplift duration figure (§4)
+
+**Analysis scripts** — all live in `./analysis/` and are run from the repo root.
+
+`./analysis/regenerate_figures.py`: regenerates every §3 paper figure from the data tables above; no extraction pipeline needed
+
+```bash
+python -m analysis.regenerate_figures
+```
+
+Generates figures reported in §3 and written to `./figs/`:
+- `resource_accuracy.pdf` — tokens / cost vs. accuracy landscape (§3.2)
+- `outcome_consistency_vs_accuracy.pdf` — outcome consistency vs. pass@1 (§3.1)
+- `resource_consistency_vs_accuracy.pdf` — resource consistency vs. pass@1 (§3.1)
+- `predictability_per_agent_vertical.pdf` — per-agent confidence and AUROC (§3.1)
+- `calibration.pdf` — confidence calibration curves (§3.1)
+- `discrimination_bar.pdf` — AUROC discrimination bar chart (§3.1)
+- `uplift_duration_by_condition.pdf` — distribution of reproduction session durations (§4)
+
+`./analysis/paper_figures.py`: individual figure functions called by `regenerate_figures.py`
+
+`./analysis/uplift_figures.py`: generates the uplift duration figure from `./data/uplift_rct.csv`
+
+`./analysis/style.py`: shared Matplotlib aesthetics (paper-mode formatting, colors, marker shapes)
+
+`./analysis/compute.py`: core data transformations and metric computations shared across figure scripts
+
+`./analysis/export_data.py`: re-exports the three data tables from `runs.parquet`; only needed if re-running from raw extraction outputs
+
+```bash
+python -m analysis.export_data
+```
+
 ## Paper section 4: Human-agent collaboration uplift
 
 `./data/RCT_responses_cleaned.csv`: Questionnaire responses 
