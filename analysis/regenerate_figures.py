@@ -16,7 +16,7 @@ DATA        = Path("data")
 PAPER_OUT   = Path("figs")
 SCRATCH_OUT = Path("figs/scratch")
 FIGS_OUT    = Path("figs")
-UPLIFT_DATA = DATA / "uplift_rct.csv"
+UPLIFT_DATA = DATA / "RCT_responses_cleaned.csv"
 PAPER_OUT.mkdir(parents=True, exist_ok=True)
 SCRATCH_OUT.mkdir(parents=True, exist_ok=True)
 

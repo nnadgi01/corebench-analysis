@@ -366,21 +366,37 @@ def fig_scaffold_model_comparison_3panel(runs: pd.DataFrame, path: Path):
 # match against agent_id to (x_offset_log_units, y_offset, label_text).
 # Substrings let us annotate by family without enumerating every config.
 TOKEN_ACC_LABELS_MAIN = {
-    "core_agent_anthropic_claude_opus_4_6":  (+0.10, -0.14, "CORE-Agent · Opus 4.6"),
-    "core_agent_gpt_5_4":                    (-0.38, +0.10, "CORE-Agent · GPT-5.4"),   # shifted right
-    "codex_agent_gpt_5_3_codex":             (-0.25, +0.08, "Codex · GPT-5.3 Codex"),  # top-left corner
-    "opencode_agent_openai_gpt_5_4":          (-0.24, -0.16, "OpenCode · GPT-5.4"),    # shifted down
+    "core_agent_anthropic_claude_opus_4_6":  (+0.10, -0.24, "CORE-Agent · Opus 4.6"),
+    "core_agent_gpt_5_4":                    (0.25, +0.0, "CORE-Agent · GPT-5.4"),   # shifted right
+    "codex_agent_gpt_5_3_codex":             (-0.35, +0.08, "Codex · GPT-5.3 Codex"),  # top-left corner
+    "opencode_agent_openai_gpt_5_4":          (-0.26, -0.23, "OpenCode · GPT-5.4"),    # shifted down
 }
 
 COST_ACC_LABELS_MAIN = {
-    "core_agent_anthropic_claude_opus_4_6":  (-0.45, -0.10, "CORE-Agent · Opus 4.6"),
-    "core_agent_gpt_5_4":                    (-0.16, +0.10, "CORE-Agent · GPT-5.4"),
-    "codex_agent_gpt_5_3_codex":             (-0.20, +0.06, "Codex · GPT-5.3 Codex"),  # top-left corner
-    "opencode_agent_openai_gpt_5_4":          (-0.30, -0.17, "OpenCode · GPT-5.4"),
+    "core_agent_anthropic_claude_opus_4_6":  (-0.85, 0, "CORE-Agent · Opus 4.6"),
+    "core_agent_gpt_5_4":                    (-0.16, +0.20, "CORE-Agent · GPT-5.4"),
+    "codex_agent_gpt_5_3_codex":             (-0.37, -0.3, "Codex · GPT-5.3 Codex"),  # top-left corner
+    "opencode_agent_openai_gpt_5_4":          (-0.25, -0.37, "OpenCode · GPT-5.4"),
 }
 
-_COMPOSITE_SQUARE_CROP = dict(left=-0.62, bottom=0.20, width=7.22, height=6.02)
-
+# Per-label (dx, dy) offsets in (xlim, ylim) span fractions for the consistency
+# panels. Tune these to nudge each annotation independently.
+OUTCOME_CONSISTENCY_LABEL_OFFSETS = {
+    "Codex · GPT-5":         (+0.1, -0.04),
+    "Codex · GPT-5.2":       (0.0, +0.15),
+    "Codex · GPT-5.3 Codex": (-0.08, -0.22),
+    "Codex · GPT-5.4":       (-0.40, +0.08),
+}
+RESOURCE_CONSISTENCY_LABEL_OFFSETS = {
+    "Codex · GPT-5":         (-0.06, 0.2),
+    "Codex · GPT-5.2":       (0.1, -0.04),
+    "Codex · GPT-5.3 Codex": (-0.38, +0.30),
+    "Codex · GPT-5.4":       (-0.4, +0.08),
+}
+_CONSISTENCY_LABEL_OFFSETS_BY_COL = {
+    "outcome_consistency": OUTCOME_CONSISTENCY_LABEL_OFFSETS,
+    "resource_consistency": RESOURCE_CONSISTENCY_LABEL_OFFSETS,
+}
 
 def _resource_accuracy_handles(
     df: pd.DataFrame, fit_excludes: tuple[str, ...], x_scale: str = "log"
@@ -518,8 +534,8 @@ def fig_tokens_vs_accuracy_square(
     label_substrings: dict[str, tuple[float, float, str]] | None = None,
 ):
     """Fixed-canvas square variant for composite LaTeX layouts."""
-    fig = plt.figure(figsize=(6.4, 6.4))
-    ax = fig.add_axes([0.15, 0.16, 0.70, 0.76])
+    fig = plt.figure(figsize=(6.0, 5.3))
+    ax = fig.add_axes([0.133, 0.16, 0.733, 0.76])
     df = _plot_resource_accuracy_panel(
         ax, eff, x_col=x_col, x_label=x_label,
         x_scale=x_scale, fit_line=fit_line, fit_excludes=fit_excludes,
@@ -529,7 +545,7 @@ def fig_tokens_vs_accuracy_square(
     ax.tick_params(labelsize=17)
     ax.xaxis.label.set_size(25)
     ax.yaxis.label.set_size(25)
-    style.save_fixed_crop(fig, path, **_COMPOSITE_SQUARE_CROP)
+    style.save(fig, path)
     return df
 
 
@@ -573,7 +589,7 @@ def fig_resource_accuracy_2panel(eff: pd.DataFrame, path: Path):
 def fig_resource_accuracy_landscape(eff: pd.DataFrame, path: Path):
     """Combined landscape two-panel: tokens and cost vs accuracy, shared legend."""
     fig, axes = plt.subplots(
-        1, 2, figsize=(style.PAPER_W * 1.85, 4.6), sharey=True,
+        1, 2, figsize=(style.PAPER_W * 1.85, 3.8), sharey=True,
     )
     df_tok = _plot_resource_accuracy_panel(
         axes[0], eff,
@@ -795,16 +811,15 @@ def fig_outcome_consistency_vs_accuracy_square(rel: pd.DataFrame, path: Path):
     df = rel.dropna(subset=["pass_at_1"]).copy()
     if len(df) == 0:
         return
-    fig = plt.figure(figsize=(6.4, 6.4))
-    ax = fig.add_axes([0.15, 0.16, 0.70, 0.76])
+    fig = plt.figure(figsize=(6.0, 5.3))
+    ax = fig.add_axes([0.092, 0.16, 0.870, 0.776])
     _plot_consistency_panel(
         ax, df, "outcome_consistency", "Outcome consistency", "#2ca02c",
-        annotation_fontsize=16, r_fontsize=25,
-        label_only={"Codex · GPT-5", "Codex · GPT-5.4"})
+        annotation_fontsize=16, r_fontsize=25)
     ax.tick_params(labelsize=17)
     ax.xaxis.label.set_size(25)
     ax.yaxis.label.set_size(25)
-    style.save_fixed_crop(fig, path, **_COMPOSITE_SQUARE_CROP)
+    style.save(fig, path)
 
 
 def fig_resource_consistency_vs_accuracy_square(rel: pd.DataFrame, path: Path):
@@ -812,16 +827,15 @@ def fig_resource_consistency_vs_accuracy_square(rel: pd.DataFrame, path: Path):
     df = rel.dropna(subset=["pass_at_1"]).copy()
     if len(df) == 0:
         return
-    fig = plt.figure(figsize=(6.4, 6.4))
-    ax = fig.add_axes([0.15, 0.16, 0.70, 0.76])
+    fig = plt.figure(figsize=(6.0, 5.3))
+    ax = fig.add_axes([0.092, 0.16, 0.870, 0.776])
     _plot_consistency_panel(
         ax, df, "resource_consistency", "Resource consistency", "#1f77b4",
-        annotation_fontsize=16, r_fontsize=25,
-        label_only={"Codex · GPT-5", "Codex · GPT-5.4"})
+        annotation_fontsize=16, r_fontsize=25)
     ax.tick_params(labelsize=17)
     ax.xaxis.label.set_size(25)
     ax.yaxis.label.set_size(25)
-    style.save_fixed_crop(fig, path, **_COMPOSITE_SQUARE_CROP)
+    style.save(fig, path)
 
 
 def _plot_consistency_panel(
@@ -863,20 +877,7 @@ def _plot_consistency_panel(
             return f"Codex · {base}" if was_codex or "Codex" in s else base
         return s
 
-    label_offsets = {
-        "outcome_consistency": {
-            "Codex · GPT-5":   (-0.08, +0.18),
-            "Codex · GPT-5.2": (+0.06, +0.10),
-            "Codex · GPT-5.3 Codex": (+0.04, +0.12),
-            "Codex · GPT-5.4": (-0.20, +0.04),
-        },
-        "resource_consistency": {
-            "Codex · GPT-5":         (+0.06, -0.32),  # below the bottom-left point
-            "Codex · GPT-5.2":       (-0.05, +0.35),  # above the left cluster (unused when label_only set)
-            "Codex · GPT-5.3 Codex": (-0.38, +0.20),  # left+up (unused when label_only set)
-            "Codex · GPT-5.4":       (-0.22, +0.18),  # upper-left of top-right point
-        },
-    }
+    label_offsets = _CONSISTENCY_LABEL_OFFSETS_BY_COL.get(col, {})
 
     style.style_axes(ax)
     sub = df.dropna(subset=[col]).sort_values("pass_at_1").reset_index(drop=True)
@@ -904,7 +905,7 @@ def _plot_consistency_panel(
             text = short(row["label"])
             if label_only is not None and text not in label_only:
                 continue
-            dx_frac, dy_frac = label_offsets[col].get(text, (+0.04, +0.10))
+            dx_frac, dy_frac = label_offsets.get(text, (+0.04, +0.10))
             dx = dx_frac * x_span
             dy = dy_frac * y_span
             style.annotate_with_arrow(
@@ -982,8 +983,8 @@ def fig_discrimination_bar(df: pd.DataFrame, path: Path):
         .str.replace(r"^Codex · ", "", regex=True)
     )
 
-    fig = plt.figure(figsize=(6.4, 6.4))
-    ax = fig.add_axes([0.23, 0.16, 0.62, 0.76])
+    fig = plt.figure(figsize=(6.0, 5.3))
+    ax = fig.add_axes([0.204, 0.16, 0.733, 0.76])
     style.style_axes(ax)
 
     y = np.arange(len(metrics))
@@ -1019,7 +1020,7 @@ def fig_discrimination_bar(df: pd.DataFrame, path: Path):
     ax.tick_params(labelsize=17)
     ax.xaxis.label.set_size(25)
     ax.grid(axis="y", visible=False)
-    style.save_fixed_crop(fig, path, **_COMPOSITE_SQUARE_CROP)
+    style.save(fig, path)
 
 
 def fig_calibration(df: pd.DataFrame, path: Path, *, n_bins: int = 5):
@@ -1032,8 +1033,8 @@ def fig_calibration(df: pd.DataFrame, path: Path, *, n_bins: int = 5):
     agents = sorted(d["agent_id"].unique())
     cmap = plt.get_cmap("plasma", len(agents) + 2)
 
-    fig = plt.figure(figsize=(6.4, 6.4))
-    ax = fig.add_axes([0.15, 0.16, 0.70, 0.76])
+    fig = plt.figure(figsize=(6.0, 5.3))
+    ax = fig.add_axes([0.112, 0.16, 0.804, 0.776])
     style.style_axes(ax)
 
     ax.plot(
@@ -1087,7 +1088,7 @@ def fig_calibration(df: pd.DataFrame, path: Path, *, n_bins: int = 5):
         borderpad=0.40, labelspacing=0.35,
         handlelength=1.3,
     )
-    style.save_fixed_crop(fig, path, **_COMPOSITE_SQUARE_CROP)
+    style.save(fig, path)
 
 
 def _predictability_handles() -> list[Line2D]:
@@ -1198,7 +1199,7 @@ def fig_predictability_per_agent_vertical(df: pd.DataFrame, path: Path):
 
     fig, axes = plt.subplots(
         n, 1,
-        figsize=(style.PAPER_W * 0.78, 2.35 * n + 1.05),
+        figsize=(style.PAPER_W * 0.50, 1.55 * n + 0.69),
         sharex=True, sharey=True,
     )
     axes = np.atleast_1d(axes).flatten()
@@ -1213,7 +1214,7 @@ def fig_predictability_per_agent_vertical(df: pd.DataFrame, path: Path):
             axes[i].tick_params(axis="x", labelbottom=False)
 
     fig.text(
-        0.045, 0.54, "Rate",
+        0.010, 0.54, "Rate",
         ha="center", va="center", rotation="vertical", fontsize=17,
     )
     fig.text(

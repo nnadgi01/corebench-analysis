@@ -18,8 +18,7 @@ TKTK
 - Columns: `pass_at_1`, `pass_at_least_1_of_k`, `pass_all_k`, `outcome_consistency`, `resource_consistency`, `confidence_mean`, `confidence_median`
 - Backs the consistency and predictability figures (§3.1)
 
-`./data/uplift_rct.csv`: per-run RCT data
-- Also used by `./analysis/uplift_figures.py` to generate the uplift duration figure (§4)
+`./data/RCT_responses_cleaned.csv` is also used by `./analysis/uplift_figures.py` to generate the uplift duration figure (§4)
 
 **Analysis scripts** — all live in `./analysis/` and are run from the repo root.
 
@@ -30,17 +29,17 @@ python -m analysis.regenerate_figures
 ```
 
 Generates figures reported in §3 and written to `./figs/`:
-- `resource_accuracy.pdf` — tokens / cost vs. accuracy landscape (§3.2)
+- `resource_accuracy_icml.pdf` — tokens / cost vs. accuracy landscape (§3.2)
 - `outcome_consistency_vs_accuracy.pdf` — outcome consistency vs. pass@1 (§3.1)
 - `resource_consistency_vs_accuracy.pdf` — resource consistency vs. pass@1 (§3.1)
 - `predictability_per_agent_vertical.pdf` — per-agent confidence and AUROC (§3.1)
 - `calibration.pdf` — confidence calibration curves (§3.1)
 - `discrimination_bar.pdf` — AUROC discrimination bar chart (§3.1)
-- `uplift_duration_by_condition.pdf` — distribution of reproduction session durations (§4)
+- `uplift_duration_by_condition_icml.pdf` — distribution of reproduction session durations (§4)
 
 `./analysis/paper_figures.py`: individual figure functions called by `regenerate_figures.py`
 
-`./analysis/uplift_figures.py`: generates the uplift duration figure from `./data/uplift_rct.csv`
+`./analysis/uplift_figures.py`: generates the uplift duration figure from `./data/RCT_responses_cleaned.csv`
 
 `./analysis/style.py`: shared Matplotlib aesthetics (paper-mode formatting, colors, marker shapes)
 

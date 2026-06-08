@@ -1,11 +1,10 @@
 """Paper-style figures for the uplift RCT analysis.
 
 The source RMarkdown currently reads from Google Sheets. This module is
-the repository-native plotting layer: export the sheet as CSV, place it
-at ``figs/data/uplift_rct.csv`` (or pass ``--data``), and rerun.
+the repository-native plotting layer that reads from the published CSV.
 
 Run:
-    python -m analysis.uplift_figures --data figs/data/uplift_rct.csv
+    python -m analysis.uplift_figures --data data/RCT_responses_cleaned.csv
 
 While waiting on final data, use:
     python -m analysis.uplift_figures --demo
@@ -27,11 +26,8 @@ from analysis import style
 style.apply_paper()
 
 
-DEFAULT_DATA = Path("figs/data/uplift_rct.csv")
+DEFAULT_DATA = Path("data/RCT_responses_cleaned.csv")
 DEFAULT_OUT = Path("figs/paper/uplift_duration_by_condition.png")
-
-# Wide panel for the RCT duration histogram.
-_LANDSCAPE_CROP = dict(left=-0.35, bottom=0.20, width=7.65, height=5.25)
 
 # Seaborn "colorblind" palette from the original RMarkdown.
 COLORBLIND_PALETTE = [
@@ -108,7 +104,7 @@ def fig_duration_by_condition(
         )
         max_count = max(max_count, int(counts.max(initial=0)))
 
-    fig = plt.figure(figsize=(7.25, 5.6))
+    fig = plt.figure(figsize=(7.25, 2.8))
     ax = fig.add_axes([0.14, 0.19, 0.77, 0.72])
     style.style_axes(ax)
 
@@ -135,8 +131,8 @@ def fig_duration_by_condition(
     ax.set_xlabel("Session duration (minutes)")
     ax.set_ylabel("Number of sessions")
     ax.tick_params(labelsize=17)
-    ax.xaxis.label.set_size(25)
-    ax.yaxis.label.set_size(25)
+    ax.xaxis.label.set_size(17)
+    ax.yaxis.label.set_size(17)
     ax.grid(axis="y", visible=True)
     ax.grid(axis="x", alpha=0.20)
 
@@ -155,7 +151,7 @@ def fig_duration_by_condition(
         handlelength=1.4,
     )
 
-    style.save_fixed_crop(fig, path, **_LANDSCAPE_CROP)
+    style.save(fig, path)
 
 
 def _demo_data(seed: int = 7) -> pd.DataFrame:
