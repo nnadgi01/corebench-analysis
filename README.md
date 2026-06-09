@@ -29,13 +29,13 @@ python -m analysis.regenerate_figures
 ```
 
 Generates figures reported in §3 and written to `./figs/`:
-- `resource_accuracy_icml.pdf` — tokens / cost vs. accuracy landscape (§3.2)
+- `resource_accuracy.pdf` — tokens / cost vs. accuracy landscape (§3.2)
 - `outcome_consistency_vs_accuracy.pdf` — outcome consistency vs. pass@1 (§3.1)
 - `resource_consistency_vs_accuracy.pdf` — resource consistency vs. pass@1 (§3.1)
 - `predictability_per_agent_vertical.pdf` — per-agent confidence and AUROC (§3.1)
 - `calibration.pdf` — confidence calibration curves (§3.1)
 - `discrimination_bar.pdf` — AUROC discrimination bar chart (§3.1)
-- `uplift_duration_by_condition_icml.pdf` — distribution of reproduction session durations (§4)
+- `uplift_duration_by_condition.pdf` — distribution of reproduction session durations (§4)
 
 `./analysis/paper_figures.py`: individual figure functions called by `regenerate_figures.py`
 

@@ -19,6 +19,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.patches import Patch
+from matplotlib.ticker import MultipleLocator
 
 from analysis import style
 
@@ -27,7 +28,7 @@ style.apply_paper()
 
 
 DEFAULT_DATA = Path("data/RCT_responses_cleaned.csv")
-DEFAULT_OUT = Path("figs/paper/uplift_duration_by_condition.png")
+DEFAULT_OUT = Path("figs/uplift_duration_by_condition.png")
 
 # Seaborn "colorblind" palette from the original RMarkdown.
 COLORBLIND_PALETTE = [
@@ -130,6 +131,7 @@ def fig_duration_by_condition(
     ax.set_xticks(xticks)
     ax.set_xlabel("Session duration (minutes)")
     ax.set_ylabel("Number of sessions")
+    ax.yaxis.set_major_locator(MultipleLocator(2))
     ax.tick_params(labelsize=17)
     ax.xaxis.label.set_size(17)
     ax.yaxis.label.set_size(17)

@@ -43,8 +43,11 @@ PALETTE = style.SCAFFOLD
 # ----- agent identity -------------------------------------------------
 
 def _agent_id(config_dir: str) -> str:
-    """Strip trailing _kN so reliability reps collapse to a single agent."""
-    return re.sub(r"_k\d+$", "", config_dir)
+    """Strip trailing _kN and _codex_version_X.Y.Z so reps and version-pinned
+    re-runs collapse to the same agent identity."""
+    s = re.sub(r"_k\d+$", "", config_dir)
+    s = re.sub(r"_codex_version_[\d.]+", "", s)
+    return s
 
 
 def short_label(agent_id: str) -> str:

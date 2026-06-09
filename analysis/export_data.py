@@ -33,7 +33,7 @@ from analysis.compute import (
 )
 
 
-OUT = Path("figs/data")
+OUT = Path("data")
 OUT.mkdir(parents=True, exist_ok=True)
 
 
@@ -41,9 +41,15 @@ def main() -> None:
     runs = pd.read_parquet("data/runs.parquet").copy()
     runs["cost"]     = runs.apply(_correct_core_agent_cost, axis=1)
     runs["agent_id"] = runs["config_dir"].map(_agent_id)
+    # Use confidence_v2 as the canonical confidence — it is standardized across
+    # all agents and is the only version present in newer runs (e.g. GPT-5.1
+    # reliability-k5-gpt51-codex-0-122-0-2026-06-04). Overwrite confidence (v1)
+    # so all downstream figure code reads a single consistent column.
+    if "confidence_v2" in runs.columns:
+        runs["confidence"] = runs["confidence_v2"]
 
     # --- runs (single source of truth) -------------------------------
-    shutil.copy2("data/runs.parquet", OUT / "runs.parquet")
+    runs.to_parquet(OUT / "runs.parquet", index=False)
     runs.to_csv(OUT / "runs.csv", index=False)
 
     # --- efficiency: per (agent_id, split) ---------------------------

@@ -82,7 +82,7 @@ _APPLIED_PROFILE: str | None = None
 def _common_rc() -> dict:
     return {
         "font.family":        "serif",
-        "font.serif":         ["Times New Roman", "Times", "DejaVu Serif"],
+        "font.serif":         ["Times New Roman", "Times", "Liberation Serif", "DejaVu Serif"],
         "mathtext.fontset":   "stix",
         "axes.unicode_minus": False,
         # Spines.

@@ -65,11 +65,7 @@ SCAFFOLD_DISPLAY = {"claude_code": "Claude Code", "codex": "Codex CLI",
 # Figure-only exclusion list. GPT-5.1 stays in all data tables, but is
 # omitted from plots while the main-vs-reliability discrepancy remains
 # under investigation.
-FIGURE_EXCLUDE_AGENT_PATTERNS = (
-    "gpt_5_1",
-    "GPT-5 1",
-    "GPT-5.1",
-)
+FIGURE_EXCLUDE_AGENT_PATTERNS = ()
 
 
 # ----- helpers ------------------------------------------------------
@@ -382,15 +378,17 @@ COST_ACC_LABELS_MAIN = {
 # Per-label (dx, dy) offsets in (xlim, ylim) span fractions for the consistency
 # panels. Tune these to nudge each annotation independently.
 OUTCOME_CONSISTENCY_LABEL_OFFSETS = {
-    "Codex · GPT-5":         (+0.1, -0.04),
-    "Codex · GPT-5.2":       (0.0, +0.15),
-    "Codex · GPT-5.3 Codex": (-0.08, -0.22),
+    "Codex · GPT-5.1":       (-0.1, +0.18),
+    "Codex · GPT-5":         (+0.10, -0.24),
+    "Codex · GPT-5.2":       (-0.38, +0.08),
+    "Codex · GPT-5.3 Codex": (-0.18, -0.26),
     "Codex · GPT-5.4":       (-0.40, +0.08),
 }
 RESOURCE_CONSISTENCY_LABEL_OFFSETS = {
-    "Codex · GPT-5":         (-0.06, 0.2),
-    "Codex · GPT-5.2":       (0.1, -0.04),
-    "Codex · GPT-5.3 Codex": (-0.38, +0.30),
+    "Codex · GPT-5.1":       (-0.08, +0.30),
+    "Codex · GPT-5":         (-0.3, +0.15),
+    "Codex · GPT-5.2":       (-0.3, -0.3),
+    "Codex · GPT-5.3 Codex": (-0.15, -0.28),
     "Codex · GPT-5.4":       (-0.4, +0.08),
 }
 _CONSISTENCY_LABEL_OFFSETS_BY_COL = {
