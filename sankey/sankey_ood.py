@@ -24,34 +24,33 @@ AMBER    = "#949494"   # gray        — grading update
 # ── Nodes ─────────────────────────────────────────────────────────────────────
 node_labels = [
     # Source (node 0)
-    "<b>CORE-Bench OOD original</b><br>(30 tasks)",                                       # 0
+    "<b>CORE-Bench OOD original</b><br>30 tasks",                                       
 
     # Branches (nodes 1–3)
-    "<b>Categorize process & computation <br>correctness </b><br>(CORE-Agent Opus 4.5 and 4.6<br>+ OpenCode GPT-5.2)<br>all 30 tasks",  # 1
-    "<b>Check for answers in pre-existing artifact </b><br>(CORE-Agent Opus 4.5 and 4.6<br>+ OpenCode GPT-5.2)<br>all 30 tasks",    # 2
-    "<b>Manual inspection of tasks for errors</b><br>all 30 tasks",                                       # 3
+    "<b>Checked for process & computation <br>incorrectness </b><br>(CORE-Agent · Opus 4.5 and 4.6<br>+ OpenCode · GPT-5.2)<br>all correct tasks", 
+    "<b>Checked for answers in pre-existing artifacts</b><br>(CORE-Agent · Opus 4.5 and 4.6<br>+ OpenCode · GPT-5.2)<br>all 30 tasks",
+    "<b>Manually inspected task questions</b><br>all 30 tasks",                                      
 
     # Curation (nodes 4–6)
-    "<b>Curation</b><br>Update tasks based on <br>validity errors found in <br>the previous step<br>Remove 12 · Edit 8<br>from 30 tasks",                                              # 4
-    "12 tasks removed",                                                                    # 5  dead end
-    "<b>18 tasks</b>",                                                                     # 6
+    "<b>Curation</b><br>Updated tasks based on <br>validity errors found in <br>the previous step<br>Remove 12 · Edit 8<br>from 30 tasks",                                              # 4
+    "Removed 12 tasks",                                                                   
+    "<b>18 tasks</b>",                                                                    
 
     # Added tasks (node 7)
-    "<b>+6 new tasks</b>",                                                                 # 7
+    "<b>+6 new tasks</b>",                                                              
 
     # Combined (node 8)
-    "<b>24 tasks</b>",                                                                     # 8
+    "<b>24 tasks</b><br>All 12 runs evaluated",                                                                 
 
     # Inspect logs (node 9)
-    "<b>Inspect incorrect logs<br>for further errors</b><br>12 Codex CLI runs<br>24 tasks",                        # 9
+    "<b>Inspected incorrect <br>logs for further <br>errors</b><br>12 Codex CLI runs<br>24 tasks",                      
 
-    # Post-inspection (nodes 10–11)
-    "5 tasks removed",                                                                     # 10 dead end
-    "<b>19 tasks</b><br>All 12 runs evaluated",                                            # 11
+    # Post-inspection (node 10)
+    "Removed 5 tasks",                                                                     # 10 dead end
 
-    # Grading update (nodes 12–13)
-    "<b>Update grading</b><br>(1 task affected)",                                           # 12
-    "<b>19 tasks</b><br>Regrade all runs",                                                 # 13
+    # Grading update (nodes 11–12)
+    "<b>Updated grading</b><br>1 task affected",                                           # 11
+    "<b>19 tasks</b>",                                                                     # 12
 ]
 
 node_colors = [
@@ -66,9 +65,8 @@ node_colors = [
     PURPLE,    # 8  24 combined
     PURPLE_L,  # 9  inspect logs
     RED,       # 10 5 removed
-    GREEN_D,   # 11 19 tasks
-    AMBER,     # 12 update grading
-    GREEN_D,   # 13 final regrade
+    AMBER,     # 11 update grading
+    GREEN_D,   # 12 final regrade
 ]
 
 node_x = [
@@ -78,9 +76,9 @@ node_x = [
     0.52,                          # 7  +6 tasks
     0.64,                          # 8  24 combined
     0.74,                          # 9  inspect logs
-    0.84, 0.84,                    # 10–11 5 removed / 19 tasks
-    0.87,                          # 12 update grading (shifted left so label clears node 13)
-    0.99,                          # 13 final
+    0.84,                          # 10  5 removed
+    0.87,                          # 11 update grading (shifted left so label clears node 12)
+    0.99,                          # 12 final
 ]
 node_y = [
     0.40,                          # 0  source (center)
@@ -89,18 +87,17 @@ node_y = [
     0.76,                          # 7  +6 tasks
     0.60,                          # 8  24 combined
     0.55,                          # 9  inspect logs
-    0.82, 0.45,                    # 10–11 5 removed / 19 tasks (raised to avoid overlap)
-    0.72,                          # 12 update grading (lowered away from node 11)
-    0.52,                          # 13 final
+    0.82,                          # 10  5 removed
+    0.72,                          # 11 update grading
+    0.52,                          # 12 final
 ]
 
 # ── Links ─────────────────────────────────────────────────────────────────────
 # Flow accounting (task units):
 #   30 tasks → 3 branches (10 each) → Curation → 12 removed + 18 continue
 #   18 tasks + 6 new tasks → 24 combined
-#   24 → Inspect logs → 5 removed + 19 continue (all 12 runs evaluated)
-#   19 tasks → 1 → update grading + 18 → regrade directly
-#   update grading → regrade  (total regrade = 18 + 1 = 19)
+#   24 → Inspect logs → 5 removed + 18 direct to final + 1 → update grading
+#   update grading → final  (total final = 18 + 1 = 19)
 
 src = [
     0, 0, 0,         # source → 3 branches
@@ -108,9 +105,8 @@ src = [
     4, 4,            # curation → 12 removed / 18 tasks
     6, 7,            # 18 tasks + 6 new → 24 combined
     8,               # 24 → inspect logs
-    9, 9,            # inspect logs → 5 removed / 19 tasks
-    11, 11,          # 19 tasks → update grading / regrade
-    12,              # update grading → regrade
+    9, 9, 9,         # inspect logs → 5 removed / update grading / 18 direct to final
+    11,              # update grading → final
 ]
 tgt = [
     1, 2, 3,
@@ -118,9 +114,8 @@ tgt = [
     5, 6,
     8, 8,
     9,
-    10, 11,
-    12, 13,
-    13,
+    10, 11, 12,
+    12,
 ]
 val = [
     10, 10, 10,      # 30 ÷ 3 branches
@@ -128,9 +123,8 @@ val = [
     12, 18,          # 12 removed; 18 continue
     18, 6,           # merge: 18 curated + 6 new = 24
     24,              # all 24 → inspect logs
-    5, 19,           # 5 removed; 19 continue
-    1, 18,           # 1 run → update grading; 18 tasks → regrade directly
-    1,               # update grading → regrade
+    5, 1, 18,        # 5 removed; 1 → update grading; 18 direct to final
+    1,               # update grading → final
 ]
 
 def rgba(hex_col: str, a: float = 0.35) -> str:

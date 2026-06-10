@@ -25,30 +25,30 @@ AMBER    = "#949494"   # gray        — grading update
 # ── Nodes ─────────────────────────────────────────────────────────────────────
 node_labels = [
     # Track 1  (nodes 0–6)
-    "<b>CORE-Bench hard</b><br>(45 tasks)",                                           # 0
-    "<b>Categorize process & computation correctness</b><br>(Claude Code · Opus 4.5)<br>all 45 tasks",               # 1
-    "<b>Manual inspection of incorrect logs</b><br>(Claude Code · Opus 4.5)<br>all 45 tasks",             # 2
-    "<b>Check for answers in pre-existing artifacts</b><br>(OpenCode + CORE-Agent<br>Opus 4.5 and 4.6)<br>all 45 tasks",# 3
-    "<b>Curation</b><br>Update tasks based on validity errors <br>found in the previous step<br>Remove 14 · Edit 12<br>from all 45 tasks",                                         # 4
-    "14 tasks removed",                                                                # 5  dead end
-    "<b>31 tasks</b>",                                                         # 6
+    "<b>CORE-Bench Hard</b><br>45 tasks",                                           
+    "<b>Checked for process & computation incorrectness</b><br>(Claude Code · Opus 4.5)<br>all correct tasks",               
+    "<b>Checked incorrect logs for benchmark errors</b><br>(Claude Code · Opus 4.5)<br>all incorrect tasks",             
+    "<b>Checked for answers in pre-existing artifacts</b><br>(OpenCode + CORE-Agent<br>Opus 4.5 and 4.6)<br>all 45 tasks",
+    "<b>Curation</b><br>Updated tasks based on validity errors <br>found in the previous step<br>Remove 14 · Edit 12<br>from all 45 tasks",                                         
+    "Removed 14 tasks",                                                            
+    "<b>31 tasks</b>",                                                         
 
     # Track 2  (nodes 7–14)
-    "<b>27 new tasks</b>",                                                             # 7
-    "<b>Categorize process & computation correctness</b><br>(OpenCode · GPT-5.2 + CORE-Agent · <br>Opus 4.5 and 4.6) | all 27 tasks",  # 8
-    "<b>Manual inspection of incorrect logs</b><br>(OpenCode · GPT-5.2 + CORE-Agent · <br>Opus 4.5 and 4.6) | all 27 tasks", # 9
-    "<b>Check for answers in pre-existing artifacts</b><br>(OpenCode · GPT-5.2 + CORE-Agent · <br>Opus 4.5 and 4.6) | all 27 tasks",   # 10
-    "<b>Manual inspection of<br>tasks for errors</b><br>all 27 tasks",                                                              # 11  new 4th branch
-    "<b>Curation</b><br>Update tasks based on validity errors <br>found in the previous step<br>Remove 16 · Edit 5<br>from all 27 tasks",                                          # 12
-    "16 tasks removed",                                                                # 13  dead end
-    "<b>11 tasks</b>",                                                         # 14
+    "<b>27 new tasks</b>",                                                            
+    "<b>Checked for process & computation incorrectness</b><br>(OpenCode · GPT-5.2 + CORE-Agent · <br>Opus 4.5 and 4.6) | all correct tasks", 
+    "<b>Checked incorrect logs for benchmark errors</b><br>(OpenCode · GPT-5.2 + CORE-Agent · <br>Opus 4.5 and 4.6) | all incorrect tasks",
+    "<b>Checked for answers in pre-existing artifacts</b><br>(OpenCode · GPT-5.2 + CORE-Agent · <br>Opus 4.5 and 4.6) | all 27 tasks",  
+    "<b>Manually inspected<br>task questions</b><br>all 27 tasks",                                                             
+    "<b>Curation</b><br>Updated tasks based on validity errors <br>found in the previous step<br>Remove 16 · Edit 5<br>from all 27 tasks",                                          
+    "Removed <br>16 tasks",                                                              
+    "<b>11 tasks</b>",                                                        
 
     # Combined pipeline  (nodes 15–20)
-    "<b>42 tasks</b><br>all 20 runs evaluated",                               # 15
-    "<b>Inspect incorrect logs<br>for further errors</b><br>12 Codex CLI runs<br>42 tasks",            # 16
-    "3 tasks removed",                                                                 # 17  dead end
-    "<b>Update grading</b><br>(4 tasks affected)",                                      # 18
-    "<b>39 tasks</b><br>Regrade all runs",                                       # 19
+    "<b>42 tasks</b><br>all 20 runs<br>evaluated",                               
+    "<b>Inspected incorrect logs<br>for further errors</b><br>all 20 agent runs<br>42 tasks",           
+    "Removed 3 tasks",                                                                 
+    "<b>Updated grading</b><br>5 tasks affected",                                      
+    "<b>39 tasks</b>",                                     
 ]
 
 node_colors = [
