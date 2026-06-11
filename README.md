@@ -1,6 +1,22 @@
-# corebench-analysis
+# Life After Benchmark Saturation: A Case Study of CORE-Bench
+<p>
+<a href="https://huggingface.co/collections/agent-evals/core-bench-v11">
+<img alt="Dataset" src="https://img.shields.io/badge/Hugging%20Face-Dataset-yellow.svg"> 
+</p>
 
-TKTK
+Analysis of results from CORE-Bench v1.1, CORE-Bench OOD, and a computational reproducibility human-agent collaboration uplift study.
+
+Run CORE-Bench v1.1 through the [Holistic Agent Leaderboard](https://github.com/princeton-pli/hal-harness/tree/feat/corebenchv2-prefect) harness. You can find the CORE-Bench v1.1 dataset [here](https://huggingface.co/datasets/agent-evals/core-bench-v1.1-mainline) and the CORE-Bench OOD dataset [here](https://huggingface.co/datasets/agent-evals/core-bench-v1.1-ood).
+
+## Paper section 2: Construct validity
+- [CORE-Bench v1.1 logs](https://docent.transluce.org/dashboard/f739ce50-eec8-4d8e-86b3-2c3dd9f42ab7)
+- [CORE-Bench OOD logs](https://docent.transluce.org/dashboard/6fcaee2b-844f-4930-b62f-617ebf924b35)
+
+`./acc_saturation/accuracies.ipynb` computes the accuracies of all agent configurations and accuracy saturation metrics
+
+`./sankey/sankey_main.py` generates the construction pipeline for CORE-Bench v1.1
+
+`./sankey/sankey_ood.py` generates the construction pipeline for CORE-Bench OOD
 
 ## Paper section 3: Multidimensional evaluation of agent performance
 
