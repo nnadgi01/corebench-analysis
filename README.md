@@ -9,8 +9,8 @@ Analysis of results from CORE-Bench v1.1, CORE-Bench OOD, and a computational re
 Run CORE-Bench v1.1 through the [Holistic Agent Leaderboard](https://github.com/princeton-pli/hal-harness/tree/feat/corebenchv2-prefect) harness. You can find the CORE-Bench v1.1 dataset [here](https://huggingface.co/datasets/agent-evals/core-bench-v1.1-mainline) and the CORE-Bench OOD dataset [here](https://huggingface.co/datasets/agent-evals/core-bench-v1.1-ood).
 
 ## Paper section 2: Construct validity
-- [CORE-Bench v1.1 logs](https://docent.transluce.org/dashboard/f739ce50-eec8-4d8e-86b3-2c3dd9f42ab7)
-- [CORE-Bench OOD logs](https://docent.transluce.org/dashboard/6fcaee2b-844f-4930-b62f-617ebf924b35)
+- [CORE-Bench v1.1 logs](https://docent.transluce.org/dashboard/f739ce50-eec8-4d8e-86b3-2c3dd9f42ab7) ([truncated](https://docent.transluce.org/dashboard/1d88d50a-7990-4528-aaf9-4b721d53b43d) tool call outputs version for log analysis)
+- [CORE-Bench OOD logs](https://docent.transluce.org/dashboard/6fcaee2b-844f-4930-b62f-617ebf924b35) ([truncated](https://docent.transluce.org/dashboard/94497783-2245-4613-8d5f-73ab653079ec) tool call outputs version for log analysis)
 
 `./acc_saturation/accuracies.ipynb` computes the accuracies of all agent configurations and accuracy saturation metrics
 
