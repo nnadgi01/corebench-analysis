@@ -34,11 +34,8 @@ pip install -r requirements.txt
 
 # Only needed to re-fetch raw logs/rubrics from Docent (§3.3):
 cp .env.example .env   # then fill in DOCENT_API_KEY
-```
 
-Regenerating the reliability, efficiency, and uplift figures (§3.1, §3.2, §4) needs only the committed data tables — no Docent access or extraction pipeline required:
-
-```bash
+# Regenerating the reliability, efficiency, and uplift figures (§3.1, §3.2, §4)
 python -m analysis.regenerate_figures
 ```
 
