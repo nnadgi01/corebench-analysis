@@ -29,8 +29,6 @@ Each `## Paper section` below maps the data files and scripts to the figures and
 
 ```bash
 git clone <repo-url> && cd corebench-analysis
-# Use a fresh Python env. The repo's Docent runner (docent/run_rubric_v2_local.py)
-# assumes a conda env named `core-bench`:
 conda create -n core-bench python -y && conda activate core-bench
 pip install -r requirements.txt
 
