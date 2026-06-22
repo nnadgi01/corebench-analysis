@@ -31,6 +31,8 @@ DEFAULT_DATA = Path("data/RCT_responses_cleaned.csv")
 DEFAULT_OUT = Path("figs/uplift_duration_by_condition.png")
 
 # Seaborn "colorblind" palette from the original RMarkdown.
+LABEL_REMAP = {"AI-assisted": "Human-agent"}
+
 COLORBLIND_PALETTE = [
     "#0173B2",
     "#DE8F05",
@@ -105,14 +107,15 @@ def fig_duration_by_condition(
         )
         max_count = max(max_count, int(counts.max(initial=0)))
 
-    fig = plt.figure(figsize=(7.25, 2.8))
-    ax = fig.add_axes([0.14, 0.19, 0.77, 0.72])
+    fig = plt.figure(figsize=(6, 3.5))
+    ax = fig.add_axes([0.22, 0.18, 0.69, 0.74])
     style.style_axes(ax)
 
     handles: list[Patch] = []
     for i, condition in enumerate(conditions):
         vals = work.loc[work[condition_col] == condition, duration_col]
         color = COLORBLIND_PALETTE[i % len(COLORBLIND_PALETTE)]
+        display_label = LABEL_REMAP.get(str(condition), str(condition))
         ax.hist(
             vals,
             bins=breaks,
@@ -120,11 +123,26 @@ def fig_duration_by_condition(
             alpha=0.45,
             edgecolor="white",
             linewidth=1.25,
-            label=str(condition),
+            label=display_label,
             zorder=3,
         )
         handles.append(Patch(facecolor=color, edgecolor="white",
-                             alpha=0.45, label=str(condition)))
+                             alpha=0.45, label=display_label))
+
+    did_not_complete = work[work[duration_col] >= 180]
+    if not did_not_complete.empty:
+        dnc_color = "#E63946"
+        ax.hist(
+            did_not_complete[duration_col],
+            bins=breaks,
+            color=dnc_color,
+            alpha=0.85,
+            edgecolor="white",
+            linewidth=1.25,
+            zorder=4,
+        )
+        handles.append(Patch(facecolor=dnc_color, edgecolor="white",
+                             alpha=0.85, label="Manual, did not complete"))
 
     ax.set_xlim(*hist_xlim)
     ax.set_ylim(0, max(1, max_count) * 1.18)
@@ -138,15 +156,13 @@ def fig_duration_by_condition(
     ax.grid(axis="y", visible=True)
     ax.grid(axis="x", alpha=0.20)
 
-    ncol = min(3, max(1, len(handles)))
     ax.legend(
         handles=handles,
         loc="upper center",
-        bbox_to_anchor=(0.5, 1.04),
-        ncol=ncol,
-        fontsize=15,
-        frameon=True,
-        framealpha=0.92,
+        bbox_to_anchor=(0.5, -0.26),
+        ncol=len(handles),
+        fontsize=14,
+        frameon=False,
         borderpad=0.35,
         labelspacing=0.35,
         columnspacing=1.0,
