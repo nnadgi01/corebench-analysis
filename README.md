@@ -1,7 +1,8 @@
 # Life After Benchmark Saturation: A Case Study of CORE-Bench
 <p>
 <a href="https://huggingface.co/collections/agent-evals/core-bench-v11">
-<img alt="Dataset" src="https://img.shields.io/badge/Hugging%20Face-Dataset-yellow.svg"> 
+<img alt="Dataset" src="https://img.shields.io/badge/Hugging%20Face-Dataset-yellow.svg">
+</a>
 </p>
 
 Analysis of results from CORE-Bench v1.1, CORE-Bench OOD, and a human-agent collaboration uplift study on computational reproducibility.
@@ -28,7 +29,7 @@ Each `## Paper section` below maps the data files and scripts to the figures and
 ## Setup
 
 ```bash
-git clone <repo-url> && cd corebench-analysis
+git clone https://github.com/nnadgi01/corebench-analysis.git && cd corebench-analysis
 conda create -n core-bench python -y && conda activate core-bench
 pip install -r requirements.txt
 
@@ -101,11 +102,9 @@ python -m analysis.regenerate_figures   # writes the figures below to ./figs/
 
 Three notebooks in `./notebooks/` produce the analysis behind §3.3 — the root-cause taxonomy of the accuracy failures, the representative trajectory-level disagreements across scaffolds, and the three findings (similar accuracies mask different failures; scaffolds induce distinct solution strategies; direct fixes outperform rewrites), all built on Docent rubrics over the agent logs.
 
-- **`model_scaffold_decomposition.ipynb`** — per-capsule pass/fail comparisons across the model × scaffold grid (oracle-router and scaffold-disagreement analysis), the root-cause taxonomy of the failures (Docent failure rubric), and the answer-source / direct-fix-vs-rewrite success rates (Docent success rubric).
-- **`model_scaffold_case_studies.ipynb`** — qualitative trajectory deep-dives behind the representative-disagreement table: CORE-Agent vs. first-party scaffold, OpenCode / Codex CLI as third-party controls, and the vision-read vs. code-output answer-source split.
-- **`failure_mode_taxonomy.ipynb`** — behavioral failure-mode analysis: the root-cause taxonomy, wrong-value / wrong-answer breakdowns, and the answer-source / resolution-strategy / verification-pattern analyses (rubric v2) behind the "scaffolds induce distinct solution strategies" finding.
-
-**Data:** the rubric-v2 analysis reads `./data/rubric_v2_results.json`. The raw agent logs and the Docent judge rubrics are fetched live from the [Docent v1.1 collection](https://docent.transluce.org/dashboard/1d88d50a-7990-4528-aaf9-4b721d53b43d) by the loader cells; these require `DOCENT_API_KEY` to be set in `.env`.
+- **`model_scaffold_decomposition.ipynb`** Docent-rubric failure classification including per-capsule pass/fail comparisons across the model × scaffold grid, the root-cause taxonomy of the failures (Docent failure rubric), and the answer-source / direct-fix-vs-rewrite success rates (Docent success rubric).
+- **`model_scaffold_case_studies.ipynb`** qualitative trajectory deep-dives behind the representative-disagreement table. 
+- **`failure_mode_taxonomy.ipynb`** behavioral failure-mode analysis, resolution strategies, answer source and verification patterns.
 
 ## Paper section 4: Human-agent collaboration uplift
 
