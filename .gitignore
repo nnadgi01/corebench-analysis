@@ -2,3 +2,4 @@ __pycache__/
 *.pyc
 figs/scratch/
 .DS_Store
+.env
