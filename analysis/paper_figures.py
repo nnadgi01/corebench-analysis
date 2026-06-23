@@ -585,35 +585,110 @@ def fig_resource_accuracy_2panel(eff: pd.DataFrame, path: Path):
 
 
 def fig_resource_accuracy_landscape(eff: pd.DataFrame, path: Path):
-    """Combined landscape two-panel: tokens and cost vs accuracy, shared legend."""
-    fig, axes = plt.subplots(
-        1, 2, figsize=(style.PAPER_W * 1.85, 3.8), sharey=True,
-    )
-    df_tok = _plot_resource_accuracy_panel(
-        axes[0], eff,
-        x_col="tot_tok_mean",
-        x_label="Mean tokens per task (log scale)",
-        label_substrings=TOKEN_ACC_LABELS_MAIN,
-        marker_size=115, annotation_fontsize=16,
-    )
-    df_cost = _plot_resource_accuracy_panel(
-        axes[1], eff,
-        x_col="cost_mean",
-        x_label="Mean cost per task (\\$, log scale)",
-        label_substrings=COST_ACC_LABELS_MAIN,
-        marker_size=115, annotation_fontsize=16,
-    )
-    axes[1].set_ylabel("")
-    axes[1].tick_params(axis="y", labelleft=False)
-    handles = _resource_accuracy_handles(df_tok, ())
-    fig.legend(
-        handles=handles, loc="lower center", bbox_to_anchor=(0.5, -0.01),
-        ncol=len(handles), fontsize=14, frameon=False,
-        handlelength=1.25, columnspacing=1.4,
-    )
+    """Two-panel tokens/cost vs accuracy with OLS log-linear CI bands.
+
+    Reads all data (tokens, cost, accuracy) from efficiency_per_agent.csv
+    (passed in as ``eff``); no runs.csv needed.
+    """
+    from scipy import stats
+
+    def _ols_ci_band(log_x, y, x_plot):
+        n = len(log_x)
+        slope, intercept = np.polyfit(log_x, y, 1)
+        y_hat = slope * log_x + intercept
+        se = np.sqrt(np.sum((y - y_hat) ** 2) / (n - 2))
+        ss_xx = np.sum((log_x - log_x.mean()) ** 2)
+        t_crit = stats.t.ppf(0.975, df=n - 2)
+        y_plot = slope * x_plot + intercept
+        se_fit = se * np.sqrt(1 / n + (x_plot - log_x.mean()) ** 2 / ss_xx)
+        return y_plot, y_plot - t_crit * se_fit, y_plot + t_crit * se_fit
+
+    def _draw_fit(ax, log_x, y):
+        x_plot = np.linspace(log_x.min(), log_x.max(), 200)
+        y_plot, ci_lo, ci_hi = _ols_ci_band(log_x, y, x_plot)
+        ax.fill_between(10 ** x_plot, ci_lo, ci_hi,
+                        color=style.GUIDE_GRAY, alpha=0.15, zorder=1)
+        ax.plot(10 ** x_plot, y_plot,
+                color=style.GUIDE_GRAY, linewidth=1.65, linestyle="--", zorder=2)
+
+    tok_df  = eff.dropna(subset=["tot_tok_mean", "accuracy"]).copy()
+    cost_df = eff.dropna(subset=["cost_mean", "accuracy"]).copy()
+    scaffolds_present = [s for s in ["claude_code", "opencode", "core_agent", "codex"]
+                         if s in eff["scaffold"].unique()]
+
+    fig, (ax_tok, ax_cost) = plt.subplots(
+        1, 2, figsize=(style.PAPER_W * 1.85, style.PAPER_H), sharey=True)
+
+    # --- left panel: tokens vs accuracy ---
+    style.style_axes(ax_tok)
+    for sc, sub in tok_df.groupby("scaffold"):
+        ax_tok.scatter(sub["tot_tok_mean"], sub["accuracy"],
+                       s=200, color=style.SCAFFOLD[sc],
+                       marker=style.SCAFFOLD_MARKER[sc],
+                       edgecolor="white", linewidth=1.55, zorder=3, alpha=0.90)
+    _draw_fit(ax_tok,
+              np.log10(tok_df["tot_tok_mean"].values),
+              tok_df["accuracy"].values)
+    for substr, (dx_log, dy, text) in TOKEN_ACC_LABELS_MAIN.items():
+        match = tok_df[tok_df["agent_id"].fillna("").str.contains(substr, regex=False)]
+        if not match.empty:
+            r = match.iloc[0]
+            anchor = (r["tot_tok_mean"], r["accuracy"])
+            style.annotate_with_arrow(
+                ax_tok, anchor_xy=anchor,
+                label_xy=(10 ** (np.log10(anchor[0]) + dx_log), anchor[1] + dy),
+                text=text, color=style.SCAFFOLD[r["scaffold"]], fontsize=16)
+    ax_tok.set_xscale("log")
+    ax_tok.set_xlim(tok_df["tot_tok_mean"].min() / 2.5,
+                    tok_df["tot_tok_mean"].max() * 2.5)
+    _set_token_log_ticks(ax_tok)
+    ax_tok.set_xlabel("Mean tokens per task (log scale)")
+    ymin = max(0.30, eff["accuracy"].min() - 0.10)
+    ax_tok.set_ylim(ymin, 1.10)
+    ax_tok.set_yticks([t for t in np.arange(0.5, 1.01, 0.1) if ymin <= t <= 1.0])
+    ax_tok.yaxis.set_major_formatter(
+        plt.FuncFormatter(lambda v, _: f"{int(round(v*100))}%"))
+    ax_tok.set_ylabel("Accuracy")
+    if ymin > 0.05:
+        style.add_y_axis_break(ax_tok)
+
+    # --- right panel: cost vs accuracy ---
+    style.style_axes(ax_cost)
+    for sc, sub in cost_df.groupby("scaffold"):
+        ax_cost.scatter(sub["cost_mean"], sub["accuracy"],
+                        s=200, color=style.SCAFFOLD[sc],
+                        marker=style.SCAFFOLD_MARKER[sc],
+                        edgecolor="white", linewidth=1.55, zorder=3, alpha=0.90)
+    _draw_fit(ax_cost,
+              np.log10(cost_df["cost_mean"].values),
+              cost_df["accuracy"].values)
+    for substr, (dx_log, dy, text) in COST_ACC_LABELS_MAIN.items():
+        match = cost_df[cost_df["agent_id"].fillna("").str.contains(substr, regex=False)]
+        if not match.empty:
+            r = match.iloc[0]
+            anchor = (r["cost_mean"], r["accuracy"])
+            style.annotate_with_arrow(
+                ax_cost, anchor_xy=anchor,
+                label_xy=(10 ** (np.log10(anchor[0]) + dx_log), anchor[1] + dy),
+                text=text, color=style.SCAFFOLD[r["scaffold"]], fontsize=16)
+    ax_cost.set_xscale("log")
+    ax_cost.set_xlim(cost_df["cost_mean"].min() / 2.5,
+                     cost_df["cost_mean"].max() * 2.5)
+    ax_cost.xaxis.set_major_formatter(
+        plt.FuncFormatter(lambda v, _: f"\\${v:.2f}" if v < 1 else f"\\${v:.0f}"))
+    ax_cost.set_xlabel("Mean cost per task (\\$, log scale)")
+    ax_cost.tick_params(axis="y", labelleft=False)
+
+    handles = [
+        Line2D([0], [0], color=style.GUIDE_GRAY, linestyle="--",
+               linewidth=1.65, label="OLS log-linear fit"),
+        *_scaffold_legend_handles(scaffolds_present),
+    ]
+    fig.legend(handles=handles, loc="lower center", bbox_to_anchor=(0.5, -0.01),
+               ncol=len(handles), fontsize=14, frameon=False,
+               handlelength=1.4, columnspacing=1.4)
     fig.tight_layout(rect=(0, 0.10, 1, 1))
     style.save(fig, path)
-    return df_tok, df_cost
 
 
 def fig_tokens_vs_accuracy_landscape(
