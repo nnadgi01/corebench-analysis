@@ -14,6 +14,15 @@ library(clubSandwich)
 
 
 ```{r}
+# whether to use the private version of the data 
+# or the published version (with researcher/evaluator names pseudonymized):
+use_private_data <- FALSE
+
+private_sheet_url <- "https://docs.google.com/spreadsheets/d/1bEDYkg4epbnJr5JUJ-P10KVICxhoYQhGx2CXVOOGCf8/edit"
+csv_data_file <- file.path("data", "RCT_responses_cleaned.csv")
+```
+
+```{r}
 # Seaborn "colorblind" palette, copied from SEABORN_PALETTES in:
 # https://github.com/mwaskom/seaborn/blob/master/seaborn/palettes.py
 # Seaborn documents "colorblind" as a named palette:
@@ -32,12 +41,18 @@ colorblind_palette <- c(
 )
 ```
 
-# Ingest data from Google Sheets
+# Ingest data
 ```{r echo=FALSE}
-# NB: This may require authorization with your Google account in interactive mode 
-# first (reply to the question in the console) before using it while knitting
-d <- read_sheet('https://docs.google.com/spreadsheets/d/1bEDYkg4epbnJr5JUJ-P10KVICxhoYQhGx2CXVOOGCf8/edit')
-# TODO: replace with a reference to the published version of the data once released
+if (use_private_data) {
+  # NB: This may require authorization with your Google account in interactive mode
+  # first (reply to the question in the console) before using it while knitting.
+  d <- read_sheet(private_sheet_url)
+} else {
+  if (!file.exists(csv_data_file)) {
+    stop("CSV data file not found: ", csv_data_file)
+  }
+  d <- data.table::fread(csv_data_file, check.names = FALSE)
+}
 ```
 
 ```{r}
@@ -160,7 +175,11 @@ reference_condition <- "AI-assisted" # estimate change relative to this conditio
 # the reciprocal factor for duration (from AI-assisted to Manual instead of vice versa).
 
 paper_col <- "Paper Title"
-researcher_col <- "Human Researcher [your name]"
+researcher_col <- if (use_private_data) {
+  "Human Researcher [your name]"
+} else {
+  "evaluator"
+}
 
 fixed_effects_regression_data <- data.frame(
   duration_minutes = durs,
