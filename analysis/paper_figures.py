@@ -419,6 +419,7 @@ def _plot_resource_accuracy_panel(
     x_label: str = "Mean tokens per task (log scale)",
     x_scale: str = "log",
     fit_line: bool = True,
+    fit_ci: bool = False,
     fit_excludes: tuple[str, ...] = (),
     label_substrings: dict[str, tuple[float, float, str]] | None = None,
     marker_size: float = 135,
@@ -432,16 +433,31 @@ def _plot_resource_accuracy_panel(
     style.style_axes(ax)
 
     if fit_line:
+        from scipy import stats as _stats
         fit_pts = df[~df["scaffold"].isin(fit_excludes)]
         if len(fit_pts) >= 3:
-            slope, intercept = np.polyfit(fit_pts["fit_x"], fit_pts["accuracy"], 1)
-            x_line = np.linspace(df["fit_x"].min(), df["fit_x"].max(), 50)
+            lx = fit_pts["fit_x"].values
+            y  = fit_pts["accuracy"].values
+            slope, intercept = np.polyfit(lx, y, 1)
+            x_line = np.linspace(df["fit_x"].min(), df["fit_x"].max(), 200)
             plot_x = 10 ** x_line if x_scale == "log" else x_line
+            y_line = slope * x_line + intercept
             ax.plot(
-                plot_x, slope * x_line + intercept,
+                plot_x, y_line,
                 color=style.GUIDE_GRAY, linewidth=1.65, linestyle="--",
                 zorder=2,
             )
+            if fit_ci and len(fit_pts) > 2:
+                n = len(lx)
+                y_hat = slope * lx + intercept
+                se = np.sqrt(np.sum((y - y_hat) ** 2) / (n - 2))
+                lx_mean = lx.mean()
+                ss_xx = np.sum((lx - lx_mean) ** 2)
+                t_crit = _stats.t.ppf(0.975, df=n - 2)
+                se_fit = se * np.sqrt(1 / n + (x_line - lx_mean) ** 2 / ss_xx)
+                ax.fill_between(plot_x, y_line - t_crit * se_fit,
+                                y_line + t_crit * se_fit,
+                                color=style.GUIDE_GRAY, alpha=0.15, zorder=1)
 
     for sc, sub in df.groupby("scaffold"):
         ax.scatter(
@@ -494,6 +510,7 @@ def fig_tokens_vs_accuracy(eff: pd.DataFrame, path: Path, *, title: str | None =
                            x_label: str = "Mean tokens per task (log scale)",
                            x_scale: str = "log",
                            fit_line: bool = True,
+                           fit_ci: bool = True,
                            fit_excludes: tuple[str, ...] = (),
                            label_substrings: dict[str, tuple[float, float, str]] | None = None):
     """Scatter of resource-usage (log) vs accuracy. Each scaffold gets
@@ -507,7 +524,7 @@ def fig_tokens_vs_accuracy(eff: pd.DataFrame, path: Path, *, title: str | None =
     fig, ax = plt.subplots(figsize=(8.5, 7.0))
     df = _plot_resource_accuracy_panel(
         ax, eff, x_col=x_col, x_label=x_label,
-        x_scale=x_scale, fit_line=fit_line, fit_excludes=fit_excludes,
+        x_scale=x_scale, fit_line=fit_line, fit_ci=fit_ci, fit_excludes=fit_excludes,
         label_substrings=label_substrings,
     )
     handles = _resource_accuracy_handles(df, fit_excludes, x_scale=x_scale)
@@ -710,7 +727,8 @@ def fig_tokens_vs_accuracy_landscape(
     fig, ax = plt.subplots(figsize=(style.PAPER_W, 5.0))
     df = _plot_resource_accuracy_panel(
         ax, eff, x_col=x_col, x_label=x_label,
-        x_scale=x_scale, fit_line=fit_line, fit_excludes=fit_excludes,
+        x_scale=x_scale, fit_line=fit_line, fit_ci=fit_line,
+        fit_excludes=fit_excludes,
         label_substrings=label_substrings,
         marker_size=135, annotation_fontsize=14,
     )
