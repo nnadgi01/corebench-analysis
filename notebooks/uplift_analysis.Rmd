@@ -6,7 +6,7 @@ author: Tilman Bayer
 ---
 
 # Libraries and settings
-```{r}
+```{r, include=FALSE}
 library(googlesheets4)
 library(data.table)
 library(clubSandwich)
@@ -232,14 +232,25 @@ researcher_cr2_condition_percent_change <-
   100 * (researcher_cr2_condition_multiplier - 1)
 researcher_cr2_condition_variance <- researcher_cr2_condition_std_error^2
 
+researcher_cr2_condition_conf_int <- conf_int(
+  m_fe,
+  vcov = V_researcher_cr2,
+  level = 0.95,
+  test = "Satterthwaite",
+  coefs = condition_effect_term
+)
+researcher_cr2_condition_log_ci <- c(
+  researcher_cr2_condition_conf_int$CI_L,
+  researcher_cr2_condition_conf_int$CI_U
+)
+researcher_cr2_condition_ratio_ci <- exp(researcher_cr2_condition_log_ci)
 researcher_cr2_condition_test
 
 ```
 
+Using CR2 standard errors clustered by researcher, the coefficient for `r condition_label` is `r round(researcher_cr2_condition_log_effect, digits = 4)`, with a CR2 variance of `r signif(researcher_cr2_condition_variance, digits = 3)`, a CR2 standard error of `r round(researcher_cr2_condition_std_error, 4)`, Satterthwaite degrees of freedom of `r round(researcher_cr2_condition_df, 1)`, and p-value `r format.pval(researcher_cr2_condition_p_value, digits = 3)`. The 95% confidence interval for the effect on the log-duration scale is [`r round(researcher_cr2_condition_log_ci[1], 4)`, `r round(researcher_cr2_condition_log_ci[2], digits = 4)`]. The point estimate implies that `r condition_label` sessions last `r round(researcher_cr2_condition_multiplier, digits = 2)` times as long as `r reference_condition` sessions (or about `r round(researcher_cr2_condition_percent_change, digits = 0)` percent longer), with a 95% confidence interval of [`r round(researcher_cr2_condition_ratio_ci[1], 2)`, `r round(researcher_cr2_condition_ratio_ci[2], digits = 2)`] for this duration ratio.
 
-Using CR2 standard errors clustered by researcher, the coefficient for `r condition_label` is `r round(researcher_cr2_condition_log_effect, 4)`, with a CR2 standard error of `r round(researcher_cr2_condition_std_error, 4)`, Satterthwaite degrees of freedom of `r round(researcher_cr2_condition_df, 1)`, and p-value `r format.pval(researcher_cr2_condition_p_value, digits = 3)`. The point estimate implies that `r condition_label` sessions last `r round(researcher_cr2_condition_multiplier, 2)` times as long as `r reference_condition` sessions, or about `r round(researcher_cr2_condition_percent_change, 0)` percent as long.
-
-
+### Additional robustness checks (not included in the paper)
 ```{r CR2 clustered by paper}
 V_paper_cr2 <- vcovCR(
   m_fe,
