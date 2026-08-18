@@ -3,6 +3,8 @@
 <a href="https://huggingface.co/collections/agent-evals/core-bench-v11">
 <img alt="Dataset" src="https://img.shields.io/badge/Hugging%20Face-Dataset-yellow.svg">
 </a>
+<a href="https://arxiv.org/pdf/2606.26158">
+<img alt="Paper" src="https://img.shields.io/badge/arXiv-arXiv%3A2606.26158-red.svg">
 </p>
 
 Analysis of results from CORE-Bench v1.1, CORE-Bench OOD, and a human-agent collaboration uplift study on computational reproducibility.
