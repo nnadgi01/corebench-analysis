@@ -18,7 +18,7 @@ If you want to run the benchmark rather than analyze results, use the [Holistic 
 
 ```
 corebench-analysis/
-├── data/              # data tables behind the §3 and §4 figures
+├── data/              
 ├── analysis/          # scripts that regenerate the §3 and §4 figures
 ├── notebooks/         # §3.3 model-scaffold analysis and §4 uplift analysis
 ├── acc_saturation/    # §2 accuracy & saturation metrics
@@ -57,10 +57,10 @@ The agent logs are hosted on Docent. Each set comes in two versions: the full lo
 - CORE-Bench v1.1: [full logs](https://docent.transluce.org/dashboard/f739ce50-eec8-4d8e-86b3-2c3dd9f42ab7) · [truncated](https://docent.transluce.org/dashboard/1d88d50a-7990-4528-aaf9-4b721d53b43d)
 - CORE-Bench Extended (OOD): [full logs](https://docent.transluce.org/dashboard/6fcaee2b-844f-4930-b62f-617ebf924b35) · [truncated](https://docent.transluce.org/dashboard/94497783-2245-4613-8d5f-73ab653079ec)
 
-Two pieces of code produce the §2 results:
+Code behind §2:
  
 - `acc_saturation/accuracies.ipynb` computes accuracy for every agent configuration, along with the saturation metrics.
-- `sankey/sankey_main.py` and `sankey/sankey_ood.py` draw the construction pipelines for CORE-Bench v1.1 and CORE-Bench Extended, respectively. Each writes `sankey_pipeline.png` to the working directory.
+- `sankey/sankey_main.py` and `sankey/sankey_ood.py` draw the benchmark construction pipeline diagrams in the appendix.
 
 ## Section 3: Multidimensional evaluation of agent performance
 
@@ -122,7 +122,7 @@ This rebuilds the §3.1, §3.2, and §4 figures from the committed data tables. 
 
 </details>
 
-### Section 3.3: Decoupling model and scaffold
+### Model–scaffold analysis (§3.3) 
 
 The analysis behind §3.3 rests on Docent rubrics applied to the agent logs, and lives in three notebooks in `notebooks/`. They work from the raw transcripts pulled from Docent (stored locally as JSON) and the rubric results in `data/rubric_v2_results.json`, not the per-agent tables. The rubric itself and the script that runs it over the logs are in `docent/`.
 
@@ -133,8 +133,6 @@ The analysis behind §3.3 rests on Docent rubrics applied to the agent logs, and
 Together these support the section's three findings: similar accuracies can hide very different failures, scaffolds push models toward distinct solution strategies, and direct fixes outperform rewrites.
 
 ## Section 4: Human-agent collaboration uplift
-
-### Data
 
 `data/RCT_responses_cleaned.csv` holds the questionnaire responses from the RCT. Participants filled it in after each reproduction run, and each response links to the Docent logs for that run. The file was exported from Google Forms and lightly cleaned, with private information such as email addresses redacted. All three §4 notebooks read from it.
 
