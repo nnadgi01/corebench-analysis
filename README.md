@@ -29,8 +29,6 @@ corebench-analysis/
 └── requirements.txt
 ```
 
-The sections below follow the paper. Each one lists the data and code that produce that section's figures and tables.
-
 ## Setup
 
 ```bash
@@ -49,6 +47,8 @@ Two optional extras:
  
 - To re-fetch raw logs and rubrics from Docent (only needed for §3.3), copy `.env.example` to `.env` and fill in your `DOCENT_API_KEY`.
 - `notebooks/uplift_analysis.Rmd` (§4) is an R Markdown notebook and needs R to run. A knitted copy is committed as `notebooks/uplift_analysis.html` if you just want to read it.
+
+The sections below follow the paper. Each one lists the data and code that produce that section's figures and tables.
 
 ## Section 2: Construct validity
 
