@@ -3,3 +3,8 @@ __pycache__/
 figs/scratch/
 .DS_Store
 .env
+data/runs_old.csv
+data/runs_old.parquet
+sankey_ood_pipeline.html
+analysis/reliability_metrics_committed_9ee581b.csv
+data/reliability/

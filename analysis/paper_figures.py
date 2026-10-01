@@ -604,8 +604,8 @@ def fig_resource_accuracy_2panel(eff: pd.DataFrame, path: Path):
 def fig_resource_accuracy_landscape(eff: pd.DataFrame, path: Path):
     """Two-panel tokens/cost vs accuracy with OLS log-linear CI bands.
 
-    Reads all data (tokens, cost, accuracy) from efficiency_per_agent.csv
-    (passed in as ``eff``); no runs.csv needed.
+    Takes per-agent tokens, cost, and accuracy aggregates as ``eff``.
+    The regeneration entry point loads these from efficiency_per_agent.csv.
     """
     from scipy import stats
 
@@ -628,13 +628,51 @@ def fig_resource_accuracy_landscape(eff: pd.DataFrame, path: Path):
         ax.plot(10 ** x_plot, y_plot,
                 color=style.GUIDE_GRAY, linewidth=1.65, linestyle="--", zorder=2)
 
+    def _label_panel(ax, df, x_col, labels, positions):
+        # Use panel-specific positions in axes coordinates: the shared
+        # single-panel offsets produce long, crossing arrows in this layout.
+        for substr, (_, _, text) in labels.items():
+            match = df[df["agent_id"].fillna("").str.contains(substr, regex=False)]
+            if match.empty:
+                continue
+            r = match.iloc[0]
+            x, y, align = positions[substr]
+            color = style.SCAFFOLD[r["scaffold"]]
+            is_cost_codex = (
+                x_col == "cost_mean" and substr == "codex_agent_gpt_5_3_codex"
+            )
+            marker_gap = (
+                14 if is_cost_codex or substr == "core_agent_anthropic_claude_opus_4_6"
+                else 9
+            )
+            ax.annotate(
+                text, xy=(r[x_col], r["accuracy"]),
+                xytext=(x, y), textcoords="axes fraction",
+                ha=align, va="center", fontsize=16, fontweight="medium",
+                color=to_rgba(color, 0.74),
+                bbox=dict(facecolor="white", alpha=0.84,
+                          pad=1.8, edgecolor="none"),
+                arrowprops=dict(
+                    arrowstyle="->,head_length=0.5,head_width=0.2",
+                    connectionstyle="arc3,rad=0",
+                    color=to_rgba(color, 0.84),
+                    # Start at the lower-left corner to leave enough room
+                    # for a visible leader and marker clearance in the cost panel.
+                    relpos=(0, 0) if is_cost_codex else (0.5, 0.5),
+                    shrinkA=5, shrinkB=marker_gap, lw=1.25,
+                ),
+                zorder=4,
+            )
+
     tok_df  = eff.dropna(subset=["tot_tok_mean", "accuracy"]).copy()
     cost_df = eff.dropna(subset=["cost_mean", "accuracy"]).copy()
     scaffolds_present = [s for s in ["claude_code", "opencode", "core_agent", "codex"]
                          if s in eff["scaffold"].unique()]
 
+    # Match the reference resource_accuracy_landscape.pdf page size exactly.
+    # A fixed canvas avoids tight-bbox cropping changing the exported dimensions.
     fig, (ax_tok, ax_cost) = plt.subplots(
-        1, 2, figsize=(style.PAPER_W * 1.85, style.PAPER_H), sharey=True)
+        1, 2, figsize=(1295.8875 / 72, 308.72 / 72), sharey=True)
 
     # --- left panel: tokens vs accuracy ---
     style.style_axes(ax_tok)
@@ -646,15 +684,6 @@ def fig_resource_accuracy_landscape(eff: pd.DataFrame, path: Path):
     _draw_fit(ax_tok,
               np.log10(tok_df["tot_tok_mean"].values),
               tok_df["accuracy"].values)
-    for substr, (dx_log, dy, text) in TOKEN_ACC_LABELS_MAIN.items():
-        match = tok_df[tok_df["agent_id"].fillna("").str.contains(substr, regex=False)]
-        if not match.empty:
-            r = match.iloc[0]
-            anchor = (r["tot_tok_mean"], r["accuracy"])
-            style.annotate_with_arrow(
-                ax_tok, anchor_xy=anchor,
-                label_xy=(10 ** (np.log10(anchor[0]) + dx_log), anchor[1] + dy),
-                text=text, color=style.SCAFFOLD[r["scaffold"]], fontsize=16)
     ax_tok.set_xscale("log")
     ax_tok.set_xlim(tok_df["tot_tok_mean"].min() / 2.5,
                     tok_df["tot_tok_mean"].max() * 2.5)
@@ -679,15 +708,6 @@ def fig_resource_accuracy_landscape(eff: pd.DataFrame, path: Path):
     _draw_fit(ax_cost,
               np.log10(cost_df["cost_mean"].values),
               cost_df["accuracy"].values)
-    for substr, (dx_log, dy, text) in COST_ACC_LABELS_MAIN.items():
-        match = cost_df[cost_df["agent_id"].fillna("").str.contains(substr, regex=False)]
-        if not match.empty:
-            r = match.iloc[0]
-            anchor = (r["cost_mean"], r["accuracy"])
-            style.annotate_with_arrow(
-                ax_cost, anchor_xy=anchor,
-                label_xy=(10 ** (np.log10(anchor[0]) + dx_log), anchor[1] + dy),
-                text=text, color=style.SCAFFOLD[r["scaffold"]], fontsize=16)
     ax_cost.set_xscale("log")
     ax_cost.set_xlim(cost_df["cost_mean"].min() / 2.5,
                      cost_df["cost_mean"].max() * 2.5)
@@ -696,16 +716,30 @@ def fig_resource_accuracy_landscape(eff: pd.DataFrame, path: Path):
     ax_cost.set_xlabel("Mean cost per task (\\$, log scale)")
     ax_cost.tick_params(axis="y", labelleft=False)
 
+    _label_panel(ax_tok, tok_df, "tot_tok_mean", TOKEN_ACC_LABELS_MAIN, {
+        "codex_agent_gpt_5_3_codex": (0.04, 0.94, "left"),
+        "core_agent_anthropic_claude_opus_4_6": (0.98, 0.94, "right"),
+        "core_agent_gpt_5_4": (0.07, 0.27, "left"),
+        "opencode_agent_openai_gpt_5_4": (0.04, 0.72, "left"),
+    })
+    _label_panel(ax_cost, cost_df, "cost_mean", COST_ACC_LABELS_MAIN, {
+        "codex_agent_gpt_5_3_codex": (0.02, 0.94, "left"),
+        "core_agent_anthropic_claude_opus_4_6": (0.71, 0.94, "right"),
+        "core_agent_gpt_5_4": (0.96, 0.10, "right"),
+        "opencode_agent_openai_gpt_5_4": (0.10, 0.64, "left"),
+    })
+
     handles = [
         Line2D([0], [0], color=style.GUIDE_GRAY, linestyle="--",
                linewidth=1.65, label="OLS log-linear fit"),
         *_scaffold_legend_handles(scaffolds_present),
     ]
-    fig.legend(handles=handles, loc="lower center", bbox_to_anchor=(0.5, -0.01),
+    fig.legend(handles=handles, loc="lower center", bbox_to_anchor=(0.5, 0.005),
                ncol=len(handles), fontsize=14, frameon=False,
                handlelength=1.4, columnspacing=1.4)
-    fig.tight_layout(rect=(0, 0.10, 1, 1))
-    style.save(fig, path)
+    fig.subplots_adjust(left=0.057, right=0.99, bottom=0.30, top=0.985,
+                        wspace=0.06)
+    style.save_fixed(fig, path)
 
 
 def fig_tokens_vs_accuracy_landscape(

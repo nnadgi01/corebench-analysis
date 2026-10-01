@@ -24,7 +24,7 @@ AMBER    = "#949494"   # gray        — grading update
 # ── Nodes ─────────────────────────────────────────────────────────────────────
 node_labels = [
     # Source (node 0)
-    "<b>CORE-Bench OOD original</b><br>30 tasks",                                       
+    "<b>CORE-Bench Extended (Original)</b><br>30 tasks",                                       
 
     # Branches (nodes 1–3)
     "<b>Checked for process & computation <br>incorrectness </b><br>(CORE-Agent · Opus 4.5 and 4.6<br>+ OpenCode · GPT-5.2)<br>all correct tasks", 
@@ -159,7 +159,7 @@ fig = go.Figure(go.Sankey(
 
 fig.update_layout(
     title=dict(
-        text="<b>CORE-Bench OOD Construction Pipeline</b>",
+        text="<b>CORE-Bench Extended Construction Pipeline</b>",
         font=dict(family=FONT, size=22, color=TEXT_COL),
         x=0.5,
     ),
