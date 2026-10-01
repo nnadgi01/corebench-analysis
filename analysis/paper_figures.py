@@ -378,18 +378,22 @@ COST_ACC_LABELS_MAIN = {
 # Per-label (dx, dy) offsets in (xlim, ylim) span fractions for the consistency
 # panels. Tune these to nudge each annotation independently.
 OUTCOME_CONSISTENCY_LABEL_OFFSETS = {
-    "Codex · GPT-5.1":       (-0.1, +0.18),
-    "Codex · GPT-5":         (+0.10, -0.24),
-    "Codex · GPT-5.2":       (-0.38, +0.08),
-    "Codex · GPT-5.3 Codex": (-0.18, -0.26),
-    "Codex · GPT-5.4":       (-0.40, +0.08),
+    "Codex · GPT-5.1": (+0.0420, +0.0023),
+    "Codex · GPT-5": (+0.0554, -0.0574),
+    "Codex · GPT-5.2": (-0.3093, -0.0087),
+    "Codex · GPT-5.3 Codex": (-0.3805, +0.0343),
+    "Codex · GPT-5.4": (-0.3140, +0.0289),
+    "OpenCode · GPT-5.4": (-0.2122, -0.2179),
+    "OpenCode · Opus 4.6": (-0.3323, +0.0177),
 }
 RESOURCE_CONSISTENCY_LABEL_OFFSETS = {
-    "Codex · GPT-5.1":       (-0.08, +0.30),
-    "Codex · GPT-5":         (-0.3, +0.15),
-    "Codex · GPT-5.2":       (-0.3, -0.3),
-    "Codex · GPT-5.3 Codex": (-0.15, -0.28),
-    "Codex · GPT-5.4":       (-0.4, +0.08),
+    "Codex · GPT-5.1": (+0.0466, -0.0165),
+    "Codex · GPT-5": (-0.3087, +0.0424),
+    "Codex · GPT-5.2": (-0.2820, -0.0652),
+    "Codex · GPT-5.3 Codex": (-0.1165, -0.1622),
+    "Codex · GPT-5.4": (-0.2912, +0.0628),
+    "OpenCode · GPT-5.4": (-0.3032, +0.0817),
+    "OpenCode · Opus 4.6": (-0.3414, +0.0618),
 }
 _CONSISTENCY_LABEL_OFFSETS_BY_COL = {
     "outcome_consistency": OUTCOME_CONSISTENCY_LABEL_OFFSETS,
@@ -940,7 +944,7 @@ def fig_outcome_consistency_vs_accuracy_square(rel: pd.DataFrame, path: Path):
     ax = fig.add_axes([0.092, 0.16, 0.870, 0.776])
     _plot_consistency_panel(
         ax, df, "outcome_consistency", "Outcome consistency", "#2ca02c",
-        annotation_fontsize=16, r_fontsize=25)
+        annotation_fontsize=12, r_fontsize=25)
     ax.tick_params(labelsize=17)
     ax.xaxis.label.set_size(25)
     ax.yaxis.label.set_size(25)
@@ -956,7 +960,7 @@ def fig_resource_consistency_vs_accuracy_square(rel: pd.DataFrame, path: Path):
     ax = fig.add_axes([0.092, 0.16, 0.870, 0.776])
     _plot_consistency_panel(
         ax, df, "resource_consistency", "Resource consistency", "#1f77b4",
-        annotation_fontsize=16, r_fontsize=25)
+        annotation_fontsize=12, r_fontsize=25)
     ax.tick_params(labelsize=17)
     ax.xaxis.label.set_size(25)
     ax.yaxis.label.set_size(25)
@@ -982,13 +986,17 @@ def _plot_consistency_panel(
     """
 
     def padded_limits(s: pd.Series, *, floor: float = 0.0,
-                      ceil: float = 1.0, min_pad: float = 0.01) -> tuple[float, float]:
+                      ceil: float = 1.02, min_pad: float = 0.01) -> tuple[float, float]:
         lo, hi = float(s.min()), float(s.max())
         span = max(hi - lo, min_pad)
         pad = max(span * 0.18, min_pad)
         return max(floor, lo - pad), min(ceil, hi + pad)
 
     def short(s: str) -> str:
+        if s == "OC GPT-5 4 medium":
+            return "OpenCode · GPT-5.4"
+        if s == "OC Opus 4 6 adaptive":
+            return "OpenCode · Opus 4.6"
         # Codex GPT-5 4 medium → Codex · GPT-5.4
         # Codex GPT-5 3 Codex medium → Codex · GPT-5.3
         if "GPT-5 3 Codex" in s:
@@ -1003,9 +1011,12 @@ def _plot_consistency_panel(
         return s
 
     label_offsets = _CONSISTENCY_LABEL_OFFSETS_BY_COL.get(col, {})
+    scaffold_colors = {"codex": "#2ca02c", "opencode": "#1f77b4"}
 
     style.style_axes(ax)
     sub = df.dropna(subset=[col]).sort_values("pass_at_1").reset_index(drop=True)
+    sub["scaffold"] = sub["agent_id"].str.extract(
+        r"corebench_hard_(.+?)_agent_", expand=False)
     xlim = padded_limits(sub["pass_at_1"], min_pad=0.008)
     ylim = padded_limits(sub[col], min_pad=0.015)
 
@@ -1019,8 +1030,16 @@ def _plot_consistency_panel(
         ax.plot(xs, slope * xs + intercept,
                 color=style.GUIDE_GRAY, linewidth=1.55,
                 linestyle="--", zorder=2)
-    ax.scatter(sub["pass_at_1"], sub[col], s=230, color=color,
-               edgecolor="white", linewidth=1.7, zorder=3)
+    for scaffold, group in sub.groupby("scaffold", sort=True):
+        ax.scatter(
+            group["pass_at_1"], group[col], s=230,
+            color=scaffold_colors.get(scaffold, color),
+            edgecolor="white", linewidth=1.7, zorder=3,
+            label=SCAFFOLD_DISPLAY.get(scaffold, scaffold),
+        )
+    ax.legend(loc="lower right", ncol=2, fontsize=12,
+              frameon=True, framealpha=0.95, markerscale=0.65,
+              handletextpad=0.3, columnspacing=0.8)
 
     if show_labels:
         x_span = xlim[1] - xlim[0]
@@ -1033,10 +1052,17 @@ def _plot_consistency_panel(
             dx_frac, dy_frac = label_offsets.get(text, (+0.04, +0.10))
             dx = dx_frac * x_span
             dy = dy_frac * y_span
-            style.annotate_with_arrow(
-                ax, anchor_xy=anchor,
-                label_xy=(anchor[0] + dx, anchor[1] + dy),
-                text=text, color=color, fontsize=annotation_fontsize,
+            annotation_color = scaffold_colors.get(row["scaffold"], color)
+            ax.annotate(
+                text, xy=anchor,
+                xytext=(anchor[0] + dx, anchor[1] + dy),
+                fontsize=annotation_fontsize, color=annotation_color,
+                va="center",
+                bbox=dict(facecolor="white", edgecolor="none", pad=1.5),
+                arrowprops=dict(
+                    arrowstyle="->", connectionstyle="arc3,rad=0",
+                    color=annotation_color, shrinkA=4, shrinkB=9, lw=1.1,
+                ),
             )
 
     ax.set_xlim(*xlim)
