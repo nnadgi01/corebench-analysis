@@ -59,7 +59,7 @@ The agent logs are hosted on Docent. Each set comes in two versions: the full lo
 
 Code behind §2:
  
-- `acc_saturation/accuracies.ipynb` computes accuracy for every agent configuration, along with the saturation metrics, from `data/runs.parquet` (or `data/runs.csv` if Parquet support is unavailable). Run all cells from the repository root or `acc_saturation/`. It groups by `agent_id`, uses `successful` as the binary outcome, and analyzes `main39` and `ood19` separately, excluding the reliability split. The two legacy CSVs in `acc_saturation/` are no longer used.
+- `acc_saturation/accuracies.ipynb` computes accuracy for every agent configuration, along with the saturation metrics, from `data/runs.parquet` (or `data/runs.csv` if Parquet support is unavailable). Run all cells from the repository root or `acc_saturation/`. It groups by `agent_id`, uses `successful` as the binary outcome, and analyzes `main39` and `ood19` separately, excluding the reliability split. 
 - `sankey/sankey_main.py` and `sankey/sankey_ood.py` draw the benchmark construction pipeline diagrams in the appendix.
 
 ## Section 3: Multidimensional evaluation of agent performance

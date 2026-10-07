@@ -378,8 +378,8 @@ COST_ACC_LABELS_MAIN = {
 # Per-label (dx, dy) offsets in (xlim, ylim) span fractions for the consistency
 # panels. Tune these to nudge each annotation independently.
 OUTCOME_CONSISTENCY_LABEL_OFFSETS = {
-    "Codex · GPT-5.1": (+0.0420, +0.0023),
-    "Codex · GPT-5": (+0.0554, -0.0574),
+    "Codex · GPT-5.1": (-0.0850, +0.1450),
+    "Codex · GPT-5": (+0.0554, +0.0300),
     "Codex · GPT-5.2": (-0.3093, -0.0087),
     "Codex · GPT-5.3 Codex": (-0.3805, +0.0343),
     "Codex · GPT-5.4": (-0.3140, +0.0289),
@@ -387,9 +387,9 @@ OUTCOME_CONSISTENCY_LABEL_OFFSETS = {
     "OpenCode · Opus 4.6": (-0.3323, +0.0177),
 }
 RESOURCE_CONSISTENCY_LABEL_OFFSETS = {
-    "Codex · GPT-5.1": (+0.0466, -0.0165),
+    "Codex · GPT-5.1": (-0.0850, -0.0850),
     "Codex · GPT-5": (-0.3087, +0.0424),
-    "Codex · GPT-5.2": (-0.2820, -0.0652),
+    "Codex · GPT-5.2": (-0.2820, -0.0200),
     "Codex · GPT-5.3 Codex": (-0.1165, -0.1622),
     "Codex · GPT-5.4": (-0.2912, +0.0628),
     "OpenCode · GPT-5.4": (-0.3032, +0.0817),
@@ -1082,6 +1082,10 @@ _ERR_LABELS  = ["0", "1–2", "3–5", "6–10", "11–20", "21+"]
 
 
 def _short_agent_label(a: str) -> str:
+    if "opencode_agent_openai_gpt_5_4_reasoning_effort_medium" in a:
+        return "OpenCode · GPT-5.4"
+    if "opencode_agent_anthropic_claude_opus_4_6_reasoning_effort_adaptive" in a:
+        return "OpenCode · Opus 4.6"
     if "gpt_5_3_codex" in a:
         return "Codex · GPT-5.3 Codex"
     label = short_label(a)
@@ -1131,16 +1135,16 @@ def fig_discrimination_bar(df: pd.DataFrame, path: Path):
     metrics["label"] = (
         metrics["agent_id"]
         .map(_short_agent_label)
-        .str.replace(r"^Codex · ", "", regex=True)
     )
 
-    fig = plt.figure(figsize=(6.0, 5.3))
-    ax = fig.add_axes([0.204, 0.16, 0.733, 0.76])
+    fig = plt.figure(figsize=(8.0, 5.3))
+    ax = fig.add_axes([0.34, 0.16, 0.61, 0.76])
     style.style_axes(ax)
 
     y = np.arange(len(metrics))
     se = metrics["P_AUROC_se"].fillna(0).to_numpy()
     vals = metrics["P_AUROC"].to_numpy()
+    xmax = min(1.0, max(0.70, float(np.max(vals + se)) + 0.08))
     ax.barh(
         y, vals, xerr=se,
         height=0.58, color="#17becf", alpha=0.90,
@@ -1159,13 +1163,13 @@ def fig_discrimination_bar(df: pd.DataFrame, path: Path):
     )
     for yi, v, e in zip(y, vals, se):
         ax.text(
-            min(v + e + 0.012, 0.695), yi, f"{v:.2f}",
+            min(v + e + 0.012, xmax - 0.05), yi, f"{v:.2f}",
             va="center", ha="left", fontsize=17,
         )
 
     ax.set_yticks(y, metrics["label"])
-    ax.set_xlim(0.30, 0.70)
-    ax.set_xticks(np.arange(0.30, 0.71, 0.10))
+    ax.set_xlim(0.30, xmax)
+    ax.set_xticks(np.arange(0.30, xmax + 0.001, 0.10))
     ax.set_xlabel("Discrimination (AUROC)")
     ax.set_ylabel("")
     ax.tick_params(labelsize=17)
@@ -1208,7 +1212,7 @@ def fig_calibration(df: pd.DataFrame, path: Path, *, n_bins: int = 5):
             n=("pass", "size"),
         ).reset_index()
         color = cmap(i + 1)
-        legend_label = re.sub(r"^Codex · ", "", _short_agent_label(agent_id))
+        legend_label = _short_agent_label(agent_id)
         ax.plot(
             agg["conf_mean"], agg["pass_mean"],
             color=color, alpha=0.76, linewidth=2.2,
@@ -1261,7 +1265,6 @@ def _plot_predictability_agent_panel(
     title_fontsize: int = 14,
     tick_fontsize: int = 10,
     show_ylabel: bool = False,
-    strip_codex_prefix: bool = False,
 ) -> None:
     style.style_axes(ax)
     agg = _bin_metrics(df[df["agent_id"] == agent_id])
@@ -1281,8 +1284,6 @@ def _plot_predictability_agent_panel(
             linewidth=2.15, zorder=3, label="confidence")
 
     title = _short_agent_label(agent_id)
-    if strip_codex_prefix:
-        title = re.sub(r"^Codex · ", "", title)
     ax.set_title(title, fontsize=title_fontsize, loc="left")
     ax.set_xticks(_ERR_CENTERS, _ERR_LABELS)
     ax.tick_params(axis="x", labelsize=tick_fontsize, rotation=30, pad=2)
@@ -1359,7 +1360,7 @@ def fig_predictability_per_agent_vertical(df: pd.DataFrame, path: Path):
         _plot_predictability_agent_panel(
             axes[i], df, a,
             title_fontsize=14, tick_fontsize=11,
-            show_ylabel=False, strip_codex_prefix=True,
+            show_ylabel=False,
         )
         if i < n - 1:
             axes[i].tick_params(axis="x", labelbottom=False)

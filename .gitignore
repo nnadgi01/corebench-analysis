@@ -8,3 +8,8 @@ data/runs_old.parquet
 sankey_ood_pipeline.html
 analysis/reliability_metrics_committed_9ee581b.csv
 data/reliability/
+data/reliability.zip
+data/ood.zip
+analysis/calibration_se.py
+analysis/confidence_bin_se.py
+analysis/reliability_metrics_with_se.csv
