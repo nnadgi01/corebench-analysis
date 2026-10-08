@@ -1212,7 +1212,7 @@ def fig_calibration(df: pd.DataFrame, path: Path, *, n_bins: int = 5):
             n=("pass", "size"),
         ).reset_index()
         color = cmap(i + 1)
-        legend_label = _short_agent_label(agent_id)
+        legend_label = _short_agent_label(agent_id).replace("Codex ·", "Codex CLI ·")
         ax.plot(
             agg["conf_mean"], agg["pass_mean"],
             color=color, alpha=0.76, linewidth=2.2,
@@ -1283,9 +1283,10 @@ def _plot_predictability_agent_panel(
             markersize=7, markeredgecolor="white", markeredgewidth=1.1,
             linewidth=2.15, zorder=3, label="confidence")
 
-    title = _short_agent_label(agent_id)
+    title = _short_agent_label(agent_id).replace("Codex ·", "Codex CLI ·")
     ax.set_title(title, fontsize=title_fontsize, loc="left")
-    ax.set_xticks(_ERR_CENTERS, _ERR_LABELS)
+    ax.set_xticks(_ERR_CENTERS)
+    ax.set_xticklabels(_ERR_LABELS)
     ax.tick_params(axis="x", labelsize=tick_fontsize, rotation=30, pad=2)
     ax.tick_params(axis="y", labelsize=tick_fontsize)
     ax.set_ylim(0, 1.05)
@@ -1306,81 +1307,48 @@ def fig_predictability_per_agent(df: pd.DataFrame, path: Path):
     agents = sorted(df["agent_id"].unique())
 
     n = len(agents)
-    ncols = min(2, max(1, n))
-    nrows = int(np.ceil(n / ncols))
+    if n == 0:
+        return
+    if n > 7:
+        raise ValueError("The 2 × 4 predictability layout supports at most seven agents.")
+
     fig, axes = plt.subplots(
-        nrows, ncols,
-        figsize=(style.PAPER_W * 1.05, 6.4),
+        2, 4,
+        figsize=(style.PAPER_W * 1.8, 6.4),
         sharex=True, sharey=True,
     )
-    axes = np.atleast_1d(axes).flatten()
+    axes = axes.flatten()
 
-    for i, a in enumerate(agents):
+    for i, agent in enumerate(agents):
         _plot_predictability_agent_panel(
-            axes[i], df, a, show_ylabel=(i % ncols == 0),
+            axes[i], df, agent,
+            title_fontsize=14, tick_fontsize=11,
+            show_ylabel=(i % 4 == 0),
         )
+        # The top-right panel has no data panel below it, so retain its labels.
+        axes[i].tick_params(axis="x", labelbottom=(i >= 4 or i + 4 >= n))
 
-    for j in range(n, len(axes)):
-        axes[j].set_visible(False)
-
+    for ax in axes[n:]:
+        ax.set_axis_off()
+    axes[-1].legend(
+        handles=_predictability_handles(), loc="center",
+        ncol=1, fontsize=13, frameon=False, handlelength=2.0,
+        labelspacing=1.0,
+    )
     fig.text(
-        0.5, 0.09, "Failed bash commands per run",
+        0.5, 0.035, "Failed bash commands per run",
         ha="center", va="center", fontsize=20,
     )
-    fig.legend(handles=_predictability_handles(), loc="lower center",
-               bbox_to_anchor=(0.5, 0.00), ncol=2,
-               fontsize=12, frameon=False, handlelength=2.0)
     fig.subplots_adjust(
-        left=0.10, right=0.99, top=0.94, bottom=0.22,
-        wspace=0.18, hspace=0.50,
+        left=0.055, right=0.99, top=0.93, bottom=0.15,
+        wspace=0.16, hspace=0.42,
     )
     style.save(fig, path)
 
 
 def fig_predictability_per_agent_vertical(df: pd.DataFrame, path: Path):
-    """N6a vertical variant. Same per-agent predictability panels as
-    ``fig_predictability_per_agent``, stacked for narrow layouts."""
-    df = df.dropna(subset=["confidence", "successful", "num_errors"]).copy()
-    df["pass"] = df["successful"].astype(float)
-    df["agent_id"] = df["config_dir"].map(_agent_id)
-    agents = sorted(df["agent_id"].unique())
-
-    n = len(agents)
-    if n == 0:
-        return
-
-    fig, axes = plt.subplots(
-        n, 1,
-        figsize=(style.PAPER_W * 0.50, 1.55 * n + 0.69),
-        sharex=True, sharey=True,
-    )
-    axes = np.atleast_1d(axes).flatten()
-
-    for i, a in enumerate(agents):
-        _plot_predictability_agent_panel(
-            axes[i], df, a,
-            title_fontsize=14, tick_fontsize=11,
-            show_ylabel=False,
-        )
-        if i < n - 1:
-            axes[i].tick_params(axis="x", labelbottom=False)
-
-    fig.text(
-        0.010, 0.54, "Rate",
-        ha="center", va="center", rotation="vertical", fontsize=17,
-    )
-    fig.text(
-        0.5, 0.075, "Failed bash commands per run",
-        ha="center", va="center", fontsize=16,
-    )
-    fig.legend(handles=_predictability_handles(), loc="lower center",
-               bbox_to_anchor=(0.5, 0.015), ncol=2,
-               fontsize=12, frameon=False, handlelength=2.0)
-    fig.subplots_adjust(
-        left=0.16, right=0.985, top=0.975, bottom=0.16,
-        hspace=0.34,
-    )
-    style.save(fig, path)
+    """Legacy paper output entry point for the 2 × 4 per-agent grid."""
+    fig_predictability_per_agent(df, path)
 
 
 def fig_reliability_3panel(rel: pd.DataFrame, runs: pd.DataFrame, path: Path):
