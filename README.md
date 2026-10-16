@@ -18,16 +18,24 @@ If you want to run the benchmark rather than analyze results, use the [Holistic 
 
 ```
 corebench-analysis/
-├── data/              
-├── analysis/          # scripts that regenerate the §3 and §4 figures
+├── data/              # current data, including re-runs with longer timeouts
+│   └── paper/         # original data for the paper
+├── analysis/          # §2 accuracy notebook and §3–§4 figure scripts
 ├── notebooks/         # §3.3 model-scaffold analysis and §4 uplift analysis
-├── acc_saturation/    # §2 accuracy & saturation metrics
 ├── sankey/            # §2 benchmark-construction diagrams
 ├── docent/            # Docent rubrics and runners
 ├── extractor/         # pricing helpers used to compute per-run cost
 ├── figs/              
 └── requirements.txt
 ```
+
+## Data versions
+
+The current run data in `data/` incorporates re-runs with longer timeouts that replaced earlier runs. Results computed from these updated data differ from those reported in the paper. The analysis scripts use the tables directly in `data/` by default.
+
+The figures in `figs/` reflect the updated data. You can also regenerate the figures using the original paper data in `data/paper/`, as described under [Regenerating the figures](#regenerating-the-figures).
+
+The linked Docent agent logs, both full and truncated, correspond to the original paper runs, not the subsequent re-runs with longer timeouts. Use `data/paper/` when comparing data with those logs or checking the paper's results. To reproduce the original analysis with its original code and data, use the Git snapshot [`19b8e3f`](https://github.com/nnadgi01/corebench-analysis/tree/19b8e3fb54232fa07b2f3088ccf76737b6b3ca14).
 
 ## Setup
 
@@ -52,14 +60,14 @@ The sections below follow the paper. Each one lists the data and code that produ
 
 ## Section 2: Construct validity
 
-The agent logs are hosted on Docent. Each set comes in two versions: the full logs, and a version where a few very long tool-call outputs (such as the raw bytes of an image file) are truncated so the logs fit in a model's context window for analysis. Everything else is identical.
+The agent logs are hosted on Docent and correspond to the original paper runs in `data/paper/` (see [Data versions](#data-versions)). Each set comes in two versions: the full logs, and a version where a few very long tool-call outputs (such as the raw bytes of an image file) are truncated so the logs fit in a model's context window for analysis. Everything else is identical.
 
 - CORE-Bench v1.1: [full logs](https://docent.transluce.org/dashboard/f739ce50-eec8-4d8e-86b3-2c3dd9f42ab7) · [truncated](https://docent.transluce.org/dashboard/1d88d50a-7990-4528-aaf9-4b721d53b43d)
 - CORE-Bench Extended (OOD): [full logs](https://docent.transluce.org/dashboard/6fcaee2b-844f-4930-b62f-617ebf924b35) · [truncated](https://docent.transluce.org/dashboard/94497783-2245-4613-8d5f-73ab653079ec)
 
 Code behind §2:
  
-- `acc_saturation/accuracies.ipynb` computes accuracy for every agent configuration, along with the saturation metrics, from `data/runs.parquet` (or `data/runs.csv` if Parquet support is unavailable). Run all cells from the repository root or `acc_saturation/`. It groups by `agent_id`, uses `successful` as the binary outcome, and analyzes `main39` and `ood19` separately, excluding the reliability split. 
+- `analysis/accuracies.ipynb` computes accuracy for every agent configuration, along with the saturation metrics, from `data/runs.parquet` (or `data/runs.csv` if Parquet support is unavailable). Run all cells from the repository root or `analysis/`. It groups by `agent_id`, uses `successful` as the binary outcome, and analyzes `main39` and `ood19` separately, excluding the reliability split.
 - `sankey/sankey_main.py` and `sankey/sankey_ood.py` draw the benchmark construction pipeline diagrams in the appendix.
 
 ## Section 3: Multidimensional evaluation of agent performance
@@ -69,10 +77,10 @@ Code behind §2:
 The §3.1 and §3.2 figures are built from three tables in `data/`:
  
 - `runs.parquet` (also exported as `runs.csv`) is the source of truth, with one row per run, agent configuration, capsule, and repetition.
-- `reliability_per_agent.csv` feeds the consistency and predictability figures (§3.1).
+- `reliability_per_agent.csv` feeds the consistency figures (§3.1); predictability and calibration figures use the reliability rows in `runs.parquet`.
 - `efficiency_per_agent.csv` feeds the token- and cost-vs-accuracy figures (§3.2).
 
-The per-agent tables are one row per agent. For anything finer — per-capsule outcomes, the spread of tokens or cost across tasks, individual reliability repetitions — go to `runs.parquet` and group it however you need.
+The reliability table has one row per agent; the efficiency table has one row per agent and benchmark split. For anything finer — per-capsule outcomes, the spread of tokens or cost across tasks, individual reliability repetitions — go to `runs.parquet` and group it however you need.
 
  
 <details>
@@ -83,9 +91,9 @@ The per-agent tables are one row per agent. For anything finer — per-capsule o
 - `cost` is the per-row cost after correction.
 - `agent_id` is `config_dir` with the `_kN` suffix removed. That suffix marks repetitions in the reliability runs; dropping it lets every repetition of an agent share one identity.
 
-**`efficiency_per_agent.csv`** has one row per `(agent_id, split)`, where `split` is `main39` (CORE-Bench v1.1), `ood19` (CORE-Bench Extended), or `reliability` (the repeated runs): `n`, `accuracy`, `tot_tok_mean/_median/_std`, `cost_mean/_median/_std`.
+**`efficiency_per_agent.csv`** has one row per `(agent_id, split)`, where `split` is `main39` (CORE-Bench v1.1) or `ood19` (CORE-Bench Extended). The current table includes `n`, `accuracy`, `tot_tok_mean`, `cost_mean`, `cost_median`, and duration and tool-use summaries.
  
-**`reliability_per_agent.csv`** has one row per `agent_id`, computed over the k=5 split: `pass_at_1`, `pass_at_least_1_of_k`, `pass_all_k`, `outcome_consistency`, `resource_consistency`, `confidence_mean`, `confidence_median`.
+**`reliability_per_agent.csv`** has one row per `agent_id`, computed over the k=5 split: `pass_at_1`, `pass_at_least_1_of_k`, `pass_all_k`, `outcome_consistency`, `resource_consistency`, and their supporting summary statistics. Confidence values used for predictability figures are read from `runs.parquet`.
  
 </details>
 
@@ -97,7 +105,9 @@ Run from the repo root:
 python -m analysis.regenerate_figures   # writes to ./figs/
 ```
  
-This rebuilds the §3.1, §3.2, and §4 figures from the committed data tables. No extraction pipeline is needed. 
+This rebuilds the §3.1, §3.2, and §4 figures from the current data tables. No extraction pipeline is needed.
+
+To regenerate these figures with the original paper data, change `DATA = Path("data")` to `DATA = Path("data/paper")` in `analysis/regenerate_figures.py`, then run the same command. This overwrites the generated figures in `figs/` using the paper data and the current plotting code. For the original plotting code and formatting as well, use the Git snapshot linked under [Data versions](#data-versions).
 
 | Figure | Section | What it shows |
 |---|---|---|
@@ -110,7 +120,7 @@ This rebuilds the §3.1, §3.2, and §4 figures from the committed data tables. 
 | `uplift_duration_by_condition` | §4 | distribution of reproduction session durations |
 
 
-`analysis/export_data.py` re-exports the two per-agent tables from `runs.parquet` (`python -m analysis.export_data`). You only need it if `runs.parquet` has changed.
+`analysis/export_data.py` recalculates derived fields in `data/runs.parquet`, rewrites both run-table formats, and re-exports the two per-agent tables (`python -m analysis.export_data`). You only need it if the run data has changed.
 
 <details>
 <summary>Supporting modules (imported by the scripts above, not run directly)</summary>
